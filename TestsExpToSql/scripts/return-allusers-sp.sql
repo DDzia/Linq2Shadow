@@ -1,0 +1,5 @@
+﻿CREATE PROCEDURE spReturnAllUsers
+	@param0 INTEGER,
+	@param1 NVARCHAR(128)
+AS
+	SELECT * FROM tUsers

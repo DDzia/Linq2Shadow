@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpToSql", "ExpToSql\ExpToSql.csproj", "{315CF68D-1925-4556-86E4-03F949A58CB6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{E171CD5A-2421-4CC6-A908-E5DEFB81E92D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestsExpToSql", "TestsExpToSql\TestsExpToSql.csproj", "{92D8A935-C41A-47BF-B7B6-20C80FB06B14}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{315CF68D-1925-4556-86E4-03F949A58CB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{315CF68D-1925-4556-86E4-03F949A58CB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{315CF68D-1925-4556-86E4-03F949A58CB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{315CF68D-1925-4556-86E4-03F949A58CB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92D8A935-C41A-47BF-B7B6-20C80FB06B14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92D8A935-C41A-47BF-B7B6-20C80FB06B14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92D8A935-C41A-47BF-B7B6-20C80FB06B14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92D8A935-C41A-47BF-B7B6-20C80FB06B14}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{92D8A935-C41A-47BF-B7B6-20C80FB06B14} = {E171CD5A-2421-4CC6-A908-E5DEFB81E92D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {34E5604E-DDEB-423B-88B9-F2080329DF61}
+	EndGlobalSection
+EndGlobal
