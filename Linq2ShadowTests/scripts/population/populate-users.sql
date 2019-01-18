@@ -1,0 +1,3 @@
+﻿INSERT INTO tUsers VALUES (0, 'Denis', '12.09.1992')
+INSERT INTO tUsers VALUES (1, 'Alex', '10.09.1985')
+INSERT INTO tUsers VALUES (2, 'Katua', '02.09.1986')
