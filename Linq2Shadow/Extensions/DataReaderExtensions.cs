@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Data;
 
-namespace Linq2Shadow
+namespace Linq2Shadow.Extensions
 {
     internal static class DataReaderExtensions
     {

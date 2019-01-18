@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using Linq2Shadow.Extensions;
 using Linq2Shadow.QueryProviders;
 
 namespace Linq2Shadow

@@ -1,1 +1,1 @@
-# DziDzi.DynamicQuery
+# Linq2Shadow

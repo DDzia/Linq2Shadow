@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Linq.Expressions;
+using Linq2Shadow.Extensions;
 using Linq2Shadow.QueryTranslators;
 
 namespace Linq2Shadow.QueryProviders
