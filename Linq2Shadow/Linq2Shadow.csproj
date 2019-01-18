@@ -1,29 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net462</TargetFrameworks>
-    <!--<TargetFrameworks>netstandard2.0;net462</TargetFrameworks>-->
+    <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
+
+    <AssemblyName>Linq2Shadow</AssemblyName>
+    <RootNamespace>Linq2Shadow</RootNamespace>
   </PropertyGroup>
 
-  <!-- common NuGet package refs that affect all projects -->
-  <!--
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
-  </ItemGroup>
-  -->
-
-
-  <!-- .NET Standard 2.0 references, compilation flags and build options -->
-  <!--<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
     <DefineConstants>NETCORE;NETSTANDARD;NETSTANDARD2_0</DefineConstants>
-  </PropertyGroup>-->
-  <!--
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
-    <PackageReference Include="System.Data.SqlClient" Version="4.4.0-preview1-25305-02" />
-  </ItemGroup>
-  -->
+  </PropertyGroup>
 
-
-  <!-- .NET 4.5 references, compilation flags and build options -->
   <ItemGroup Condition=" '$(TargetFramework)' == 'net462' ">
     <Reference Include="mscorlib" />
     <Reference Include="System" />
