@@ -30,7 +30,7 @@ namespace Linq2ShadowTests.OperatorTests
         public void Should_ReturnDenisRecord_When_DenisIsExists()
         {
             // Act
-            var data = _sut.FromTableFunction(DbConfig.DbObjectNames.GetAllUsersFunction).Where(x => x["UserName"].Equals("Denis")).ToArray();
+            var data = _sut.QueryToTableValuedFunction(DbConfig.DbObjectNames.GetAllUsersFunction).Where(x => x["UserName"].Equals("Denis")).ToArray();
 
             // Assert
             Assert.AreEqual(data.Length, 1);
@@ -40,7 +40,7 @@ namespace Linq2ShadowTests.OperatorTests
         public void Should_ReturnTwoRecord_When_ContainsIsUsed()
         {
             // Act
-            var data = _sut.FromTableFunction(DbConfig.DbObjectNames.GetAllUsersFunction).Where(x => ((string) x["UserName"]).Contains("e"))
+            var data = _sut.QueryToTableValuedFunction(DbConfig.DbObjectNames.GetAllUsersFunction).Where(x => ((string) x["UserName"]).Contains("e"))
                             .ToArray();
 
             // Assert
@@ -51,7 +51,7 @@ namespace Linq2ShadowTests.OperatorTests
         public void Should_ReturnDenisRecord_When_EndWithS()
         {
             // Act
-            var data = _sut.FromTableFunction(DbConfig.DbObjectNames.GetAllUsersFunction).Where(x => ((string) x["UserName"]).EndsWith("s"))
+            var data = _sut.QueryToTableValuedFunction(DbConfig.DbObjectNames.GetAllUsersFunction).Where(x => ((string) x["UserName"]).EndsWith("s"))
                             .ToArray();
 
             // Assert
@@ -62,7 +62,7 @@ namespace Linq2ShadowTests.OperatorTests
         public void Should_ReturnAlexRecord_When_StartWithS()
         {
             // Act
-            var data = _sut.FromTableFunction(DbConfig.DbObjectNames.GetAllUsersFunction).Where(x => ((string) x["UserName"]).StartsWith("A"))
+            var data = _sut.QueryToTableValuedFunction(DbConfig.DbObjectNames.GetAllUsersFunction).Where(x => ((string) x["UserName"]).StartsWith("A"))
                             .ToArray();
 
             // Assert
@@ -77,7 +77,7 @@ namespace Linq2ShadowTests.OperatorTests
             var filter = ExpressionUtils.MakeEquals("Id", Expression.Constant(1));
 
             // Act
-            var data = _sut.FromTableFunction(DbConfig.DbObjectNames.GetAllUsersFunction)
+            var data = _sut.QueryToTableValuedFunction(DbConfig.DbObjectNames.GetAllUsersFunction)
                 .Where(x => x["Id"].Equals(1))
                 .Where(filter)
                 .ToArray();
@@ -93,7 +93,7 @@ namespace Linq2ShadowTests.OperatorTests
             var filter = ExpressionUtils.MakeEquals("Id", Expression.Constant(1));
 
             // Act
-            var data = _sut.FromTableFunction(DbConfig.DbObjectNames.GetAllUsersFunction).Where(x => x["Id"].Equals(1)).Where(filter).ToArray();
+            var data = _sut.QueryToTableValuedFunction(DbConfig.DbObjectNames.GetAllUsersFunction).Where(x => x["Id"].Equals(1)).Where(filter).ToArray();
 
             // Assert
             Assert.AreEqual(data[0]["UserName"], "Alex");
@@ -106,7 +106,7 @@ namespace Linq2ShadowTests.OperatorTests
             var v = Guid.NewGuid().ToString();
 
             // Act
-            var data = _sut.FromTableFunction(DbConfig.DbObjectNames.GetAllUsersFunction).Where(x =>
+            var data = _sut.QueryToTableValuedFunction(DbConfig.DbObjectNames.GetAllUsersFunction).Where(x =>
                 ((int) x["Id"] == 0 || (int) x["Id"] == 1 || (int) x["Id"] == 2)
                 && (string) x["UserName"] != v).ToArray();
 
@@ -121,7 +121,7 @@ namespace Linq2ShadowTests.OperatorTests
             var v = Guid.NewGuid().ToString();
 
             // Act
-            var data = _sut.FromTableFunction(DbConfig.DbObjectNames.GetAllUsersFunction).Where(x => (double) x["Id"] > 1).ToArray();
+            var data = _sut.QueryToTableValuedFunction(DbConfig.DbObjectNames.GetAllUsersFunction).Where(x => (double) x["Id"] > 1).ToArray();
 
             // Assert
             Assert.AreEqual(data[0]["UserName"], "Katua");
@@ -134,7 +134,7 @@ namespace Linq2ShadowTests.OperatorTests
             var v = Guid.NewGuid().ToString();
 
             // Act
-            var data = _sut.FromTableFunction(DbConfig.DbObjectNames.GetAllUsersFunction).Where(x => (double) x["Id"] >= 1).ToArray();
+            var data = _sut.QueryToTableValuedFunction(DbConfig.DbObjectNames.GetAllUsersFunction).Where(x => (double) x["Id"] >= 1).ToArray();
 
             // Assert
             Assert.AreEqual(data.Length, 2);
@@ -147,7 +147,7 @@ namespace Linq2ShadowTests.OperatorTests
             var v = Guid.NewGuid().ToString();
 
             // Act
-            var data = _sut.FromTableFunction(DbConfig.DbObjectNames.GetAllUsersFunction).Where(x => (double) x["Id"] < 1).ToArray();
+            var data = _sut.QueryToTableValuedFunction(DbConfig.DbObjectNames.GetAllUsersFunction).Where(x => (double) x["Id"] < 1).ToArray();
 
             // Assert
             Assert.AreEqual(data.Length, 1);
@@ -160,7 +160,7 @@ namespace Linq2ShadowTests.OperatorTests
             var v = Guid.NewGuid().ToString();
 
             // Act
-            var data = _sut.FromTableFunction(DbConfig.DbObjectNames.GetAllUsersFunction).Where(x => (double) x["Id"] <= 1).ToArray();
+            var data = _sut.QueryToTableValuedFunction(DbConfig.DbObjectNames.GetAllUsersFunction).Where(x => (double) x["Id"] <= 1).ToArray();
 
             // Assert
             Assert.AreEqual(data.Length, 2);
@@ -173,7 +173,7 @@ namespace Linq2ShadowTests.OperatorTests
             var v = Guid.NewGuid().ToString();
 
             // Act
-            var data = _sut.FromTableFunction(DbConfig.DbObjectNames.GetAllUsersFunction).Where(x => (double) x["Id"] == 1).ToArray();
+            var data = _sut.QueryToTableValuedFunction(DbConfig.DbObjectNames.GetAllUsersFunction).Where(x => (double) x["Id"] == 1).ToArray();
 
             // Assert
             Assert.AreEqual(data[0]["UserName"].ToString(), "Alex");
@@ -185,7 +185,7 @@ namespace Linq2ShadowTests.OperatorTests
             var v = Guid.NewGuid().ToString();
 
             // Act
-            var data = _sut.FromTableFunction(DbConfig.DbObjectNames.GetAllUsersFunction).Where(x => (double) x["Id"] != 1).ToArray();
+            var data = _sut.QueryToTableValuedFunction(DbConfig.DbObjectNames.GetAllUsersFunction).Where(x => (double) x["Id"] != 1).ToArray();
 
             // Assert
             Assert.AreEqual(data.Length, 2);
@@ -198,7 +198,7 @@ namespace Linq2ShadowTests.OperatorTests
             var v = Guid.NewGuid().ToString();
 
             // Act
-            var data = _sut.FromTableFunction(DbConfig.DbObjectNames.GetAllUsersFunction).Where(x => (double) x["Id"] != 1).ToArray();
+            var data = _sut.QueryToTableValuedFunction(DbConfig.DbObjectNames.GetAllUsersFunction).Where(x => (double) x["Id"] != 1).ToArray();
 
             // Assert
             Assert.AreEqual(data.Length, 2);
@@ -211,7 +211,7 @@ namespace Linq2ShadowTests.OperatorTests
             var ids = new[] { 1, 2 };
 
             // Act
-            var data = _sut.FromTableFunction(DbConfig.DbObjectNames.GetAllUsersFunction).Where(x => ids.Contains((int) x["Id"])).ToArray();
+            var data = _sut.QueryToTableValuedFunction(DbConfig.DbObjectNames.GetAllUsersFunction).Where(x => ids.Contains((int) x["Id"])).ToArray();
 
             // Assert
             Assert.AreEqual(data.Length, 2);

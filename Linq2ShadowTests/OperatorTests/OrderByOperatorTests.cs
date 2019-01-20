@@ -30,7 +30,7 @@ namespace Linq2ShadowTests.OperatorTests
             var orderMember = "UserName";
 
             // Act
-            var data = _sut.FromTableFunction(DbConfig.DbObjectNames.GetAllUsersFunction)
+            var data = _sut.QueryToTableValuedFunction(DbConfig.DbObjectNames.GetAllUsersFunction)
                             .OrderBy(x => x[orderMember])
                             .ToArray();
 
@@ -45,7 +45,7 @@ namespace Linq2ShadowTests.OperatorTests
             var expectedUniqIdsOrder = new[] { 40, 10, 30, 20 };
 
             // Act
-            var data = _sut.FromTable(DbConfig.DbObjectNames.ReportsTable)
+            var data = _sut.QueryToTable(DbConfig.DbObjectNames.ReportsTable)
                            .OrderByDescending(x => x["Id"])
                            .ThenBy(x => x["FileName"])
                            .ThenByDescending(x => x["CreatedBy"])
