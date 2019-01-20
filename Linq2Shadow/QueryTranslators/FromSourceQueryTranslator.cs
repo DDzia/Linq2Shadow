@@ -26,6 +26,7 @@ namespace Linq2Shadow.QueryTranslators
             var itIsCount = false;
             var itIsFirst = false;
             var skipUsed = ExpressionsInternalToolkit.SkipIsUsed(expr);
+            var takeUsed = ExpressionsInternalToolkit.TakeIsUsed(expr);
 
 #pragma warning disable CS0642
 
@@ -95,8 +96,27 @@ namespace Linq2Shadow.QueryTranslators
                     }
 
                     _sb.Append(" OFFSET ");
-                    _sb.Append(_queryParamsStore.Append(ExpressionsInternalToolkit.GetSkipCount(expr)));
+                    var skipCount = ExpressionsInternalToolkit.GetSkipCount(expr);
+                    _sb.Append(_queryParamsStore.Append(skipCount));
                     _sb.Append(" ROWS");
+                }
+
+                if (takeUsed)
+                {
+                    if (!skipUsed)
+                    {
+                        if (!orderByUsed)
+                        {
+                            _sb.Append(" ORDER BY (SELECT NULL)");
+                        }
+
+                        _sb.Append(" OFFSET 0 ROWS");
+                    }
+
+                    _sb.Append(" FETCH NEXT ");
+                    var takeCount = ExpressionsInternalToolkit.GetTakeCount(expr);
+                    _sb.Append(_queryParamsStore.Append(takeCount));
+                    _sb.Append(" ROW ONLY");
                 }
             }
 

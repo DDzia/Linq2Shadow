@@ -35,7 +35,7 @@ namespace Linq2ShadowTests.OperatorTests
             var predicate = ExpressionUtils.MakeEquals(member, idExpected);
 
             // Act
-            var query = _sut.FromTable(DbConfig.DbObjectNames.UsersTable);
+            var query = _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable);
             var rowFound = useFirstOrDefault
                 ? query.FirstOrDefault(predicate)
                 : query.First(predicate);
@@ -55,7 +55,7 @@ namespace Linq2ShadowTests.OperatorTests
             var filterExpr = ExpressionUtils.MakeEquals(member, notExistsId);
 
             // Act
-            var query = _sut.FromTable(DbConfig.DbObjectNames.UsersTable);
+            var query = _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable);
 
             // Assert
             if (useFirstOrDefault)

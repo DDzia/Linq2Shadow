@@ -27,7 +27,7 @@ namespace Linq2ShadowTests.OperatorTests
         public void Should_Return3_When_CountCalledWithoutWhere()
         {
             // Act
-            var count = _sut.FromTableFunction(DbConfig.DbObjectNames.GetAllUsersFunction)
+            var count = _sut.QueryToTableValuedFunction(DbConfig.DbObjectNames.GetAllUsersFunction)
                             .Count();
 
             // Assert
@@ -41,7 +41,7 @@ namespace Linq2ShadowTests.OperatorTests
             var ids = new[] { 0, 2 };
 
             // Act
-            var count = _sut.FromTableFunction(DbConfig.DbObjectNames.GetAllUsersFunction)
+            var count = _sut.QueryToTableValuedFunction(DbConfig.DbObjectNames.GetAllUsersFunction)
                             .Count(x => Enumerable.Contains(ids, (int)x["Id"]));
 
             // Assert

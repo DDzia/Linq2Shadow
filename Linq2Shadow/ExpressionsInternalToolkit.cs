@@ -133,5 +133,49 @@ namespace Linq2Shadow
 
             return skipCount;
         }
+
+        public static bool TakeIsUsed(Expression expr)
+        {
+            return GetTakeCountInternal(expr) != null;
+        }
+
+        public static int GetTakeCount(Expression expr)
+        {
+            if (!TakeIsUsed(expr))
+            {
+                throw new InvalidOperationException("Take operator not used.");
+            }
+
+            return GetTakeCountInternal(expr).Value;
+        }
+
+        private static int? GetTakeCountInternal(Expression expr)
+        {
+            if (expr is MethodCallExpression mCallExpr &&
+                mCallExpr.Method.DeclaringType == typeof(Queryable))
+            {
+                if (mCallExpr.Method.Name == nameof(Queryable.Take))
+                {
+                    var currentTake = (int)GetConstant(mCallExpr.Arguments[1]);
+                    if (currentTake < 1)
+                    {
+                        throw new InvalidOperationException("Invalid take value.");
+                    }
+
+                    return currentTake;
+                }
+
+                foreach (var arg in mCallExpr.Arguments)
+                {
+                    var takeCurrent = GetTakeCountInternal(arg);
+                    if (takeCurrent != null)
+                    {
+                        return takeCurrent;
+                    }
+                }
+            }
+
+            return null;
+        }
     }
 }
