@@ -119,5 +119,20 @@ namespace Linq2ShadowTests.OperatorTests
             // Assert
             Assert.AreEqual(userFound["UserName"], "Alex");
         }
+
+        [Test]
+        public void Should_Return0Count_When_SkipedMoreThanTotalCount()
+        {
+            // Arrange
+            var skipCount = 4;
+
+            // Act
+            var usersFoundCount = _sut.FromTable(DbConfig.DbObjectNames.UsersTable)
+                .Skip(skipCount)
+                .Count();
+
+            // Assert
+            Assert.AreEqual(usersFoundCount, 0);
+        }
     }
 }
