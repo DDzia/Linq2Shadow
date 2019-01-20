@@ -5,7 +5,7 @@ namespace Linq2Shadow.Extensions
 {
     internal static class DataReaderExtensions
     {
-        public static IEnumerable<ShadowRow> ReadAll(this IDataReader reader)
+        public static List<ShadowRow> ReadAll(this IDataReader reader)
         {
             var items = new List<ShadowRow>();
 

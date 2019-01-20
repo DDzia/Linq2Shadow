@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Linq;
 using System.Linq.Expressions;
 using Linq2Shadow.Extensions;
 using Linq2Shadow.QueryTranslators;
@@ -84,7 +85,34 @@ namespace Linq2Shadow.QueryProviders
             {
                 using (var reader = cmd.ExecuteReader())
                 {
-                    return (TResult)reader.ReadAll();
+                    var collection = reader.ReadAll();
+
+                    var firstAggregationCalled = ExpressionsInternalToolkit.IsFirstQueryableCall(expression);
+                    var firstOrDefaultAggregationCalled = ExpressionsInternalToolkit.IsFirstOrDefaultQueryableCall(expression);
+                    if (firstAggregationCalled || firstOrDefaultAggregationCalled)
+                    {
+                        if (collection.Count > 1)
+                        {
+                            throw new InvalidOperationException("Unexpected collection length.");
+                        }
+
+                        if (firstAggregationCalled)
+                        {
+                            var first = collection.FirstOrDefault();
+                            if (first == null)
+                            {
+                                throw new InvalidOperationException("Data not found.");
+                            }
+                            return (TResult)(object)first;
+                        }
+
+                        if (firstOrDefaultAggregationCalled)
+                        {
+                            return (TResult)(object)collection.FirstOrDefault();
+                        }
+                    }
+
+                    return (TResult)(object) collection;
                 }
             }
         }
