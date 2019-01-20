@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
+using Linq2Shadow.Exceptions;
 
 namespace Linq2Shadow.Utils
 {
@@ -19,6 +20,13 @@ namespace Linq2Shadow.Utils
             Expression.Call(p, RowIndexer, Expression.Constant(member));
 
         public static ParameterExpression CreateDefaultRowParameter() => Expression.Parameter(typeof(ShadowRow), "x");
+
+        public static Expression<Func<ShadowRow, bool>> MakeEquals<T>(string member, T value, ParameterExpression parametr = null)
+        {
+            ExHelpers.ThrowIfSpacesOrNull(() => member);
+
+            return MakeEquals(member, Expression.Constant(value), parametr);
+        }
 
         public static Expression<Func<ShadowRow, bool>> MakeEquals(string member, ConstantExpression value, ParameterExpression parametr = null)
         {
@@ -315,6 +323,13 @@ namespace Linq2Shadow.Utils
 
             Expression<Func<ShadowRow, bool>> lambda = x => Enumerable.Contains(list, x[member]);
             return lambda;
+        }
+
+        public static Expression<Func<ShadowRow, bool>> MemberPropertyAccess(string propertyName)
+        {
+            ExHelpers.ThrowIfNull(() => propertyName);
+            // propertyName = propertyName ?? throw new ArgumentNullException()
+            return null;
         }
     }
 }
