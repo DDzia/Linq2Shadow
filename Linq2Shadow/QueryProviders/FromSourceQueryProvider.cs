@@ -76,7 +76,11 @@ namespace Linq2Shadow.QueryProviders
             {
                 using (var cmd = PrepareSqlAndParams())
                 {
-                    return (TResult)cmd.ExecuteScalar();
+                    var val = cmd.ExecuteScalar();
+
+                    var skipCount = ExpressionsInternalToolkit.GetSkipCount(expression);
+
+                    return (TResult)(object)((int)val - skipCount);
                 }
             }
 

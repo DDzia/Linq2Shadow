@@ -102,5 +102,36 @@ namespace Linq2Shadow
                    mCallExpr.Method.DeclaringType == typeof(Queryable) &&
                    mCallExpr.Method.Name == nameof(Queryable.FirstOrDefault);
         }
+
+        public static bool SkipIsUsed(Expression expr)
+        {
+            return GetSkipCount(expr) != 0;
+        }
+
+        public static int GetSkipCount(Expression expr)
+        {
+            int skipCount = 0;
+            if (expr is MethodCallExpression mCallExpr &&
+                mCallExpr.Method.DeclaringType == typeof(Queryable))
+            {
+                if (mCallExpr.Method.Name == nameof(Queryable.Skip))
+                {
+                    var currentSkip = (int)GetConstant(mCallExpr.Arguments[1]);
+                    if (currentSkip < 1)
+                    {
+                        throw new InvalidOperationException("Invalid skip value.");
+                    }
+
+                    skipCount += currentSkip;
+                }
+
+                foreach (var arg in mCallExpr.Arguments)
+                {
+                    skipCount += GetSkipCount(arg);
+                }
+            }
+
+            return skipCount;
+        }
     }
 }

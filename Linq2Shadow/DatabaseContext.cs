@@ -100,7 +100,7 @@ namespace Linq2Shadow
             }
         }
 
-        public IQueryable<ShadowRow> FromSource(string sourceName)
+        public IQueryable<ShadowRow> FromTable(string sourceName)
         {
             return new Query<ShadowRow>(new FromSourceQueryProvider(this, sourceName));
         }
