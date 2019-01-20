@@ -28,16 +28,14 @@ namespace Linq2Shadow
             });
         }
 
-        public virtual DatabaseContext Branch() => new DatabaseContext(_connFactory);
-
-        public IQueryable<ShadowRow> FromTableFunction(string functionName, object[] parameters = null)
+        public IQueryable<ShadowRow> QueryToTableValuedFunction(string functionName, object[] parameters = null)
         {
             return new Query<ShadowRow>(new FunctionCallQueryProvider(this, functionName, parameters));
         }
 
         public IEnumerable<ShadowRow> QueryToStoredProcedure(string storedProcedureName, IDictionary<string, object> parameters = null)
         {
-            return FromStoredProcedureInternal(storedProcedureName, parameters);
+            return QueryToStoredProcedureInternal(storedProcedureName, parameters);
         }
 
         public IEnumerable<ShadowRow> QueryToStoredProcedure<T>(string storedProcedureName, T parameters = null)
@@ -60,17 +58,14 @@ namespace Linq2Shadow
                 }
             }
 
-            return FromStoredProcedureInternal(storedProcedureName, parametersMap);
+            return QueryToStoredProcedureInternal(storedProcedureName, parametersMap);
         }
 
-        private IEnumerable<ShadowRow> FromStoredProcedureInternal(string storedProcedureName,
+        private IEnumerable<ShadowRow> QueryToStoredProcedureInternal(string storedProcedureName,
             IDictionary<string, object> parameters = null)
         {
-            var sb = new StringBuilder();
-            sb.AppendLine("DECLARE @return_value int");
-            sb.AppendLine($"EXEC @return_value = {storedProcedureName}");
-
             var cmd = Connection.Value.CreateCommand();
+            var paramsSql = string.Empty;
             if (parameters != null && parameters.Any())
             {
                 var paramNames = new List<string>();
@@ -81,18 +76,14 @@ namespace Linq2Shadow
                     p.Value = param.Value;
                     cmd.Parameters.Add(p);
 
-                    paramNames.Add($"\t@{param.Key}");
+                    paramNames.Add($"@{param.Key}");
                 }
-                var paramsAllSql = string.Join(",\n", paramNames);
-                sb.AppendLine(paramsAllSql);
+                paramsSql = string.Join(", ", paramNames);
             }
-
-            sb.AppendLine("SELECT 'Return Value' = @return_value");
 
             using (cmd)
             {
-                cmd.CommandText = sb.ToString();
-
+                cmd.CommandText = string.Format(SqlTemplates.sqlSp, storedProcedureName, paramsSql);
                 using (var reader = cmd.ExecuteReader())
                 {
                     return reader.ReadAll();
@@ -100,7 +91,7 @@ namespace Linq2Shadow
             }
         }
 
-        public IQueryable<ShadowRow> FromTable(string sourceName)
+        public IQueryable<ShadowRow> QueryToTable(string sourceName)
         {
             return new Query<ShadowRow>(new FromSourceQueryProvider(this, sourceName));
         }

@@ -33,11 +33,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>ExMessages.resx</DependentUpon>
     </Compile>
+    <Compile Update="SqlTemplates.Designer.cs">
+      <DependentUpon>SqlTemplates.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Exceptions\ExMessages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ExMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="SqlTemplates.resx">
+      <LastGenOutput>SqlTemplates.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
   </ItemGroup>
 </Project>

@@ -79,6 +79,14 @@ namespace Linq2Shadow.QueryProviders
                     var val = cmd.ExecuteScalar();
 
                     var skipCount = ExpressionsInternalToolkit.GetSkipCount(expression);
+                    var countViaSkipAdjusted = Math.Max((int) val - skipCount, 0);
+                    if (ExpressionsInternalToolkit.TakeIsUsed(expression))
+                    {
+                        var takeCount = ExpressionsInternalToolkit.GetTakeCount(expression);
+                        var countViaTakeAdjusted = Math.Min(countViaSkipAdjusted, takeCount);
+                        return (TResult) (object) countViaTakeAdjusted;
+                    }
+
                     return (TResult) (object) Math.Max((int) val - skipCount, 0);
                 }
             }

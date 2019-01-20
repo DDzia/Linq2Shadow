@@ -30,7 +30,7 @@ namespace Linq2ShadowTests.OperatorTests
             var skipCount = 1;
 
             // Act
-            var usersFound = _sut.FromTable(DbConfig.DbObjectNames.UsersTable)
+            var usersFound = _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
                 .Skip(skipCount)
                 .ToList();
 
@@ -47,7 +47,7 @@ namespace Linq2ShadowTests.OperatorTests
             var skipCount = 1;
 
             // Act
-            var usersFound = _sut.FromTable(DbConfig.DbObjectNames.UsersTable)
+            var usersFound = _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
                 .Skip(skipCount)
                 .Skip(skipCount)
                 .ToList();
@@ -64,7 +64,7 @@ namespace Linq2ShadowTests.OperatorTests
             var skipCount = 1;
 
             // Act
-            var usersFound = _sut.FromTable(DbConfig.DbObjectNames.UsersTable)
+            var usersFound = _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
                 .OrderByDescending(x => x["UserName"])
                 .Skip(skipCount)
                 .ToList();
@@ -82,7 +82,7 @@ namespace Linq2ShadowTests.OperatorTests
             var skipCount = 3;
 
             // Act
-            var usersFound = _sut.FromTable(DbConfig.DbObjectNames.UsersTable)
+            var usersFound = _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
                 .Skip(skipCount)
                 .ToList();
 
@@ -97,7 +97,7 @@ namespace Linq2ShadowTests.OperatorTests
             var skipCount = 1;
 
             // Act
-            var usersFoundCount = _sut.FromTable(DbConfig.DbObjectNames.UsersTable)
+            var usersFoundCount = _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
                 .Skip(skipCount)
                 .Count();
 
@@ -112,7 +112,7 @@ namespace Linq2ShadowTests.OperatorTests
             var skipCount = 1;
 
             // Act
-            var userFound = _sut.FromTable(DbConfig.DbObjectNames.UsersTable)
+            var userFound = _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
                 .Skip(skipCount)
                 .First();
 
@@ -127,7 +127,7 @@ namespace Linq2ShadowTests.OperatorTests
             var skipCount = 4;
 
             // Act
-            var usersFoundCount = _sut.FromTable(DbConfig.DbObjectNames.UsersTable)
+            var usersFoundCount = _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
                 .Skip(skipCount)
                 .Count();
 
