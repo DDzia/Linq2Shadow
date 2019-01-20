@@ -6,6 +6,15 @@
 
     <IsTestProject>false</IsTestProject>
     <IsPackable>true</IsPackable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>0.1.0</Version>
+    <Authors>Dzianis Dziarkach</Authors>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <AssemblyVersion>0.1.0.0</AssemblyVersion>
+    <PackageProjectUrl>https://github.com/DDzia/Linq2Shadow</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/DDzia/Linq2Shadow</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>#linq #mssql #sql #adonet</PackageTags>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
