@@ -79,8 +79,7 @@ namespace Linq2Shadow.QueryProviders
                     var val = cmd.ExecuteScalar();
 
                     var skipCount = ExpressionsInternalToolkit.GetSkipCount(expression);
-
-                    return (TResult)(object)((int)val - skipCount);
+                    return (TResult) (object) Math.Max((int) val - skipCount, 0);
                 }
             }
 
