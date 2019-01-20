@@ -88,5 +88,19 @@ namespace Linq2Shadow
                    mCallExpr.Method.DeclaringType == typeof(Queryable) &&
                    mCallExpr.Method.Name == nameof(Queryable.Count);
         }
+
+        public static bool IsFirstQueryableCall(Expression expr)
+        {
+            return expr is MethodCallExpression mCallExpr &&
+                   mCallExpr.Method.DeclaringType == typeof(Queryable) &&
+                   mCallExpr.Method.Name == nameof(Queryable.First);
+        }
+
+        public static bool IsFirstOrDefaultQueryableCall(Expression expr)
+        {
+            return expr is MethodCallExpression mCallExpr &&
+                   mCallExpr.Method.DeclaringType == typeof(Queryable) &&
+                   mCallExpr.Method.Name == nameof(Queryable.FirstOrDefault);
+        }
     }
 }

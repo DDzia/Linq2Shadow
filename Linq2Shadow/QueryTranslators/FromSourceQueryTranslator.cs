@@ -35,8 +35,22 @@ namespace Linq2Shadow.QueryTranslators
                     var lambdaTyped =
                         Expression.Lambda<Func<ShadowRow, bool>>(lambda.Body, ExpressionUtils.CreateDefaultRowParameter());
                     externalPredicates.Add(lambdaTyped);
+                }
+            }
+            else if (ExpressionsInternalToolkit.IsFirstQueryableCall(expr) ||
+                ExpressionsInternalToolkit.IsFirstOrDefaultQueryableCall(expr))
+            {
+                _sb.Append("SELECT TOP 1 * FROM ");
+                var mCall = expr as MethodCallExpression;
+                if (mCall.Arguments.Count == 2)
+                {
+                    var lambda = ExpressionsInternalToolkit.SkipUnary(mCall.Arguments[1]) as LambdaExpression; // skip Quote
+                    var lambdaTyped =
+                        Expression.Lambda<Func<ShadowRow, bool>>(lambda.Body, ExpressionUtils.CreateDefaultRowParameter());
+                    externalPredicates.Add(lambdaTyped);
 
                 }
+                itIsQuery = true;
             }
             else
             {
