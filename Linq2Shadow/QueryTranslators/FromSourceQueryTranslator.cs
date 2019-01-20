@@ -23,9 +23,19 @@ namespace Linq2Shadow.QueryTranslators
         {
             List<Expression<Func<ShadowRow, bool>>> externalPredicates = new List<Expression<Func<ShadowRow, bool>>>();
 
-            var itIsQuery = false;
+            var itIsCount = false;
+            var itIsFirst = false;
+            var skipUsed = ExpressionsInternalToolkit.SkipIsUsed(expr);
 
-            if (ExpressionsInternalToolkit.IsCountQueryableCall(expr))
+#pragma warning disable CS0642
+
+            if (itIsCount = ExpressionsInternalToolkit.IsCountQueryableCall(expr)) ;
+            else if (itIsFirst = ExpressionsInternalToolkit.IsFirstQueryableCall(expr) ||
+                                 ExpressionsInternalToolkit.IsFirstOrDefaultQueryableCall(expr)) ;
+#pragma warning restore CS0642
+
+
+            if (itIsCount)
             {
                 _sb.Append("SELECT COUNT (*) FROM ");
                 var mCall = expr as MethodCallExpression;
@@ -37,8 +47,7 @@ namespace Linq2Shadow.QueryTranslators
                     externalPredicates.Add(lambdaTyped);
                 }
             }
-            else if (ExpressionsInternalToolkit.IsFirstQueryableCall(expr) ||
-                ExpressionsInternalToolkit.IsFirstOrDefaultQueryableCall(expr))
+            else if (itIsFirst && !skipUsed)
             {
                 _sb.Append("SELECT TOP 1 * FROM ");
                 var mCall = expr as MethodCallExpression;
@@ -50,11 +59,9 @@ namespace Linq2Shadow.QueryTranslators
                     externalPredicates.Add(lambdaTyped);
 
                 }
-                itIsQuery = true;
             }
             else
             {
-                itIsQuery = true;
                 _sb.Append("SELECT * FROM ");
             }
 
@@ -69,16 +76,33 @@ namespace Linq2Shadow.QueryTranslators
                 _sb.Append(whereLine);
             }
 
-            // apply ordering for queries only
-            if (itIsQuery)
+            if (!itIsCount)
             {
                 var orderByLine = new OrderByQueryTranslator(_queryParamsStore)
                     .TranslateToSql(expr);
-                if (!string.IsNullOrWhiteSpace(orderByLine))
+                var orderByUsed = !string.IsNullOrWhiteSpace(orderByLine);
+                if (orderByUsed)
                 {
                     _sb.Append(" ORDER BY ");
                     _sb.Append(orderByLine);
                 }
+
+                if (skipUsed)
+                {
+                    if (!orderByUsed)
+                    {
+                        _sb.Append(" ORDER BY (SELECT NULL)");
+                    }
+
+                    _sb.Append(" OFFSET ");
+                    _sb.Append(_queryParamsStore.Append(ExpressionsInternalToolkit.GetSkipCount(expr)));
+                    _sb.Append(" ROWS");
+                }
+            }
+
+            if (itIsFirst && skipUsed)
+            {
+                _sb.Append(" FETCH NEXT 1 ROW ONLY");
             }
 
             return _sb.ToString();

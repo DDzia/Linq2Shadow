@@ -45,7 +45,7 @@ namespace Linq2ShadowTests.OperatorTests
             var expectedUniqIdsOrder = new[] { 40, 10, 30, 20 };
 
             // Act
-            var data = _sut.FromSource(DbConfig.DbObjectNames.ReportsTable)
+            var data = _sut.FromTable(DbConfig.DbObjectNames.ReportsTable)
                            .OrderByDescending(x => x["Id"])
                            .ThenBy(x => x["FileName"])
                            .ThenByDescending(x => x["CreatedBy"])
