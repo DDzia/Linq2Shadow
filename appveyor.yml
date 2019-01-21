@@ -32,11 +32,11 @@ deploy:
     skip_symbols: false
     on:
       branch: master
-      APPVEYOR_REPO_TAG: true
+      APPVEYOR_REPO_TAG: false
   - provider: Environment
     name: GitHub
     artifact: '*.nupkg'
     skip_symbols: false
     on:
       branch: master
-      APPVEYOR_REPO_TAG: true
+      APPVEYOR_REPO_TAG: false
