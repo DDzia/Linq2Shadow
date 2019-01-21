@@ -1,9 +1,5 @@
-version: '1.0.{build}'
+version: "1.0.{build}"
 image: Visual Studio 2017
-#branches:
-#  only:
-#    - develop
-#    - master
 init:
   - cmd: git config --global core.autocrlf true
 before_build:
@@ -17,25 +13,25 @@ test_script:
 dotnet_csproj:
   patch: true
   file: '**\*.csproj'
-  version: '{version}'
-  package_version: '{version}'
-  assembly_version: '{version}'
-  file_version: '{version}'
-  informational_version: '{version}'
+  version: "{version}"
+  package_version: "{version}"
+  assembly_version: "{version}"
+  file_version: "{version}"
+  informational_version: "{version}"
 artifacts:
   - path: .\**\*.nupkg
     name: NuGet
 deploy:
   - provider: Environment
     name: Nuget
-    artifact: '*.nupkg'
+    artifact: "*.nupkg"
     skip_symbols: false
     on:
       branch: master
       APPVEYOR_REPO_TAG: false
   - provider: Environment
     name: GitHub
-    artifact: '*.nupkg'
+    artifact: "*.nupkg"
     skip_symbols: false
     on:
       branch: master
