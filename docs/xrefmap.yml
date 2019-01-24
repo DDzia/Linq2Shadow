@@ -1,0 +1,650 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Linq2Shadow
+  name: Linq2Shadow
+  href: api/Linq2Shadow.html
+  commentId: N:Linq2Shadow
+  fullName: Linq2Shadow
+  nameWithType: Linq2Shadow
+- uid: Linq2Shadow.DatabaseContext
+  name: DatabaseContext
+  href: api/Linq2Shadow.DatabaseContext.html
+  commentId: T:Linq2Shadow.DatabaseContext
+  fullName: Linq2Shadow.DatabaseContext
+  nameWithType: DatabaseContext
+- uid: Linq2Shadow.DatabaseContext.#ctor(System.Func{System.Data.IDbConnection})
+  name: DatabaseContext(Func<IDbConnection>)
+  href: api/Linq2Shadow.DatabaseContext.html#Linq2Shadow_DatabaseContext__ctor_System_Func_System_Data_IDbConnection__
+  commentId: M:Linq2Shadow.DatabaseContext.#ctor(System.Func{System.Data.IDbConnection})
+  name.vb: DatabaseContext(Func(Of IDbConnection))
+  fullName: Linq2Shadow.DatabaseContext.DatabaseContext(System.Func<System.Data.IDbConnection>)
+  fullName.vb: Linq2Shadow.DatabaseContext.DatabaseContext(System.Func(Of System.Data.IDbConnection))
+  nameWithType: DatabaseContext.DatabaseContext(Func<IDbConnection>)
+  nameWithType.vb: DatabaseContext.DatabaseContext(Func(Of IDbConnection))
+- uid: Linq2Shadow.DatabaseContext.#ctor*
+  name: DatabaseContext
+  href: api/Linq2Shadow.DatabaseContext.html#Linq2Shadow_DatabaseContext__ctor_
+  commentId: Overload:Linq2Shadow.DatabaseContext.#ctor
+  isSpec: "True"
+  fullName: Linq2Shadow.DatabaseContext.DatabaseContext
+  nameWithType: DatabaseContext.DatabaseContext
+- uid: Linq2Shadow.DatabaseContext.Dispose
+  name: Dispose()
+  href: api/Linq2Shadow.DatabaseContext.html#Linq2Shadow_DatabaseContext_Dispose
+  commentId: M:Linq2Shadow.DatabaseContext.Dispose
+  fullName: Linq2Shadow.DatabaseContext.Dispose()
+  nameWithType: DatabaseContext.Dispose()
+- uid: Linq2Shadow.DatabaseContext.Dispose(System.Boolean)
+  name: Dispose(Boolean)
+  href: api/Linq2Shadow.DatabaseContext.html#Linq2Shadow_DatabaseContext_Dispose_System_Boolean_
+  commentId: M:Linq2Shadow.DatabaseContext.Dispose(System.Boolean)
+  fullName: Linq2Shadow.DatabaseContext.Dispose(System.Boolean)
+  nameWithType: DatabaseContext.Dispose(Boolean)
+- uid: Linq2Shadow.DatabaseContext.Dispose*
+  name: Dispose
+  href: api/Linq2Shadow.DatabaseContext.html#Linq2Shadow_DatabaseContext_Dispose_
+  commentId: Overload:Linq2Shadow.DatabaseContext.Dispose
+  isSpec: "True"
+  fullName: Linq2Shadow.DatabaseContext.Dispose
+  nameWithType: DatabaseContext.Dispose
+- uid: Linq2Shadow.DatabaseContext.QueryToStoredProcedure(System.String,System.Collections.Generic.IDictionary{System.String,System.Object})
+  name: QueryToStoredProcedure(String, IDictionary<String, Object>)
+  href: api/Linq2Shadow.DatabaseContext.html#Linq2Shadow_DatabaseContext_QueryToStoredProcedure_System_String_System_Collections_Generic_IDictionary_System_String_System_Object__
+  commentId: M:Linq2Shadow.DatabaseContext.QueryToStoredProcedure(System.String,System.Collections.Generic.IDictionary{System.String,System.Object})
+  name.vb: QueryToStoredProcedure(String, IDictionary(Of String, Object))
+  fullName: Linq2Shadow.DatabaseContext.QueryToStoredProcedure(System.String, System.Collections.Generic.IDictionary<System.String, System.Object>)
+  fullName.vb: Linq2Shadow.DatabaseContext.QueryToStoredProcedure(System.String, System.Collections.Generic.IDictionary(Of System.String, System.Object))
+  nameWithType: DatabaseContext.QueryToStoredProcedure(String, IDictionary<String, Object>)
+  nameWithType.vb: DatabaseContext.QueryToStoredProcedure(String, IDictionary(Of String, Object))
+- uid: Linq2Shadow.DatabaseContext.QueryToStoredProcedure*
+  name: QueryToStoredProcedure
+  href: api/Linq2Shadow.DatabaseContext.html#Linq2Shadow_DatabaseContext_QueryToStoredProcedure_
+  commentId: Overload:Linq2Shadow.DatabaseContext.QueryToStoredProcedure
+  isSpec: "True"
+  fullName: Linq2Shadow.DatabaseContext.QueryToStoredProcedure
+  nameWithType: DatabaseContext.QueryToStoredProcedure
+- uid: Linq2Shadow.DatabaseContext.QueryToStoredProcedure``1(System.String,``0)
+  name: QueryToStoredProcedure<T>(String, T)
+  href: api/Linq2Shadow.DatabaseContext.html#Linq2Shadow_DatabaseContext_QueryToStoredProcedure__1_System_String___0_
+  commentId: M:Linq2Shadow.DatabaseContext.QueryToStoredProcedure``1(System.String,``0)
+  name.vb: QueryToStoredProcedure(Of T)(String, T)
+  fullName: Linq2Shadow.DatabaseContext.QueryToStoredProcedure<T>(System.String, T)
+  fullName.vb: Linq2Shadow.DatabaseContext.QueryToStoredProcedure(Of T)(System.String, T)
+  nameWithType: DatabaseContext.QueryToStoredProcedure<T>(String, T)
+  nameWithType.vb: DatabaseContext.QueryToStoredProcedure(Of T)(String, T)
+- uid: Linq2Shadow.DatabaseContext.QueryToTable(System.String)
+  name: QueryToTable(String)
+  href: api/Linq2Shadow.DatabaseContext.html#Linq2Shadow_DatabaseContext_QueryToTable_System_String_
+  commentId: M:Linq2Shadow.DatabaseContext.QueryToTable(System.String)
+  fullName: Linq2Shadow.DatabaseContext.QueryToTable(System.String)
+  nameWithType: DatabaseContext.QueryToTable(String)
+- uid: Linq2Shadow.DatabaseContext.QueryToTable*
+  name: QueryToTable
+  href: api/Linq2Shadow.DatabaseContext.html#Linq2Shadow_DatabaseContext_QueryToTable_
+  commentId: Overload:Linq2Shadow.DatabaseContext.QueryToTable
+  isSpec: "True"
+  fullName: Linq2Shadow.DatabaseContext.QueryToTable
+  nameWithType: DatabaseContext.QueryToTable
+- uid: Linq2Shadow.DatabaseContext.QueryToTableValuedFunction(System.String,System.Object[])
+  name: QueryToTableValuedFunction(String, Object[])
+  href: api/Linq2Shadow.DatabaseContext.html#Linq2Shadow_DatabaseContext_QueryToTableValuedFunction_System_String_System_Object___
+  commentId: M:Linq2Shadow.DatabaseContext.QueryToTableValuedFunction(System.String,System.Object[])
+  name.vb: QueryToTableValuedFunction(String, Object())
+  fullName: Linq2Shadow.DatabaseContext.QueryToTableValuedFunction(System.String, System.Object[])
+  fullName.vb: Linq2Shadow.DatabaseContext.QueryToTableValuedFunction(System.String, System.Object())
+  nameWithType: DatabaseContext.QueryToTableValuedFunction(String, Object[])
+  nameWithType.vb: DatabaseContext.QueryToTableValuedFunction(String, Object())
+- uid: Linq2Shadow.DatabaseContext.QueryToTableValuedFunction*
+  name: QueryToTableValuedFunction
+  href: api/Linq2Shadow.DatabaseContext.html#Linq2Shadow_DatabaseContext_QueryToTableValuedFunction_
+  commentId: Overload:Linq2Shadow.DatabaseContext.QueryToTableValuedFunction
+  isSpec: "True"
+  fullName: Linq2Shadow.DatabaseContext.QueryToTableValuedFunction
+  nameWithType: DatabaseContext.QueryToTableValuedFunction
+- uid: Linq2Shadow.ShadowRow
+  name: ShadowRow
+  href: api/Linq2Shadow.ShadowRow.html
+  commentId: T:Linq2Shadow.ShadowRow
+  fullName: Linq2Shadow.ShadowRow
+  nameWithType: ShadowRow
+- uid: Linq2Shadow.ShadowRow.ContainsKey(System.String)
+  name: ContainsKey(String)
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_ContainsKey_System_String_
+  commentId: M:Linq2Shadow.ShadowRow.ContainsKey(System.String)
+  fullName: Linq2Shadow.ShadowRow.ContainsKey(System.String)
+  nameWithType: ShadowRow.ContainsKey(String)
+- uid: Linq2Shadow.ShadowRow.ContainsKey*
+  name: ContainsKey
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_ContainsKey_
+  commentId: Overload:Linq2Shadow.ShadowRow.ContainsKey
+  isSpec: "True"
+  fullName: Linq2Shadow.ShadowRow.ContainsKey
+  nameWithType: ShadowRow.ContainsKey
+- uid: Linq2Shadow.ShadowRow.Count
+  name: Count
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_Count
+  commentId: P:Linq2Shadow.ShadowRow.Count
+  fullName: Linq2Shadow.ShadowRow.Count
+  nameWithType: ShadowRow.Count
+- uid: Linq2Shadow.ShadowRow.Count*
+  name: Count
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_Count_
+  commentId: Overload:Linq2Shadow.ShadowRow.Count
+  isSpec: "True"
+  fullName: Linq2Shadow.ShadowRow.Count
+  nameWithType: ShadowRow.Count
+- uid: Linq2Shadow.ShadowRow.GetDynamicMemberNames
+  name: GetDynamicMemberNames()
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_GetDynamicMemberNames
+  commentId: M:Linq2Shadow.ShadowRow.GetDynamicMemberNames
+  fullName: Linq2Shadow.ShadowRow.GetDynamicMemberNames()
+  nameWithType: ShadowRow.GetDynamicMemberNames()
+- uid: Linq2Shadow.ShadowRow.GetDynamicMemberNames*
+  name: GetDynamicMemberNames
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_GetDynamicMemberNames_
+  commentId: Overload:Linq2Shadow.ShadowRow.GetDynamicMemberNames
+  isSpec: "True"
+  fullName: Linq2Shadow.ShadowRow.GetDynamicMemberNames
+  nameWithType: ShadowRow.GetDynamicMemberNames
+- uid: Linq2Shadow.ShadowRow.GetEnumerator
+  name: GetEnumerator()
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_GetEnumerator
+  commentId: M:Linq2Shadow.ShadowRow.GetEnumerator
+  fullName: Linq2Shadow.ShadowRow.GetEnumerator()
+  nameWithType: ShadowRow.GetEnumerator()
+- uid: Linq2Shadow.ShadowRow.GetEnumerator*
+  name: GetEnumerator
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_GetEnumerator_
+  commentId: Overload:Linq2Shadow.ShadowRow.GetEnumerator
+  isSpec: "True"
+  fullName: Linq2Shadow.ShadowRow.GetEnumerator
+  nameWithType: ShadowRow.GetEnumerator
+- uid: Linq2Shadow.ShadowRow.Item(System.String)
+  name: Item[String]
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_Item_System_String_
+  commentId: P:Linq2Shadow.ShadowRow.Item(System.String)
+  name.vb: Item(String)
+  fullName: Linq2Shadow.ShadowRow.Item[System.String]
+  fullName.vb: Linq2Shadow.ShadowRow.Item(System.String)
+  nameWithType: ShadowRow.Item[String]
+  nameWithType.vb: ShadowRow.Item(String)
+- uid: Linq2Shadow.ShadowRow.Item*
+  name: Item
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_Item_
+  commentId: Overload:Linq2Shadow.ShadowRow.Item
+  isSpec: "True"
+  fullName: Linq2Shadow.ShadowRow.Item
+  nameWithType: ShadowRow.Item
+- uid: Linq2Shadow.ShadowRow.Keys
+  name: Keys
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_Keys
+  commentId: P:Linq2Shadow.ShadowRow.Keys
+  fullName: Linq2Shadow.ShadowRow.Keys
+  nameWithType: ShadowRow.Keys
+- uid: Linq2Shadow.ShadowRow.Keys*
+  name: Keys
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_Keys_
+  commentId: Overload:Linq2Shadow.ShadowRow.Keys
+  isSpec: "True"
+  fullName: Linq2Shadow.ShadowRow.Keys
+  nameWithType: ShadowRow.Keys
+- uid: Linq2Shadow.ShadowRow.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:Linq2Shadow.ShadowRow.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: Linq2Shadow.ShadowRow.System.Collections.IEnumerable.GetEnumerator()
+  nameWithType: ShadowRow.IEnumerable.GetEnumerator()
+  nameWithType.vb: ShadowRow.System.Collections.IEnumerable.GetEnumerator()
+- uid: Linq2Shadow.ShadowRow.System#Collections#IEnumerable#GetEnumerator*
+  name: IEnumerable.GetEnumerator
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_System_Collections_IEnumerable_GetEnumerator_
+  commentId: Overload:Linq2Shadow.ShadowRow.System#Collections#IEnumerable#GetEnumerator
+  isSpec: "True"
+  name.vb: System.Collections.IEnumerable.GetEnumerator
+  fullName: Linq2Shadow.ShadowRow.System.Collections.IEnumerable.GetEnumerator
+  nameWithType: ShadowRow.IEnumerable.GetEnumerator
+  nameWithType.vb: ShadowRow.System.Collections.IEnumerable.GetEnumerator
+- uid: Linq2Shadow.ShadowRow.TryBinaryOperation(System.Dynamic.BinaryOperationBinder,System.Object,System.Object@)
+  name: TryBinaryOperation(BinaryOperationBinder, Object, out Object)
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_TryBinaryOperation_System_Dynamic_BinaryOperationBinder_System_Object_System_Object__
+  commentId: M:Linq2Shadow.ShadowRow.TryBinaryOperation(System.Dynamic.BinaryOperationBinder,System.Object,System.Object@)
+  name.vb: TryBinaryOperation(BinaryOperationBinder, Object, ByRef Object)
+  fullName: Linq2Shadow.ShadowRow.TryBinaryOperation(System.Dynamic.BinaryOperationBinder, System.Object, out System.Object)
+  fullName.vb: Linq2Shadow.ShadowRow.TryBinaryOperation(System.Dynamic.BinaryOperationBinder, System.Object, ByRef System.Object)
+  nameWithType: ShadowRow.TryBinaryOperation(BinaryOperationBinder, Object, out Object)
+  nameWithType.vb: ShadowRow.TryBinaryOperation(BinaryOperationBinder, Object, ByRef Object)
+- uid: Linq2Shadow.ShadowRow.TryBinaryOperation*
+  name: TryBinaryOperation
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_TryBinaryOperation_
+  commentId: Overload:Linq2Shadow.ShadowRow.TryBinaryOperation
+  isSpec: "True"
+  fullName: Linq2Shadow.ShadowRow.TryBinaryOperation
+  nameWithType: ShadowRow.TryBinaryOperation
+- uid: Linq2Shadow.ShadowRow.TryConvert(System.Dynamic.ConvertBinder,System.Object@)
+  name: TryConvert(ConvertBinder, out Object)
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_TryConvert_System_Dynamic_ConvertBinder_System_Object__
+  commentId: M:Linq2Shadow.ShadowRow.TryConvert(System.Dynamic.ConvertBinder,System.Object@)
+  name.vb: TryConvert(ConvertBinder, ByRef Object)
+  fullName: Linq2Shadow.ShadowRow.TryConvert(System.Dynamic.ConvertBinder, out System.Object)
+  fullName.vb: Linq2Shadow.ShadowRow.TryConvert(System.Dynamic.ConvertBinder, ByRef System.Object)
+  nameWithType: ShadowRow.TryConvert(ConvertBinder, out Object)
+  nameWithType.vb: ShadowRow.TryConvert(ConvertBinder, ByRef Object)
+- uid: Linq2Shadow.ShadowRow.TryConvert*
+  name: TryConvert
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_TryConvert_
+  commentId: Overload:Linq2Shadow.ShadowRow.TryConvert
+  isSpec: "True"
+  fullName: Linq2Shadow.ShadowRow.TryConvert
+  nameWithType: ShadowRow.TryConvert
+- uid: Linq2Shadow.ShadowRow.TryCreateInstance(System.Dynamic.CreateInstanceBinder,System.Object[],System.Object@)
+  name: TryCreateInstance(CreateInstanceBinder, Object[], out Object)
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_TryCreateInstance_System_Dynamic_CreateInstanceBinder_System_Object___System_Object__
+  commentId: M:Linq2Shadow.ShadowRow.TryCreateInstance(System.Dynamic.CreateInstanceBinder,System.Object[],System.Object@)
+  name.vb: TryCreateInstance(CreateInstanceBinder, Object(), ByRef Object)
+  fullName: Linq2Shadow.ShadowRow.TryCreateInstance(System.Dynamic.CreateInstanceBinder, System.Object[], out System.Object)
+  fullName.vb: Linq2Shadow.ShadowRow.TryCreateInstance(System.Dynamic.CreateInstanceBinder, System.Object(), ByRef System.Object)
+  nameWithType: ShadowRow.TryCreateInstance(CreateInstanceBinder, Object[], out Object)
+  nameWithType.vb: ShadowRow.TryCreateInstance(CreateInstanceBinder, Object(), ByRef Object)
+- uid: Linq2Shadow.ShadowRow.TryCreateInstance*
+  name: TryCreateInstance
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_TryCreateInstance_
+  commentId: Overload:Linq2Shadow.ShadowRow.TryCreateInstance
+  isSpec: "True"
+  fullName: Linq2Shadow.ShadowRow.TryCreateInstance
+  nameWithType: ShadowRow.TryCreateInstance
+- uid: Linq2Shadow.ShadowRow.TryDeleteIndex(System.Dynamic.DeleteIndexBinder,System.Object[])
+  name: TryDeleteIndex(DeleteIndexBinder, Object[])
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_TryDeleteIndex_System_Dynamic_DeleteIndexBinder_System_Object___
+  commentId: M:Linq2Shadow.ShadowRow.TryDeleteIndex(System.Dynamic.DeleteIndexBinder,System.Object[])
+  name.vb: TryDeleteIndex(DeleteIndexBinder, Object())
+  fullName: Linq2Shadow.ShadowRow.TryDeleteIndex(System.Dynamic.DeleteIndexBinder, System.Object[])
+  fullName.vb: Linq2Shadow.ShadowRow.TryDeleteIndex(System.Dynamic.DeleteIndexBinder, System.Object())
+  nameWithType: ShadowRow.TryDeleteIndex(DeleteIndexBinder, Object[])
+  nameWithType.vb: ShadowRow.TryDeleteIndex(DeleteIndexBinder, Object())
+- uid: Linq2Shadow.ShadowRow.TryDeleteIndex*
+  name: TryDeleteIndex
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_TryDeleteIndex_
+  commentId: Overload:Linq2Shadow.ShadowRow.TryDeleteIndex
+  isSpec: "True"
+  fullName: Linq2Shadow.ShadowRow.TryDeleteIndex
+  nameWithType: ShadowRow.TryDeleteIndex
+- uid: Linq2Shadow.ShadowRow.TryDeleteMember(System.Dynamic.DeleteMemberBinder)
+  name: TryDeleteMember(DeleteMemberBinder)
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_TryDeleteMember_System_Dynamic_DeleteMemberBinder_
+  commentId: M:Linq2Shadow.ShadowRow.TryDeleteMember(System.Dynamic.DeleteMemberBinder)
+  fullName: Linq2Shadow.ShadowRow.TryDeleteMember(System.Dynamic.DeleteMemberBinder)
+  nameWithType: ShadowRow.TryDeleteMember(DeleteMemberBinder)
+- uid: Linq2Shadow.ShadowRow.TryDeleteMember*
+  name: TryDeleteMember
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_TryDeleteMember_
+  commentId: Overload:Linq2Shadow.ShadowRow.TryDeleteMember
+  isSpec: "True"
+  fullName: Linq2Shadow.ShadowRow.TryDeleteMember
+  nameWithType: ShadowRow.TryDeleteMember
+- uid: Linq2Shadow.ShadowRow.TryGetIndex(System.Dynamic.GetIndexBinder,System.Object[],System.Object@)
+  name: TryGetIndex(GetIndexBinder, Object[], out Object)
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_TryGetIndex_System_Dynamic_GetIndexBinder_System_Object___System_Object__
+  commentId: M:Linq2Shadow.ShadowRow.TryGetIndex(System.Dynamic.GetIndexBinder,System.Object[],System.Object@)
+  name.vb: TryGetIndex(GetIndexBinder, Object(), ByRef Object)
+  fullName: Linq2Shadow.ShadowRow.TryGetIndex(System.Dynamic.GetIndexBinder, System.Object[], out System.Object)
+  fullName.vb: Linq2Shadow.ShadowRow.TryGetIndex(System.Dynamic.GetIndexBinder, System.Object(), ByRef System.Object)
+  nameWithType: ShadowRow.TryGetIndex(GetIndexBinder, Object[], out Object)
+  nameWithType.vb: ShadowRow.TryGetIndex(GetIndexBinder, Object(), ByRef Object)
+- uid: Linq2Shadow.ShadowRow.TryGetIndex*
+  name: TryGetIndex
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_TryGetIndex_
+  commentId: Overload:Linq2Shadow.ShadowRow.TryGetIndex
+  isSpec: "True"
+  fullName: Linq2Shadow.ShadowRow.TryGetIndex
+  nameWithType: ShadowRow.TryGetIndex
+- uid: Linq2Shadow.ShadowRow.TryGetMember(System.Dynamic.GetMemberBinder,System.Object@)
+  name: TryGetMember(GetMemberBinder, out Object)
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_TryGetMember_System_Dynamic_GetMemberBinder_System_Object__
+  commentId: M:Linq2Shadow.ShadowRow.TryGetMember(System.Dynamic.GetMemberBinder,System.Object@)
+  name.vb: TryGetMember(GetMemberBinder, ByRef Object)
+  fullName: Linq2Shadow.ShadowRow.TryGetMember(System.Dynamic.GetMemberBinder, out System.Object)
+  fullName.vb: Linq2Shadow.ShadowRow.TryGetMember(System.Dynamic.GetMemberBinder, ByRef System.Object)
+  nameWithType: ShadowRow.TryGetMember(GetMemberBinder, out Object)
+  nameWithType.vb: ShadowRow.TryGetMember(GetMemberBinder, ByRef Object)
+- uid: Linq2Shadow.ShadowRow.TryGetMember*
+  name: TryGetMember
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_TryGetMember_
+  commentId: Overload:Linq2Shadow.ShadowRow.TryGetMember
+  isSpec: "True"
+  fullName: Linq2Shadow.ShadowRow.TryGetMember
+  nameWithType: ShadowRow.TryGetMember
+- uid: Linq2Shadow.ShadowRow.TryGetValue(System.String,System.Object@)
+  name: TryGetValue(String, out Object)
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_TryGetValue_System_String_System_Object__
+  commentId: M:Linq2Shadow.ShadowRow.TryGetValue(System.String,System.Object@)
+  name.vb: TryGetValue(String, ByRef Object)
+  fullName: Linq2Shadow.ShadowRow.TryGetValue(System.String, out System.Object)
+  fullName.vb: Linq2Shadow.ShadowRow.TryGetValue(System.String, ByRef System.Object)
+  nameWithType: ShadowRow.TryGetValue(String, out Object)
+  nameWithType.vb: ShadowRow.TryGetValue(String, ByRef Object)
+- uid: Linq2Shadow.ShadowRow.TryGetValue*
+  name: TryGetValue
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_TryGetValue_
+  commentId: Overload:Linq2Shadow.ShadowRow.TryGetValue
+  isSpec: "True"
+  fullName: Linq2Shadow.ShadowRow.TryGetValue
+  nameWithType: ShadowRow.TryGetValue
+- uid: Linq2Shadow.ShadowRow.TryInvoke(System.Dynamic.InvokeBinder,System.Object[],System.Object@)
+  name: TryInvoke(InvokeBinder, Object[], out Object)
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_TryInvoke_System_Dynamic_InvokeBinder_System_Object___System_Object__
+  commentId: M:Linq2Shadow.ShadowRow.TryInvoke(System.Dynamic.InvokeBinder,System.Object[],System.Object@)
+  name.vb: TryInvoke(InvokeBinder, Object(), ByRef Object)
+  fullName: Linq2Shadow.ShadowRow.TryInvoke(System.Dynamic.InvokeBinder, System.Object[], out System.Object)
+  fullName.vb: Linq2Shadow.ShadowRow.TryInvoke(System.Dynamic.InvokeBinder, System.Object(), ByRef System.Object)
+  nameWithType: ShadowRow.TryInvoke(InvokeBinder, Object[], out Object)
+  nameWithType.vb: ShadowRow.TryInvoke(InvokeBinder, Object(), ByRef Object)
+- uid: Linq2Shadow.ShadowRow.TryInvoke*
+  name: TryInvoke
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_TryInvoke_
+  commentId: Overload:Linq2Shadow.ShadowRow.TryInvoke
+  isSpec: "True"
+  fullName: Linq2Shadow.ShadowRow.TryInvoke
+  nameWithType: ShadowRow.TryInvoke
+- uid: Linq2Shadow.ShadowRow.TryInvokeMember(System.Dynamic.InvokeMemberBinder,System.Object[],System.Object@)
+  name: TryInvokeMember(InvokeMemberBinder, Object[], out Object)
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_TryInvokeMember_System_Dynamic_InvokeMemberBinder_System_Object___System_Object__
+  commentId: M:Linq2Shadow.ShadowRow.TryInvokeMember(System.Dynamic.InvokeMemberBinder,System.Object[],System.Object@)
+  name.vb: TryInvokeMember(InvokeMemberBinder, Object(), ByRef Object)
+  fullName: Linq2Shadow.ShadowRow.TryInvokeMember(System.Dynamic.InvokeMemberBinder, System.Object[], out System.Object)
+  fullName.vb: Linq2Shadow.ShadowRow.TryInvokeMember(System.Dynamic.InvokeMemberBinder, System.Object(), ByRef System.Object)
+  nameWithType: ShadowRow.TryInvokeMember(InvokeMemberBinder, Object[], out Object)
+  nameWithType.vb: ShadowRow.TryInvokeMember(InvokeMemberBinder, Object(), ByRef Object)
+- uid: Linq2Shadow.ShadowRow.TryInvokeMember*
+  name: TryInvokeMember
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_TryInvokeMember_
+  commentId: Overload:Linq2Shadow.ShadowRow.TryInvokeMember
+  isSpec: "True"
+  fullName: Linq2Shadow.ShadowRow.TryInvokeMember
+  nameWithType: ShadowRow.TryInvokeMember
+- uid: Linq2Shadow.ShadowRow.TrySetIndex(System.Dynamic.SetIndexBinder,System.Object[],System.Object)
+  name: TrySetIndex(SetIndexBinder, Object[], Object)
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_TrySetIndex_System_Dynamic_SetIndexBinder_System_Object___System_Object_
+  commentId: M:Linq2Shadow.ShadowRow.TrySetIndex(System.Dynamic.SetIndexBinder,System.Object[],System.Object)
+  name.vb: TrySetIndex(SetIndexBinder, Object(), Object)
+  fullName: Linq2Shadow.ShadowRow.TrySetIndex(System.Dynamic.SetIndexBinder, System.Object[], System.Object)
+  fullName.vb: Linq2Shadow.ShadowRow.TrySetIndex(System.Dynamic.SetIndexBinder, System.Object(), System.Object)
+  nameWithType: ShadowRow.TrySetIndex(SetIndexBinder, Object[], Object)
+  nameWithType.vb: ShadowRow.TrySetIndex(SetIndexBinder, Object(), Object)
+- uid: Linq2Shadow.ShadowRow.TrySetIndex*
+  name: TrySetIndex
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_TrySetIndex_
+  commentId: Overload:Linq2Shadow.ShadowRow.TrySetIndex
+  isSpec: "True"
+  fullName: Linq2Shadow.ShadowRow.TrySetIndex
+  nameWithType: ShadowRow.TrySetIndex
+- uid: Linq2Shadow.ShadowRow.TrySetMember(System.Dynamic.SetMemberBinder,System.Object)
+  name: TrySetMember(SetMemberBinder, Object)
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_TrySetMember_System_Dynamic_SetMemberBinder_System_Object_
+  commentId: M:Linq2Shadow.ShadowRow.TrySetMember(System.Dynamic.SetMemberBinder,System.Object)
+  fullName: Linq2Shadow.ShadowRow.TrySetMember(System.Dynamic.SetMemberBinder, System.Object)
+  nameWithType: ShadowRow.TrySetMember(SetMemberBinder, Object)
+- uid: Linq2Shadow.ShadowRow.TrySetMember*
+  name: TrySetMember
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_TrySetMember_
+  commentId: Overload:Linq2Shadow.ShadowRow.TrySetMember
+  isSpec: "True"
+  fullName: Linq2Shadow.ShadowRow.TrySetMember
+  nameWithType: ShadowRow.TrySetMember
+- uid: Linq2Shadow.ShadowRow.TryUnaryOperation(System.Dynamic.UnaryOperationBinder,System.Object@)
+  name: TryUnaryOperation(UnaryOperationBinder, out Object)
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_TryUnaryOperation_System_Dynamic_UnaryOperationBinder_System_Object__
+  commentId: M:Linq2Shadow.ShadowRow.TryUnaryOperation(System.Dynamic.UnaryOperationBinder,System.Object@)
+  name.vb: TryUnaryOperation(UnaryOperationBinder, ByRef Object)
+  fullName: Linq2Shadow.ShadowRow.TryUnaryOperation(System.Dynamic.UnaryOperationBinder, out System.Object)
+  fullName.vb: Linq2Shadow.ShadowRow.TryUnaryOperation(System.Dynamic.UnaryOperationBinder, ByRef System.Object)
+  nameWithType: ShadowRow.TryUnaryOperation(UnaryOperationBinder, out Object)
+  nameWithType.vb: ShadowRow.TryUnaryOperation(UnaryOperationBinder, ByRef Object)
+- uid: Linq2Shadow.ShadowRow.TryUnaryOperation*
+  name: TryUnaryOperation
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_TryUnaryOperation_
+  commentId: Overload:Linq2Shadow.ShadowRow.TryUnaryOperation
+  isSpec: "True"
+  fullName: Linq2Shadow.ShadowRow.TryUnaryOperation
+  nameWithType: ShadowRow.TryUnaryOperation
+- uid: Linq2Shadow.ShadowRow.Values
+  name: Values
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_Values
+  commentId: P:Linq2Shadow.ShadowRow.Values
+  fullName: Linq2Shadow.ShadowRow.Values
+  nameWithType: ShadowRow.Values
+- uid: Linq2Shadow.ShadowRow.Values*
+  name: Values
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_Values_
+  commentId: Overload:Linq2Shadow.ShadowRow.Values
+  isSpec: "True"
+  fullName: Linq2Shadow.ShadowRow.Values
+  nameWithType: ShadowRow.Values
+- uid: Linq2Shadow.Utils
+  name: Linq2Shadow.Utils
+  href: api/Linq2Shadow.Utils.html
+  commentId: N:Linq2Shadow.Utils
+  fullName: Linq2Shadow.Utils
+  nameWithType: Linq2Shadow.Utils
+- uid: Linq2Shadow.Utils.ExpressionUtils
+  name: ExpressionUtils
+  href: api/Linq2Shadow.Utils.ExpressionUtils.html
+  commentId: T:Linq2Shadow.Utils.ExpressionUtils
+  fullName: Linq2Shadow.Utils.ExpressionUtils
+  nameWithType: ExpressionUtils
+- uid: Linq2Shadow.Utils.ExpressionUtils.And(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}},System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}})
+  name: And(Expression<Func<ShadowRow, Boolean>>, Expression<Func<ShadowRow, Boolean>>)
+  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_And_System_Linq_Expressions_Expression_System_Func_Linq2Shadow_ShadowRow_System_Boolean___System_Linq_Expressions_Expression_System_Func_Linq2Shadow_ShadowRow_System_Boolean___
+  commentId: M:Linq2Shadow.Utils.ExpressionUtils.And(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}},System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}})
+  name.vb: And(Expression(Of Func(Of ShadowRow, Boolean)), Expression(Of Func(Of ShadowRow, Boolean)))
+  fullName: Linq2Shadow.Utils.ExpressionUtils.And(System.Linq.Expressions.Expression<System.Func<Linq2Shadow.ShadowRow, System.Boolean>>, System.Linq.Expressions.Expression<System.Func<Linq2Shadow.ShadowRow, System.Boolean>>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionUtils.And(System.Linq.Expressions.Expression(Of System.Func(Of Linq2Shadow.ShadowRow, System.Boolean)), System.Linq.Expressions.Expression(Of System.Func(Of Linq2Shadow.ShadowRow, System.Boolean)))
+  nameWithType: ExpressionUtils.And(Expression<Func<ShadowRow, Boolean>>, Expression<Func<ShadowRow, Boolean>>)
+  nameWithType.vb: ExpressionUtils.And(Expression(Of Func(Of ShadowRow, Boolean)), Expression(Of Func(Of ShadowRow, Boolean)))
+- uid: Linq2Shadow.Utils.ExpressionUtils.And(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}}[])
+  name: And(Expression<Func<ShadowRow, Boolean>>[])
+  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_And_System_Linq_Expressions_Expression_System_Func_Linq2Shadow_ShadowRow_System_Boolean_____
+  commentId: M:Linq2Shadow.Utils.ExpressionUtils.And(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}}[])
+  name.vb: And(Expression(Of Func(Of ShadowRow, Boolean))())
+  fullName: Linq2Shadow.Utils.ExpressionUtils.And(System.Linq.Expressions.Expression<System.Func<Linq2Shadow.ShadowRow, System.Boolean>>[])
+  fullName.vb: Linq2Shadow.Utils.ExpressionUtils.And(System.Linq.Expressions.Expression(Of System.Func(Of Linq2Shadow.ShadowRow, System.Boolean))())
+  nameWithType: ExpressionUtils.And(Expression<Func<ShadowRow, Boolean>>[])
+  nameWithType.vb: ExpressionUtils.And(Expression(Of Func(Of ShadowRow, Boolean))())
+- uid: Linq2Shadow.Utils.ExpressionUtils.And*
+  name: And
+  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_And_
+  commentId: Overload:Linq2Shadow.Utils.ExpressionUtils.And
+  isSpec: "True"
+  fullName: Linq2Shadow.Utils.ExpressionUtils.And
+  nameWithType: ExpressionUtils.And
+- uid: Linq2Shadow.Utils.ExpressionUtils.CollectionContains(System.Linq.Expressions.ConstantExpression,System.String)
+  name: CollectionContains(ConstantExpression, String)
+  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_CollectionContains_System_Linq_Expressions_ConstantExpression_System_String_
+  commentId: M:Linq2Shadow.Utils.ExpressionUtils.CollectionContains(System.Linq.Expressions.ConstantExpression,System.String)
+  fullName: Linq2Shadow.Utils.ExpressionUtils.CollectionContains(System.Linq.Expressions.ConstantExpression, System.String)
+  nameWithType: ExpressionUtils.CollectionContains(ConstantExpression, String)
+- uid: Linq2Shadow.Utils.ExpressionUtils.CollectionContains*
+  name: CollectionContains
+  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_CollectionContains_
+  commentId: Overload:Linq2Shadow.Utils.ExpressionUtils.CollectionContains
+  isSpec: "True"
+  fullName: Linq2Shadow.Utils.ExpressionUtils.CollectionContains
+  nameWithType: ExpressionUtils.CollectionContains
+- uid: Linq2Shadow.Utils.ExpressionUtils.Contains(System.String,System.String,System.Linq.Expressions.ParameterExpression)
+  name: Contains(String, String, ParameterExpression)
+  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_Contains_System_String_System_String_System_Linq_Expressions_ParameterExpression_
+  commentId: M:Linq2Shadow.Utils.ExpressionUtils.Contains(System.String,System.String,System.Linq.Expressions.ParameterExpression)
+  fullName: Linq2Shadow.Utils.ExpressionUtils.Contains(System.String, System.String, System.Linq.Expressions.ParameterExpression)
+  nameWithType: ExpressionUtils.Contains(String, String, ParameterExpression)
+- uid: Linq2Shadow.Utils.ExpressionUtils.Contains*
+  name: Contains
+  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_Contains_
+  commentId: Overload:Linq2Shadow.Utils.ExpressionUtils.Contains
+  isSpec: "True"
+  fullName: Linq2Shadow.Utils.ExpressionUtils.Contains
+  nameWithType: ExpressionUtils.Contains
+- uid: Linq2Shadow.Utils.ExpressionUtils.CreateDefaultRowParameter
+  name: CreateDefaultRowParameter()
+  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_CreateDefaultRowParameter
+  commentId: M:Linq2Shadow.Utils.ExpressionUtils.CreateDefaultRowParameter
+  fullName: Linq2Shadow.Utils.ExpressionUtils.CreateDefaultRowParameter()
+  nameWithType: ExpressionUtils.CreateDefaultRowParameter()
+- uid: Linq2Shadow.Utils.ExpressionUtils.CreateDefaultRowParameter*
+  name: CreateDefaultRowParameter
+  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_CreateDefaultRowParameter_
+  commentId: Overload:Linq2Shadow.Utils.ExpressionUtils.CreateDefaultRowParameter
+  isSpec: "True"
+  fullName: Linq2Shadow.Utils.ExpressionUtils.CreateDefaultRowParameter
+  nameWithType: ExpressionUtils.CreateDefaultRowParameter
+- uid: Linq2Shadow.Utils.ExpressionUtils.EndsWith(System.String,System.String,System.Linq.Expressions.ParameterExpression)
+  name: EndsWith(String, String, ParameterExpression)
+  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_EndsWith_System_String_System_String_System_Linq_Expressions_ParameterExpression_
+  commentId: M:Linq2Shadow.Utils.ExpressionUtils.EndsWith(System.String,System.String,System.Linq.Expressions.ParameterExpression)
+  fullName: Linq2Shadow.Utils.ExpressionUtils.EndsWith(System.String, System.String, System.Linq.Expressions.ParameterExpression)
+  nameWithType: ExpressionUtils.EndsWith(String, String, ParameterExpression)
+- uid: Linq2Shadow.Utils.ExpressionUtils.EndsWith*
+  name: EndsWith
+  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_EndsWith_
+  commentId: Overload:Linq2Shadow.Utils.ExpressionUtils.EndsWith
+  isSpec: "True"
+  fullName: Linq2Shadow.Utils.ExpressionUtils.EndsWith
+  nameWithType: ExpressionUtils.EndsWith
+- uid: Linq2Shadow.Utils.ExpressionUtils.MakeEquals(System.String,System.Linq.Expressions.ConstantExpression,System.Linq.Expressions.ParameterExpression)
+  name: MakeEquals(String, ConstantExpression, ParameterExpression)
+  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_MakeEquals_System_String_System_Linq_Expressions_ConstantExpression_System_Linq_Expressions_ParameterExpression_
+  commentId: M:Linq2Shadow.Utils.ExpressionUtils.MakeEquals(System.String,System.Linq.Expressions.ConstantExpression,System.Linq.Expressions.ParameterExpression)
+  fullName: Linq2Shadow.Utils.ExpressionUtils.MakeEquals(System.String, System.Linq.Expressions.ConstantExpression, System.Linq.Expressions.ParameterExpression)
+  nameWithType: ExpressionUtils.MakeEquals(String, ConstantExpression, ParameterExpression)
+- uid: Linq2Shadow.Utils.ExpressionUtils.MakeEquals*
+  name: MakeEquals
+  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_MakeEquals_
+  commentId: Overload:Linq2Shadow.Utils.ExpressionUtils.MakeEquals
+  isSpec: "True"
+  fullName: Linq2Shadow.Utils.ExpressionUtils.MakeEquals
+  nameWithType: ExpressionUtils.MakeEquals
+- uid: Linq2Shadow.Utils.ExpressionUtils.MakeEquals``1(System.String,``0,System.Linq.Expressions.ParameterExpression)
+  name: MakeEquals<T>(String, T, ParameterExpression)
+  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_MakeEquals__1_System_String___0_System_Linq_Expressions_ParameterExpression_
+  commentId: M:Linq2Shadow.Utils.ExpressionUtils.MakeEquals``1(System.String,``0,System.Linq.Expressions.ParameterExpression)
+  name.vb: MakeEquals(Of T)(String, T, ParameterExpression)
+  fullName: Linq2Shadow.Utils.ExpressionUtils.MakeEquals<T>(System.String, T, System.Linq.Expressions.ParameterExpression)
+  fullName.vb: Linq2Shadow.Utils.ExpressionUtils.MakeEquals(Of T)(System.String, T, System.Linq.Expressions.ParameterExpression)
+  nameWithType: ExpressionUtils.MakeEquals<T>(String, T, ParameterExpression)
+  nameWithType.vb: ExpressionUtils.MakeEquals(Of T)(String, T, ParameterExpression)
+- uid: Linq2Shadow.Utils.ExpressionUtils.MakeGreaterThan(System.String,System.Linq.Expressions.ConstantExpression,System.Linq.Expressions.ParameterExpression)
+  name: MakeGreaterThan(String, ConstantExpression, ParameterExpression)
+  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_MakeGreaterThan_System_String_System_Linq_Expressions_ConstantExpression_System_Linq_Expressions_ParameterExpression_
+  commentId: M:Linq2Shadow.Utils.ExpressionUtils.MakeGreaterThan(System.String,System.Linq.Expressions.ConstantExpression,System.Linq.Expressions.ParameterExpression)
+  fullName: Linq2Shadow.Utils.ExpressionUtils.MakeGreaterThan(System.String, System.Linq.Expressions.ConstantExpression, System.Linq.Expressions.ParameterExpression)
+  nameWithType: ExpressionUtils.MakeGreaterThan(String, ConstantExpression, ParameterExpression)
+- uid: Linq2Shadow.Utils.ExpressionUtils.MakeGreaterThan*
+  name: MakeGreaterThan
+  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_MakeGreaterThan_
+  commentId: Overload:Linq2Shadow.Utils.ExpressionUtils.MakeGreaterThan
+  isSpec: "True"
+  fullName: Linq2Shadow.Utils.ExpressionUtils.MakeGreaterThan
+  nameWithType: ExpressionUtils.MakeGreaterThan
+- uid: Linq2Shadow.Utils.ExpressionUtils.MakeGreaterThanOrEqual(System.String,System.Linq.Expressions.ConstantExpression,System.Linq.Expressions.ParameterExpression)
+  name: MakeGreaterThanOrEqual(String, ConstantExpression, ParameterExpression)
+  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_MakeGreaterThanOrEqual_System_String_System_Linq_Expressions_ConstantExpression_System_Linq_Expressions_ParameterExpression_
+  commentId: M:Linq2Shadow.Utils.ExpressionUtils.MakeGreaterThanOrEqual(System.String,System.Linq.Expressions.ConstantExpression,System.Linq.Expressions.ParameterExpression)
+  fullName: Linq2Shadow.Utils.ExpressionUtils.MakeGreaterThanOrEqual(System.String, System.Linq.Expressions.ConstantExpression, System.Linq.Expressions.ParameterExpression)
+  nameWithType: ExpressionUtils.MakeGreaterThanOrEqual(String, ConstantExpression, ParameterExpression)
+- uid: Linq2Shadow.Utils.ExpressionUtils.MakeGreaterThanOrEqual*
+  name: MakeGreaterThanOrEqual
+  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_MakeGreaterThanOrEqual_
+  commentId: Overload:Linq2Shadow.Utils.ExpressionUtils.MakeGreaterThanOrEqual
+  isSpec: "True"
+  fullName: Linq2Shadow.Utils.ExpressionUtils.MakeGreaterThanOrEqual
+  nameWithType: ExpressionUtils.MakeGreaterThanOrEqual
+- uid: Linq2Shadow.Utils.ExpressionUtils.MakeLessThan(System.String,System.Linq.Expressions.ConstantExpression,System.Linq.Expressions.ParameterExpression)
+  name: MakeLessThan(String, ConstantExpression, ParameterExpression)
+  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_MakeLessThan_System_String_System_Linq_Expressions_ConstantExpression_System_Linq_Expressions_ParameterExpression_
+  commentId: M:Linq2Shadow.Utils.ExpressionUtils.MakeLessThan(System.String,System.Linq.Expressions.ConstantExpression,System.Linq.Expressions.ParameterExpression)
+  fullName: Linq2Shadow.Utils.ExpressionUtils.MakeLessThan(System.String, System.Linq.Expressions.ConstantExpression, System.Linq.Expressions.ParameterExpression)
+  nameWithType: ExpressionUtils.MakeLessThan(String, ConstantExpression, ParameterExpression)
+- uid: Linq2Shadow.Utils.ExpressionUtils.MakeLessThan*
+  name: MakeLessThan
+  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_MakeLessThan_
+  commentId: Overload:Linq2Shadow.Utils.ExpressionUtils.MakeLessThan
+  isSpec: "True"
+  fullName: Linq2Shadow.Utils.ExpressionUtils.MakeLessThan
+  nameWithType: ExpressionUtils.MakeLessThan
+- uid: Linq2Shadow.Utils.ExpressionUtils.MakeLessThanOrEqual(System.String,System.Linq.Expressions.ConstantExpression,System.Linq.Expressions.ParameterExpression)
+  name: MakeLessThanOrEqual(String, ConstantExpression, ParameterExpression)
+  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_MakeLessThanOrEqual_System_String_System_Linq_Expressions_ConstantExpression_System_Linq_Expressions_ParameterExpression_
+  commentId: M:Linq2Shadow.Utils.ExpressionUtils.MakeLessThanOrEqual(System.String,System.Linq.Expressions.ConstantExpression,System.Linq.Expressions.ParameterExpression)
+  fullName: Linq2Shadow.Utils.ExpressionUtils.MakeLessThanOrEqual(System.String, System.Linq.Expressions.ConstantExpression, System.Linq.Expressions.ParameterExpression)
+  nameWithType: ExpressionUtils.MakeLessThanOrEqual(String, ConstantExpression, ParameterExpression)
+- uid: Linq2Shadow.Utils.ExpressionUtils.MakeLessThanOrEqual*
+  name: MakeLessThanOrEqual
+  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_MakeLessThanOrEqual_
+  commentId: Overload:Linq2Shadow.Utils.ExpressionUtils.MakeLessThanOrEqual
+  isSpec: "True"
+  fullName: Linq2Shadow.Utils.ExpressionUtils.MakeLessThanOrEqual
+  nameWithType: ExpressionUtils.MakeLessThanOrEqual
+- uid: Linq2Shadow.Utils.ExpressionUtils.MakeNotEquals(System.String,System.Linq.Expressions.ConstantExpression,System.Linq.Expressions.ParameterExpression)
+  name: MakeNotEquals(String, ConstantExpression, ParameterExpression)
+  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_MakeNotEquals_System_String_System_Linq_Expressions_ConstantExpression_System_Linq_Expressions_ParameterExpression_
+  commentId: M:Linq2Shadow.Utils.ExpressionUtils.MakeNotEquals(System.String,System.Linq.Expressions.ConstantExpression,System.Linq.Expressions.ParameterExpression)
+  fullName: Linq2Shadow.Utils.ExpressionUtils.MakeNotEquals(System.String, System.Linq.Expressions.ConstantExpression, System.Linq.Expressions.ParameterExpression)
+  nameWithType: ExpressionUtils.MakeNotEquals(String, ConstantExpression, ParameterExpression)
+- uid: Linq2Shadow.Utils.ExpressionUtils.MakeNotEquals*
+  name: MakeNotEquals
+  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_MakeNotEquals_
+  commentId: Overload:Linq2Shadow.Utils.ExpressionUtils.MakeNotEquals
+  isSpec: "True"
+  fullName: Linq2Shadow.Utils.ExpressionUtils.MakeNotEquals
+  nameWithType: ExpressionUtils.MakeNotEquals
+- uid: Linq2Shadow.Utils.ExpressionUtils.MemberPropertyAccess(System.String)
+  name: MemberPropertyAccess(String)
+  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_MemberPropertyAccess_System_String_
+  commentId: M:Linq2Shadow.Utils.ExpressionUtils.MemberPropertyAccess(System.String)
+  fullName: Linq2Shadow.Utils.ExpressionUtils.MemberPropertyAccess(System.String)
+  nameWithType: ExpressionUtils.MemberPropertyAccess(String)
+- uid: Linq2Shadow.Utils.ExpressionUtils.MemberPropertyAccess*
+  name: MemberPropertyAccess
+  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_MemberPropertyAccess_
+  commentId: Overload:Linq2Shadow.Utils.ExpressionUtils.MemberPropertyAccess
+  isSpec: "True"
+  fullName: Linq2Shadow.Utils.ExpressionUtils.MemberPropertyAccess
+  nameWithType: ExpressionUtils.MemberPropertyAccess
+- uid: Linq2Shadow.Utils.ExpressionUtils.Or(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}},System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}})
+  name: Or(Expression<Func<ShadowRow, Boolean>>, Expression<Func<ShadowRow, Boolean>>)
+  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_Or_System_Linq_Expressions_Expression_System_Func_Linq2Shadow_ShadowRow_System_Boolean___System_Linq_Expressions_Expression_System_Func_Linq2Shadow_ShadowRow_System_Boolean___
+  commentId: M:Linq2Shadow.Utils.ExpressionUtils.Or(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}},System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}})
+  name.vb: Or(Expression(Of Func(Of ShadowRow, Boolean)), Expression(Of Func(Of ShadowRow, Boolean)))
+  fullName: Linq2Shadow.Utils.ExpressionUtils.Or(System.Linq.Expressions.Expression<System.Func<Linq2Shadow.ShadowRow, System.Boolean>>, System.Linq.Expressions.Expression<System.Func<Linq2Shadow.ShadowRow, System.Boolean>>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionUtils.Or(System.Linq.Expressions.Expression(Of System.Func(Of Linq2Shadow.ShadowRow, System.Boolean)), System.Linq.Expressions.Expression(Of System.Func(Of Linq2Shadow.ShadowRow, System.Boolean)))
+  nameWithType: ExpressionUtils.Or(Expression<Func<ShadowRow, Boolean>>, Expression<Func<ShadowRow, Boolean>>)
+  nameWithType.vb: ExpressionUtils.Or(Expression(Of Func(Of ShadowRow, Boolean)), Expression(Of Func(Of ShadowRow, Boolean)))
+- uid: Linq2Shadow.Utils.ExpressionUtils.Or(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}}[])
+  name: Or(Expression<Func<ShadowRow, Boolean>>[])
+  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_Or_System_Linq_Expressions_Expression_System_Func_Linq2Shadow_ShadowRow_System_Boolean_____
+  commentId: M:Linq2Shadow.Utils.ExpressionUtils.Or(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}}[])
+  name.vb: Or(Expression(Of Func(Of ShadowRow, Boolean))())
+  fullName: Linq2Shadow.Utils.ExpressionUtils.Or(System.Linq.Expressions.Expression<System.Func<Linq2Shadow.ShadowRow, System.Boolean>>[])
+  fullName.vb: Linq2Shadow.Utils.ExpressionUtils.Or(System.Linq.Expressions.Expression(Of System.Func(Of Linq2Shadow.ShadowRow, System.Boolean))())
+  nameWithType: ExpressionUtils.Or(Expression<Func<ShadowRow, Boolean>>[])
+  nameWithType.vb: ExpressionUtils.Or(Expression(Of Func(Of ShadowRow, Boolean))())
+- uid: Linq2Shadow.Utils.ExpressionUtils.Or*
+  name: Or
+  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_Or_
+  commentId: Overload:Linq2Shadow.Utils.ExpressionUtils.Or
+  isSpec: "True"
+  fullName: Linq2Shadow.Utils.ExpressionUtils.Or
+  nameWithType: ExpressionUtils.Or
+- uid: Linq2Shadow.Utils.ExpressionUtils.StartsWith(System.String,System.String,System.Linq.Expressions.ParameterExpression)
+  name: StartsWith(String, String, ParameterExpression)
+  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_StartsWith_System_String_System_String_System_Linq_Expressions_ParameterExpression_
+  commentId: M:Linq2Shadow.Utils.ExpressionUtils.StartsWith(System.String,System.String,System.Linq.Expressions.ParameterExpression)
+  fullName: Linq2Shadow.Utils.ExpressionUtils.StartsWith(System.String, System.String, System.Linq.Expressions.ParameterExpression)
+  nameWithType: ExpressionUtils.StartsWith(String, String, ParameterExpression)
+- uid: Linq2Shadow.Utils.ExpressionUtils.StartsWith*
+  name: StartsWith
+  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_StartsWith_
+  commentId: Overload:Linq2Shadow.Utils.ExpressionUtils.StartsWith
+  isSpec: "True"
+  fullName: Linq2Shadow.Utils.ExpressionUtils.StartsWith
+  nameWithType: ExpressionUtils.StartsWith
