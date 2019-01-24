@@ -1,15 +1,20 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "build",
-            "command": "dotnet",
-            "type": "process",
-            "args": [
-                "build",
-                "${workspaceFolder}/Linq2ShadowTests/Linq2ShadowTests.csproj"
-            ],
-            "problemMatcher": "$msCompile"
-        }
-    ]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "build",
+        "${workspaceFolder}/Linq2ShadowTests/Linq2ShadowTests.csproj"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "build doc",
+      "type": "shell",
+      "command": "./build-doc.ps1"
+    }
+  ]
 }
