@@ -15,7 +15,9 @@ namespace Linq2Shadow.Extensions
                 for (int i = 0; i < reader.FieldCount; i++)
                 {
                     var name = reader.GetName(i);
-                    var value = reader.GetValue(i);
+                    var value = reader.IsDBNull(i)
+                        ? null
+                        : reader.GetValue(i);
                     row.SetValue(name, value);
                 }
                 items.Add(row);

@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Linq2Shadow.DatabaseContext.html",
-          "hash": "Fko+jUK2rN78Q9WWQkRNTA=="
+          "hash": "9GBGZREXpUEGjdmOM4LKaQ=="
         }
       },
       "is_incremental": true,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Linq2Shadow.ShadowRow.html",
-          "hash": "3BybJkodUeE3b5DH3Vcy7A=="
+          "hash": "Yus//Qgw3l6ZAukEbIvYmA=="
         }
       },
       "is_incremental": true,
@@ -29,11 +29,23 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Linq2Shadow.Utils.ExpressionUtils.yml",
+      "source_relative_path": "api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Linq2Shadow.Utils.ExpressionUtils.html",
-          "hash": "rVgpZTyIi27q/sQXzB2juQ=="
+          "relative_path": "api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html",
+          "hash": "+jn6XF0ohSsIyRxguB8buA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Linq2Shadow.Utils.ExpressionBuilders.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Linq2Shadow.Utils.ExpressionBuilders.html",
+          "hash": "cDNVjM5XYWuA4Lfu1/yGFQ=="
         }
       },
       "is_incremental": true,
@@ -45,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Linq2Shadow.Utils.html",
-          "hash": "LqFqK25kWmRlcIqEo16qMg=="
+          "hash": "LN7jYNfzYPHYhlNJ8B/8xA=="
         }
       },
       "is_incremental": true,
@@ -81,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "VGi0mLq+X9V9Q9B4VQSm2w=="
+          "hash": "u/HaODF4/angv8MMPoRBqQ=="
         }
       },
       "is_incremental": false,

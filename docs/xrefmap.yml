@@ -427,224 +427,255 @@ references:
   commentId: N:Linq2Shadow.Utils
   fullName: Linq2Shadow.Utils
   nameWithType: Linq2Shadow.Utils
-- uid: Linq2Shadow.Utils.ExpressionUtils
-  name: ExpressionUtils
-  href: api/Linq2Shadow.Utils.ExpressionUtils.html
-  commentId: T:Linq2Shadow.Utils.ExpressionUtils
-  fullName: Linq2Shadow.Utils.ExpressionUtils
-  nameWithType: ExpressionUtils
-- uid: Linq2Shadow.Utils.ExpressionUtils.And(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}},System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}})
+- uid: Linq2Shadow.Utils.ExpressionBuilders
+  name: ExpressionBuilders
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.html
+  commentId: T:Linq2Shadow.Utils.ExpressionBuilders
+  fullName: Linq2Shadow.Utils.ExpressionBuilders
+  nameWithType: ExpressionBuilders
+- uid: Linq2Shadow.Utils.ExpressionBuilders.And(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}},System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}})
   name: And(Expression<Func<ShadowRow, Boolean>>, Expression<Func<ShadowRow, Boolean>>)
-  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_And_System_Linq_Expressions_Expression_System_Func_Linq2Shadow_ShadowRow_System_Boolean___System_Linq_Expressions_Expression_System_Func_Linq2Shadow_ShadowRow_System_Boolean___
-  commentId: M:Linq2Shadow.Utils.ExpressionUtils.And(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}},System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}})
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.html#Linq2Shadow_Utils_ExpressionBuilders_And_System_Linq_Expressions_Expression_System_Func_Linq2Shadow_ShadowRow_System_Boolean___System_Linq_Expressions_Expression_System_Func_Linq2Shadow_ShadowRow_System_Boolean___
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.And(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}},System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}})
   name.vb: And(Expression(Of Func(Of ShadowRow, Boolean)), Expression(Of Func(Of ShadowRow, Boolean)))
-  fullName: Linq2Shadow.Utils.ExpressionUtils.And(System.Linq.Expressions.Expression<System.Func<Linq2Shadow.ShadowRow, System.Boolean>>, System.Linq.Expressions.Expression<System.Func<Linq2Shadow.ShadowRow, System.Boolean>>)
-  fullName.vb: Linq2Shadow.Utils.ExpressionUtils.And(System.Linq.Expressions.Expression(Of System.Func(Of Linq2Shadow.ShadowRow, System.Boolean)), System.Linq.Expressions.Expression(Of System.Func(Of Linq2Shadow.ShadowRow, System.Boolean)))
-  nameWithType: ExpressionUtils.And(Expression<Func<ShadowRow, Boolean>>, Expression<Func<ShadowRow, Boolean>>)
-  nameWithType.vb: ExpressionUtils.And(Expression(Of Func(Of ShadowRow, Boolean)), Expression(Of Func(Of ShadowRow, Boolean)))
-- uid: Linq2Shadow.Utils.ExpressionUtils.And(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}}[])
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.And(System.Linq.Expressions.Expression<System.Func<Linq2Shadow.ShadowRow, System.Boolean>>, System.Linq.Expressions.Expression<System.Func<Linq2Shadow.ShadowRow, System.Boolean>>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.And(System.Linq.Expressions.Expression(Of System.Func(Of Linq2Shadow.ShadowRow, System.Boolean)), System.Linq.Expressions.Expression(Of System.Func(Of Linq2Shadow.ShadowRow, System.Boolean)))
+  nameWithType: ExpressionBuilders.And(Expression<Func<ShadowRow, Boolean>>, Expression<Func<ShadowRow, Boolean>>)
+  nameWithType.vb: ExpressionBuilders.And(Expression(Of Func(Of ShadowRow, Boolean)), Expression(Of Func(Of ShadowRow, Boolean)))
+- uid: Linq2Shadow.Utils.ExpressionBuilders.And(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}}[])
   name: And(Expression<Func<ShadowRow, Boolean>>[])
-  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_And_System_Linq_Expressions_Expression_System_Func_Linq2Shadow_ShadowRow_System_Boolean_____
-  commentId: M:Linq2Shadow.Utils.ExpressionUtils.And(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}}[])
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.html#Linq2Shadow_Utils_ExpressionBuilders_And_System_Linq_Expressions_Expression_System_Func_Linq2Shadow_ShadowRow_System_Boolean_____
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.And(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}}[])
   name.vb: And(Expression(Of Func(Of ShadowRow, Boolean))())
-  fullName: Linq2Shadow.Utils.ExpressionUtils.And(System.Linq.Expressions.Expression<System.Func<Linq2Shadow.ShadowRow, System.Boolean>>[])
-  fullName.vb: Linq2Shadow.Utils.ExpressionUtils.And(System.Linq.Expressions.Expression(Of System.Func(Of Linq2Shadow.ShadowRow, System.Boolean))())
-  nameWithType: ExpressionUtils.And(Expression<Func<ShadowRow, Boolean>>[])
-  nameWithType.vb: ExpressionUtils.And(Expression(Of Func(Of ShadowRow, Boolean))())
-- uid: Linq2Shadow.Utils.ExpressionUtils.And*
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.And(System.Linq.Expressions.Expression<System.Func<Linq2Shadow.ShadowRow, System.Boolean>>[])
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.And(System.Linq.Expressions.Expression(Of System.Func(Of Linq2Shadow.ShadowRow, System.Boolean))())
+  nameWithType: ExpressionBuilders.And(Expression<Func<ShadowRow, Boolean>>[])
+  nameWithType.vb: ExpressionBuilders.And(Expression(Of Func(Of ShadowRow, Boolean))())
+- uid: Linq2Shadow.Utils.ExpressionBuilders.And*
   name: And
-  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_And_
-  commentId: Overload:Linq2Shadow.Utils.ExpressionUtils.And
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.html#Linq2Shadow_Utils_ExpressionBuilders_And_
+  commentId: Overload:Linq2Shadow.Utils.ExpressionBuilders.And
   isSpec: "True"
-  fullName: Linq2Shadow.Utils.ExpressionUtils.And
-  nameWithType: ExpressionUtils.And
-- uid: Linq2Shadow.Utils.ExpressionUtils.CollectionContains(System.Linq.Expressions.ConstantExpression,System.String)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.And
+  nameWithType: ExpressionBuilders.And
+- uid: Linq2Shadow.Utils.ExpressionBuilders.CollectionContains(System.Linq.Expressions.ConstantExpression,System.String)
   name: CollectionContains(ConstantExpression, String)
-  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_CollectionContains_System_Linq_Expressions_ConstantExpression_System_String_
-  commentId: M:Linq2Shadow.Utils.ExpressionUtils.CollectionContains(System.Linq.Expressions.ConstantExpression,System.String)
-  fullName: Linq2Shadow.Utils.ExpressionUtils.CollectionContains(System.Linq.Expressions.ConstantExpression, System.String)
-  nameWithType: ExpressionUtils.CollectionContains(ConstantExpression, String)
-- uid: Linq2Shadow.Utils.ExpressionUtils.CollectionContains*
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.html#Linq2Shadow_Utils_ExpressionBuilders_CollectionContains_System_Linq_Expressions_ConstantExpression_System_String_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.CollectionContains(System.Linq.Expressions.ConstantExpression,System.String)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.CollectionContains(System.Linq.Expressions.ConstantExpression, System.String)
+  nameWithType: ExpressionBuilders.CollectionContains(ConstantExpression, String)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.CollectionContains*
   name: CollectionContains
-  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_CollectionContains_
-  commentId: Overload:Linq2Shadow.Utils.ExpressionUtils.CollectionContains
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.html#Linq2Shadow_Utils_ExpressionBuilders_CollectionContains_
+  commentId: Overload:Linq2Shadow.Utils.ExpressionBuilders.CollectionContains
   isSpec: "True"
-  fullName: Linq2Shadow.Utils.ExpressionUtils.CollectionContains
-  nameWithType: ExpressionUtils.CollectionContains
-- uid: Linq2Shadow.Utils.ExpressionUtils.Contains(System.String,System.String,System.Linq.Expressions.ParameterExpression)
-  name: Contains(String, String, ParameterExpression)
-  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_Contains_System_String_System_String_System_Linq_Expressions_ParameterExpression_
-  commentId: M:Linq2Shadow.Utils.ExpressionUtils.Contains(System.String,System.String,System.Linq.Expressions.ParameterExpression)
-  fullName: Linq2Shadow.Utils.ExpressionUtils.Contains(System.String, System.String, System.Linq.Expressions.ParameterExpression)
-  nameWithType: ExpressionUtils.Contains(String, String, ParameterExpression)
-- uid: Linq2Shadow.Utils.ExpressionUtils.Contains*
-  name: Contains
-  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_Contains_
-  commentId: Overload:Linq2Shadow.Utils.ExpressionUtils.Contains
-  isSpec: "True"
-  fullName: Linq2Shadow.Utils.ExpressionUtils.Contains
-  nameWithType: ExpressionUtils.Contains
-- uid: Linq2Shadow.Utils.ExpressionUtils.CreateDefaultRowParameter
-  name: CreateDefaultRowParameter()
-  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_CreateDefaultRowParameter
-  commentId: M:Linq2Shadow.Utils.ExpressionUtils.CreateDefaultRowParameter
-  fullName: Linq2Shadow.Utils.ExpressionUtils.CreateDefaultRowParameter()
-  nameWithType: ExpressionUtils.CreateDefaultRowParameter()
-- uid: Linq2Shadow.Utils.ExpressionUtils.CreateDefaultRowParameter*
-  name: CreateDefaultRowParameter
-  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_CreateDefaultRowParameter_
-  commentId: Overload:Linq2Shadow.Utils.ExpressionUtils.CreateDefaultRowParameter
-  isSpec: "True"
-  fullName: Linq2Shadow.Utils.ExpressionUtils.CreateDefaultRowParameter
-  nameWithType: ExpressionUtils.CreateDefaultRowParameter
-- uid: Linq2Shadow.Utils.ExpressionUtils.EndsWith(System.String,System.String,System.Linq.Expressions.ParameterExpression)
-  name: EndsWith(String, String, ParameterExpression)
-  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_EndsWith_System_String_System_String_System_Linq_Expressions_ParameterExpression_
-  commentId: M:Linq2Shadow.Utils.ExpressionUtils.EndsWith(System.String,System.String,System.Linq.Expressions.ParameterExpression)
-  fullName: Linq2Shadow.Utils.ExpressionUtils.EndsWith(System.String, System.String, System.Linq.Expressions.ParameterExpression)
-  nameWithType: ExpressionUtils.EndsWith(String, String, ParameterExpression)
-- uid: Linq2Shadow.Utils.ExpressionUtils.EndsWith*
-  name: EndsWith
-  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_EndsWith_
-  commentId: Overload:Linq2Shadow.Utils.ExpressionUtils.EndsWith
-  isSpec: "True"
-  fullName: Linq2Shadow.Utils.ExpressionUtils.EndsWith
-  nameWithType: ExpressionUtils.EndsWith
-- uid: Linq2Shadow.Utils.ExpressionUtils.MakeEquals(System.String,System.Linq.Expressions.ConstantExpression,System.Linq.Expressions.ParameterExpression)
-  name: MakeEquals(String, ConstantExpression, ParameterExpression)
-  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_MakeEquals_System_String_System_Linq_Expressions_ConstantExpression_System_Linq_Expressions_ParameterExpression_
-  commentId: M:Linq2Shadow.Utils.ExpressionUtils.MakeEquals(System.String,System.Linq.Expressions.ConstantExpression,System.Linq.Expressions.ParameterExpression)
-  fullName: Linq2Shadow.Utils.ExpressionUtils.MakeEquals(System.String, System.Linq.Expressions.ConstantExpression, System.Linq.Expressions.ParameterExpression)
-  nameWithType: ExpressionUtils.MakeEquals(String, ConstantExpression, ParameterExpression)
-- uid: Linq2Shadow.Utils.ExpressionUtils.MakeEquals*
-  name: MakeEquals
-  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_MakeEquals_
-  commentId: Overload:Linq2Shadow.Utils.ExpressionUtils.MakeEquals
-  isSpec: "True"
-  fullName: Linq2Shadow.Utils.ExpressionUtils.MakeEquals
-  nameWithType: ExpressionUtils.MakeEquals
-- uid: Linq2Shadow.Utils.ExpressionUtils.MakeEquals``1(System.String,``0,System.Linq.Expressions.ParameterExpression)
-  name: MakeEquals<T>(String, T, ParameterExpression)
-  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_MakeEquals__1_System_String___0_System_Linq_Expressions_ParameterExpression_
-  commentId: M:Linq2Shadow.Utils.ExpressionUtils.MakeEquals``1(System.String,``0,System.Linq.Expressions.ParameterExpression)
-  name.vb: MakeEquals(Of T)(String, T, ParameterExpression)
-  fullName: Linq2Shadow.Utils.ExpressionUtils.MakeEquals<T>(System.String, T, System.Linq.Expressions.ParameterExpression)
-  fullName.vb: Linq2Shadow.Utils.ExpressionUtils.MakeEquals(Of T)(System.String, T, System.Linq.Expressions.ParameterExpression)
-  nameWithType: ExpressionUtils.MakeEquals<T>(String, T, ParameterExpression)
-  nameWithType.vb: ExpressionUtils.MakeEquals(Of T)(String, T, ParameterExpression)
-- uid: Linq2Shadow.Utils.ExpressionUtils.MakeGreaterThan(System.String,System.Linq.Expressions.ConstantExpression,System.Linq.Expressions.ParameterExpression)
-  name: MakeGreaterThan(String, ConstantExpression, ParameterExpression)
-  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_MakeGreaterThan_System_String_System_Linq_Expressions_ConstantExpression_System_Linq_Expressions_ParameterExpression_
-  commentId: M:Linq2Shadow.Utils.ExpressionUtils.MakeGreaterThan(System.String,System.Linq.Expressions.ConstantExpression,System.Linq.Expressions.ParameterExpression)
-  fullName: Linq2Shadow.Utils.ExpressionUtils.MakeGreaterThan(System.String, System.Linq.Expressions.ConstantExpression, System.Linq.Expressions.ParameterExpression)
-  nameWithType: ExpressionUtils.MakeGreaterThan(String, ConstantExpression, ParameterExpression)
-- uid: Linq2Shadow.Utils.ExpressionUtils.MakeGreaterThan*
-  name: MakeGreaterThan
-  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_MakeGreaterThan_
-  commentId: Overload:Linq2Shadow.Utils.ExpressionUtils.MakeGreaterThan
-  isSpec: "True"
-  fullName: Linq2Shadow.Utils.ExpressionUtils.MakeGreaterThan
-  nameWithType: ExpressionUtils.MakeGreaterThan
-- uid: Linq2Shadow.Utils.ExpressionUtils.MakeGreaterThanOrEqual(System.String,System.Linq.Expressions.ConstantExpression,System.Linq.Expressions.ParameterExpression)
-  name: MakeGreaterThanOrEqual(String, ConstantExpression, ParameterExpression)
-  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_MakeGreaterThanOrEqual_System_String_System_Linq_Expressions_ConstantExpression_System_Linq_Expressions_ParameterExpression_
-  commentId: M:Linq2Shadow.Utils.ExpressionUtils.MakeGreaterThanOrEqual(System.String,System.Linq.Expressions.ConstantExpression,System.Linq.Expressions.ParameterExpression)
-  fullName: Linq2Shadow.Utils.ExpressionUtils.MakeGreaterThanOrEqual(System.String, System.Linq.Expressions.ConstantExpression, System.Linq.Expressions.ParameterExpression)
-  nameWithType: ExpressionUtils.MakeGreaterThanOrEqual(String, ConstantExpression, ParameterExpression)
-- uid: Linq2Shadow.Utils.ExpressionUtils.MakeGreaterThanOrEqual*
-  name: MakeGreaterThanOrEqual
-  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_MakeGreaterThanOrEqual_
-  commentId: Overload:Linq2Shadow.Utils.ExpressionUtils.MakeGreaterThanOrEqual
-  isSpec: "True"
-  fullName: Linq2Shadow.Utils.ExpressionUtils.MakeGreaterThanOrEqual
-  nameWithType: ExpressionUtils.MakeGreaterThanOrEqual
-- uid: Linq2Shadow.Utils.ExpressionUtils.MakeLessThan(System.String,System.Linq.Expressions.ConstantExpression,System.Linq.Expressions.ParameterExpression)
-  name: MakeLessThan(String, ConstantExpression, ParameterExpression)
-  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_MakeLessThan_System_String_System_Linq_Expressions_ConstantExpression_System_Linq_Expressions_ParameterExpression_
-  commentId: M:Linq2Shadow.Utils.ExpressionUtils.MakeLessThan(System.String,System.Linq.Expressions.ConstantExpression,System.Linq.Expressions.ParameterExpression)
-  fullName: Linq2Shadow.Utils.ExpressionUtils.MakeLessThan(System.String, System.Linq.Expressions.ConstantExpression, System.Linq.Expressions.ParameterExpression)
-  nameWithType: ExpressionUtils.MakeLessThan(String, ConstantExpression, ParameterExpression)
-- uid: Linq2Shadow.Utils.ExpressionUtils.MakeLessThan*
-  name: MakeLessThan
-  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_MakeLessThan_
-  commentId: Overload:Linq2Shadow.Utils.ExpressionUtils.MakeLessThan
-  isSpec: "True"
-  fullName: Linq2Shadow.Utils.ExpressionUtils.MakeLessThan
-  nameWithType: ExpressionUtils.MakeLessThan
-- uid: Linq2Shadow.Utils.ExpressionUtils.MakeLessThanOrEqual(System.String,System.Linq.Expressions.ConstantExpression,System.Linq.Expressions.ParameterExpression)
-  name: MakeLessThanOrEqual(String, ConstantExpression, ParameterExpression)
-  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_MakeLessThanOrEqual_System_String_System_Linq_Expressions_ConstantExpression_System_Linq_Expressions_ParameterExpression_
-  commentId: M:Linq2Shadow.Utils.ExpressionUtils.MakeLessThanOrEqual(System.String,System.Linq.Expressions.ConstantExpression,System.Linq.Expressions.ParameterExpression)
-  fullName: Linq2Shadow.Utils.ExpressionUtils.MakeLessThanOrEqual(System.String, System.Linq.Expressions.ConstantExpression, System.Linq.Expressions.ParameterExpression)
-  nameWithType: ExpressionUtils.MakeLessThanOrEqual(String, ConstantExpression, ParameterExpression)
-- uid: Linq2Shadow.Utils.ExpressionUtils.MakeLessThanOrEqual*
-  name: MakeLessThanOrEqual
-  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_MakeLessThanOrEqual_
-  commentId: Overload:Linq2Shadow.Utils.ExpressionUtils.MakeLessThanOrEqual
-  isSpec: "True"
-  fullName: Linq2Shadow.Utils.ExpressionUtils.MakeLessThanOrEqual
-  nameWithType: ExpressionUtils.MakeLessThanOrEqual
-- uid: Linq2Shadow.Utils.ExpressionUtils.MakeNotEquals(System.String,System.Linq.Expressions.ConstantExpression,System.Linq.Expressions.ParameterExpression)
-  name: MakeNotEquals(String, ConstantExpression, ParameterExpression)
-  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_MakeNotEquals_System_String_System_Linq_Expressions_ConstantExpression_System_Linq_Expressions_ParameterExpression_
-  commentId: M:Linq2Shadow.Utils.ExpressionUtils.MakeNotEquals(System.String,System.Linq.Expressions.ConstantExpression,System.Linq.Expressions.ParameterExpression)
-  fullName: Linq2Shadow.Utils.ExpressionUtils.MakeNotEquals(System.String, System.Linq.Expressions.ConstantExpression, System.Linq.Expressions.ParameterExpression)
-  nameWithType: ExpressionUtils.MakeNotEquals(String, ConstantExpression, ParameterExpression)
-- uid: Linq2Shadow.Utils.ExpressionUtils.MakeNotEquals*
-  name: MakeNotEquals
-  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_MakeNotEquals_
-  commentId: Overload:Linq2Shadow.Utils.ExpressionUtils.MakeNotEquals
-  isSpec: "True"
-  fullName: Linq2Shadow.Utils.ExpressionUtils.MakeNotEquals
-  nameWithType: ExpressionUtils.MakeNotEquals
-- uid: Linq2Shadow.Utils.ExpressionUtils.MemberPropertyAccess(System.String)
-  name: MemberPropertyAccess(String)
-  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_MemberPropertyAccess_System_String_
-  commentId: M:Linq2Shadow.Utils.ExpressionUtils.MemberPropertyAccess(System.String)
-  fullName: Linq2Shadow.Utils.ExpressionUtils.MemberPropertyAccess(System.String)
-  nameWithType: ExpressionUtils.MemberPropertyAccess(String)
-- uid: Linq2Shadow.Utils.ExpressionUtils.MemberPropertyAccess*
-  name: MemberPropertyAccess
-  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_MemberPropertyAccess_
-  commentId: Overload:Linq2Shadow.Utils.ExpressionUtils.MemberPropertyAccess
-  isSpec: "True"
-  fullName: Linq2Shadow.Utils.ExpressionUtils.MemberPropertyAccess
-  nameWithType: ExpressionUtils.MemberPropertyAccess
-- uid: Linq2Shadow.Utils.ExpressionUtils.Or(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}},System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}})
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.CollectionContains
+  nameWithType: ExpressionBuilders.CollectionContains
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Or(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}},System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}})
   name: Or(Expression<Func<ShadowRow, Boolean>>, Expression<Func<ShadowRow, Boolean>>)
-  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_Or_System_Linq_Expressions_Expression_System_Func_Linq2Shadow_ShadowRow_System_Boolean___System_Linq_Expressions_Expression_System_Func_Linq2Shadow_ShadowRow_System_Boolean___
-  commentId: M:Linq2Shadow.Utils.ExpressionUtils.Or(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}},System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}})
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.html#Linq2Shadow_Utils_ExpressionBuilders_Or_System_Linq_Expressions_Expression_System_Func_Linq2Shadow_ShadowRow_System_Boolean___System_Linq_Expressions_Expression_System_Func_Linq2Shadow_ShadowRow_System_Boolean___
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Or(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}},System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}})
   name.vb: Or(Expression(Of Func(Of ShadowRow, Boolean)), Expression(Of Func(Of ShadowRow, Boolean)))
-  fullName: Linq2Shadow.Utils.ExpressionUtils.Or(System.Linq.Expressions.Expression<System.Func<Linq2Shadow.ShadowRow, System.Boolean>>, System.Linq.Expressions.Expression<System.Func<Linq2Shadow.ShadowRow, System.Boolean>>)
-  fullName.vb: Linq2Shadow.Utils.ExpressionUtils.Or(System.Linq.Expressions.Expression(Of System.Func(Of Linq2Shadow.ShadowRow, System.Boolean)), System.Linq.Expressions.Expression(Of System.Func(Of Linq2Shadow.ShadowRow, System.Boolean)))
-  nameWithType: ExpressionUtils.Or(Expression<Func<ShadowRow, Boolean>>, Expression<Func<ShadowRow, Boolean>>)
-  nameWithType.vb: ExpressionUtils.Or(Expression(Of Func(Of ShadowRow, Boolean)), Expression(Of Func(Of ShadowRow, Boolean)))
-- uid: Linq2Shadow.Utils.ExpressionUtils.Or(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}}[])
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Or(System.Linq.Expressions.Expression<System.Func<Linq2Shadow.ShadowRow, System.Boolean>>, System.Linq.Expressions.Expression<System.Func<Linq2Shadow.ShadowRow, System.Boolean>>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Or(System.Linq.Expressions.Expression(Of System.Func(Of Linq2Shadow.ShadowRow, System.Boolean)), System.Linq.Expressions.Expression(Of System.Func(Of Linq2Shadow.ShadowRow, System.Boolean)))
+  nameWithType: ExpressionBuilders.Or(Expression<Func<ShadowRow, Boolean>>, Expression<Func<ShadowRow, Boolean>>)
+  nameWithType.vb: ExpressionBuilders.Or(Expression(Of Func(Of ShadowRow, Boolean)), Expression(Of Func(Of ShadowRow, Boolean)))
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Or(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}}[])
   name: Or(Expression<Func<ShadowRow, Boolean>>[])
-  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_Or_System_Linq_Expressions_Expression_System_Func_Linq2Shadow_ShadowRow_System_Boolean_____
-  commentId: M:Linq2Shadow.Utils.ExpressionUtils.Or(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}}[])
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.html#Linq2Shadow_Utils_ExpressionBuilders_Or_System_Linq_Expressions_Expression_System_Func_Linq2Shadow_ShadowRow_System_Boolean_____
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Or(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}}[])
   name.vb: Or(Expression(Of Func(Of ShadowRow, Boolean))())
-  fullName: Linq2Shadow.Utils.ExpressionUtils.Or(System.Linq.Expressions.Expression<System.Func<Linq2Shadow.ShadowRow, System.Boolean>>[])
-  fullName.vb: Linq2Shadow.Utils.ExpressionUtils.Or(System.Linq.Expressions.Expression(Of System.Func(Of Linq2Shadow.ShadowRow, System.Boolean))())
-  nameWithType: ExpressionUtils.Or(Expression<Func<ShadowRow, Boolean>>[])
-  nameWithType.vb: ExpressionUtils.Or(Expression(Of Func(Of ShadowRow, Boolean))())
-- uid: Linq2Shadow.Utils.ExpressionUtils.Or*
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Or(System.Linq.Expressions.Expression<System.Func<Linq2Shadow.ShadowRow, System.Boolean>>[])
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Or(System.Linq.Expressions.Expression(Of System.Func(Of Linq2Shadow.ShadowRow, System.Boolean))())
+  nameWithType: ExpressionBuilders.Or(Expression<Func<ShadowRow, Boolean>>[])
+  nameWithType.vb: ExpressionBuilders.Or(Expression(Of Func(Of ShadowRow, Boolean))())
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Or*
   name: Or
-  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_Or_
-  commentId: Overload:Linq2Shadow.Utils.ExpressionUtils.Or
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.html#Linq2Shadow_Utils_ExpressionBuilders_Or_
+  commentId: Overload:Linq2Shadow.Utils.ExpressionBuilders.Or
   isSpec: "True"
-  fullName: Linq2Shadow.Utils.ExpressionUtils.Or
-  nameWithType: ExpressionUtils.Or
-- uid: Linq2Shadow.Utils.ExpressionUtils.StartsWith(System.String,System.String,System.Linq.Expressions.ParameterExpression)
-  name: StartsWith(String, String, ParameterExpression)
-  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_StartsWith_System_String_System_String_System_Linq_Expressions_ParameterExpression_
-  commentId: M:Linq2Shadow.Utils.ExpressionUtils.StartsWith(System.String,System.String,System.Linq.Expressions.ParameterExpression)
-  fullName: Linq2Shadow.Utils.ExpressionUtils.StartsWith(System.String, System.String, System.Linq.Expressions.ParameterExpression)
-  nameWithType: ExpressionUtils.StartsWith(String, String, ParameterExpression)
-- uid: Linq2Shadow.Utils.ExpressionUtils.StartsWith*
-  name: StartsWith
-  href: api/Linq2Shadow.Utils.ExpressionUtils.html#Linq2Shadow_Utils_ExpressionUtils_StartsWith_
-  commentId: Overload:Linq2Shadow.Utils.ExpressionUtils.StartsWith
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Or
+  nameWithType: ExpressionBuilders.Or
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates
+  name: ExpressionBuilders.Predicates
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html
+  commentId: T:Linq2Shadow.Utils.ExpressionBuilders.Predicates
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates
+  nameWithType: ExpressionBuilders.Predicates
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Boolean)
+  name: AreEquals(String, Boolean)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreEquals_System_String_System_Boolean_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Boolean)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String, System.Boolean)
+  nameWithType: ExpressionBuilders.Predicates.AreEquals(String, Boolean)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.DateTime)
+  name: AreEquals(String, DateTime)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreEquals_System_String_System_DateTime_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.DateTime)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String, System.DateTime)
+  nameWithType: ExpressionBuilders.Predicates.AreEquals(String, DateTime)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Int32)
+  name: AreEquals(String, Int32)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreEquals_System_String_System_Int32_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Int32)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String, System.Int32)
+  nameWithType: ExpressionBuilders.Predicates.AreEquals(String, Int32)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.String)
+  name: AreEquals(String, String)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreEquals_System_String_System_String_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.String)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String, System.String)
+  nameWithType: ExpressionBuilders.Predicates.AreEquals(String, String)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals*
+  name: AreEquals
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreEquals_
+  commentId: Overload:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals
   isSpec: "True"
-  fullName: Linq2Shadow.Utils.ExpressionUtils.StartsWith
-  nameWithType: ExpressionUtils.StartsWith
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals
+  nameWithType: ExpressionBuilders.Predicates.AreEquals
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Boolean)
+  name: AreNotEquals(String, Boolean)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreNotEquals_System_String_System_Boolean_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Boolean)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String, System.Boolean)
+  nameWithType: ExpressionBuilders.Predicates.AreNotEquals(String, Boolean)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.DateTime)
+  name: AreNotEquals(String, DateTime)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreNotEquals_System_String_System_DateTime_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.DateTime)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String, System.DateTime)
+  nameWithType: ExpressionBuilders.Predicates.AreNotEquals(String, DateTime)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Int32)
+  name: AreNotEquals(String, Int32)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreNotEquals_System_String_System_Int32_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Int32)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String, System.Int32)
+  nameWithType: ExpressionBuilders.Predicates.AreNotEquals(String, Int32)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.String)
+  name: AreNotEquals(String, String)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreNotEquals_System_String_System_String_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.String)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String, System.String)
+  nameWithType: ExpressionBuilders.Predicates.AreNotEquals(String, String)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals*
+  name: AreNotEquals
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreNotEquals_
+  commentId: Overload:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals
+  isSpec: "True"
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals
+  nameWithType: ExpressionBuilders.Predicates.AreNotEquals
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThan(System.String,System.DateTime)
+  name: GreaterThan(String, DateTime)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_GreaterThan_System_String_System_DateTime_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThan(System.String,System.DateTime)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThan(System.String, System.DateTime)
+  nameWithType: ExpressionBuilders.Predicates.GreaterThan(String, DateTime)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThan(System.String,System.Int32)
+  name: GreaterThan(String, Int32)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_GreaterThan_System_String_System_Int32_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThan(System.String,System.Int32)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThan(System.String, System.Int32)
+  nameWithType: ExpressionBuilders.Predicates.GreaterThan(String, Int32)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThan*
+  name: GreaterThan
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_GreaterThan_
+  commentId: Overload:Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThan
+  isSpec: "True"
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThan
+  nameWithType: ExpressionBuilders.Predicates.GreaterThan
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String,System.DateTime)
+  name: GreaterThanOrEqual(String, DateTime)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_GreaterThanOrEqual_System_String_System_DateTime_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String,System.DateTime)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String, System.DateTime)
+  nameWithType: ExpressionBuilders.Predicates.GreaterThanOrEqual(String, DateTime)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String,System.Int32)
+  name: GreaterThanOrEqual(String, Int32)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_GreaterThanOrEqual_System_String_System_Int32_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String,System.Int32)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String, System.Int32)
+  nameWithType: ExpressionBuilders.Predicates.GreaterThanOrEqual(String, Int32)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual*
+  name: GreaterThanOrEqual
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_GreaterThanOrEqual_
+  commentId: Overload:Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual
+  isSpec: "True"
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual
+  nameWithType: ExpressionBuilders.Predicates.GreaterThanOrEqual
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThan(System.String,System.DateTime)
+  name: LessThan(String, DateTime)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LessThan_System_String_System_DateTime_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThan(System.String,System.DateTime)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThan(System.String, System.DateTime)
+  nameWithType: ExpressionBuilders.Predicates.LessThan(String, DateTime)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThan(System.String,System.Int32)
+  name: LessThan(String, Int32)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LessThan_System_String_System_Int32_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThan(System.String,System.Int32)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThan(System.String, System.Int32)
+  nameWithType: ExpressionBuilders.Predicates.LessThan(String, Int32)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThan*
+  name: LessThan
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LessThan_
+  commentId: Overload:Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThan
+  isSpec: "True"
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThan
+  nameWithType: ExpressionBuilders.Predicates.LessThan
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String,System.DateTime)
+  name: LessThanOrEqual(String, DateTime)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LessThanOrEqual_System_String_System_DateTime_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String,System.DateTime)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String, System.DateTime)
+  nameWithType: ExpressionBuilders.Predicates.LessThanOrEqual(String, DateTime)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String,System.Int32)
+  name: LessThanOrEqual(String, Int32)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LessThanOrEqual_System_String_System_Int32_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String,System.Int32)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String, System.Int32)
+  nameWithType: ExpressionBuilders.Predicates.LessThanOrEqual(String, Int32)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual*
+  name: LessThanOrEqual
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LessThanOrEqual_
+  commentId: Overload:Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual
+  isSpec: "True"
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual
+  nameWithType: ExpressionBuilders.Predicates.LessThanOrEqual
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringContains(System.String,System.String)
+  name: StringContains(String, String)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_StringContains_System_String_System_String_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringContains(System.String,System.String)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringContains(System.String, System.String)
+  nameWithType: ExpressionBuilders.Predicates.StringContains(String, String)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringContains*
+  name: StringContains
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_StringContains_
+  commentId: Overload:Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringContains
+  isSpec: "True"
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringContains
+  nameWithType: ExpressionBuilders.Predicates.StringContains
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringEndsWith(System.String,System.String)
+  name: StringEndsWith(String, String)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_StringEndsWith_System_String_System_String_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringEndsWith(System.String,System.String)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringEndsWith(System.String, System.String)
+  nameWithType: ExpressionBuilders.Predicates.StringEndsWith(String, String)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringEndsWith*
+  name: StringEndsWith
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_StringEndsWith_
+  commentId: Overload:Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringEndsWith
+  isSpec: "True"
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringEndsWith
+  nameWithType: ExpressionBuilders.Predicates.StringEndsWith
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringStartsWith(System.String,System.String)
+  name: StringStartsWith(String, String)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_StringStartsWith_System_String_System_String_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringStartsWith(System.String,System.String)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringStartsWith(System.String, System.String)
+  nameWithType: ExpressionBuilders.Predicates.StringStartsWith(String, String)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringStartsWith*
+  name: StringStartsWith
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_StringStartsWith_
+  commentId: Overload:Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringStartsWith
+  isSpec: "True"
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringStartsWith
+  nameWithType: ExpressionBuilders.Predicates.StringStartsWith

@@ -32,12 +32,12 @@ namespace Linq2ShadowTests.OperatorTests
             // Act
             var usersFound = _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
                 .Skip(skipCount)
-                .ToList();
+                .ToList<dynamic>();
 
             // Assert
             Assert.AreEqual(usersFound.Count, 2);
-            Assert.AreEqual(usersFound[0]["UserName"], "Alex");
-            Assert.AreEqual(usersFound[1]["UserName"], "Katua");
+            Assert.AreEqual(usersFound[0].UserName, "Alex");
+            Assert.AreEqual(usersFound[1].UserName, "Katrin");
         }
 
         [Test]
@@ -50,11 +50,11 @@ namespace Linq2ShadowTests.OperatorTests
             var usersFound = _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
                 .Skip(skipCount)
                 .Skip(skipCount)
-                .ToList();
+                .ToList<dynamic>();
 
             // Assert
             Assert.AreEqual(usersFound.Count, 1);
-            Assert.AreEqual(usersFound[0]["UserName"], "Katua");
+            Assert.AreEqual(usersFound[0].UserName, "Katrin");
         }
 
         [Test]
@@ -67,12 +67,12 @@ namespace Linq2ShadowTests.OperatorTests
             var usersFound = _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
                 .OrderByDescending(x => x["UserName"])
                 .Skip(skipCount)
-                .ToList();
+                .ToList<dynamic>();
 
             // Assert
             Assert.AreEqual(usersFound.Count, 2);
-            Assert.AreEqual(usersFound[0]["UserName"], "Denis");
-            Assert.AreEqual(usersFound[1]["UserName"], "Alex");
+            Assert.AreEqual(usersFound[0].UserName, "Dzianis");
+            Assert.AreEqual(usersFound[1].UserName, "Alex");
         }
 
         [Test]

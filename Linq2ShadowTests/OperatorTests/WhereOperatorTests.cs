@@ -1,6 +1,5 @@
-using System;
+﻿using System;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Linq2Shadow;
 using Linq2Shadow.Utils;
@@ -30,7 +29,9 @@ namespace Linq2ShadowTests.OperatorTests
         public void Should_ReturnDenisRecord_When_DenisIsExists()
         {
             // Act
-            var data = _sut.QueryToTableValuedFunction(DbConfig.DbObjectNames.GetAllUsersFunction).Where(x => x["UserName"].Equals("Denis")).ToArray();
+            var data = _sut.QueryToTableValuedFunction(DbConfig.DbObjectNames.GetAllUsersFunction)
+                .Where(ExpressionBuilders.Predicates.AreEquals("UserName", "Dzianis"))
+                .ToArray<dynamic>();
 
             // Assert
             Assert.AreEqual(data.Length, 1);
@@ -40,22 +41,24 @@ namespace Linq2ShadowTests.OperatorTests
         public void Should_ReturnTwoRecord_When_ContainsIsUsed()
         {
             // Act
-            var data = _sut.QueryToTableValuedFunction(DbConfig.DbObjectNames.GetAllUsersFunction).Where(x => ((string) x["UserName"]).Contains("e"))
-                            .ToArray();
+            var data = _sut.QueryToTableValuedFunction(DbConfig.DbObjectNames.GetAllUsersFunction)
+                .Where(ExpressionBuilders.Predicates.StringContains("UserName", "e"))
+                .ToArray();
 
             // Assert
-            Assert.AreEqual(data.Length, 2);
+            Assert.AreEqual(data.Length, 1);
         }
 
         [Test]
         public void Should_ReturnDenisRecord_When_EndWithS()
         {
             // Act
-            var data = _sut.QueryToTableValuedFunction(DbConfig.DbObjectNames.GetAllUsersFunction).Where(x => ((string) x["UserName"]).EndsWith("s"))
-                            .ToArray();
+            var data = _sut.QueryToTableValuedFunction(DbConfig.DbObjectNames.GetAllUsersFunction)
+                .Where(ExpressionBuilders.Predicates.StringEndsWith("UserName", "s"))
+                .ToList<dynamic>();
 
             // Assert
-            Assert.AreEqual(data[0]["UserName"], "Denis");
+            Assert.AreEqual(data[0].UserName, "Dzianis");
         }
 
         [Test]
@@ -74,7 +77,7 @@ namespace Linq2ShadowTests.OperatorTests
         public void Should_ReturnAlexRecord_When_IdIs1()
         {
             // Arrange
-            var filter = ExpressionUtils.MakeEquals("Id", Expression.Constant(1));
+            var filter = ExpressionBuilders.Predicates.AreEquals("Id", 1);
 
             // Act
             var data = _sut.QueryToTableValuedFunction(DbConfig.DbObjectNames.GetAllUsersFunction)
@@ -90,7 +93,7 @@ namespace Linq2ShadowTests.OperatorTests
         public void Should_ReturnAlexAndDenisRecords_When_IdIs1And2()
         {
             // Arrange
-            var filter = ExpressionUtils.MakeEquals("Id", Expression.Constant(1));
+            var filter = ExpressionBuilders.Predicates.AreEquals("Id", 1);
 
             // Act
             var data = _sut.QueryToTableValuedFunction(DbConfig.DbObjectNames.GetAllUsersFunction).Where(x => x["Id"].Equals(1)).Where(filter).ToArray();
@@ -121,10 +124,12 @@ namespace Linq2ShadowTests.OperatorTests
             var v = Guid.NewGuid().ToString();
 
             // Act
-            var data = _sut.QueryToTableValuedFunction(DbConfig.DbObjectNames.GetAllUsersFunction).Where(x => (double) x["Id"] > 1).ToArray();
+            var data = _sut.QueryToTableValuedFunction(DbConfig.DbObjectNames.GetAllUsersFunction)
+                .Where(x => (double) x["Id"] > 1)
+                .ToList<dynamic>();
 
             // Assert
-            Assert.AreEqual(data[0]["UserName"], "Katua");
+            Assert.AreEqual(data[0].UserName, "Katrin");
         }
 
         [Test]
