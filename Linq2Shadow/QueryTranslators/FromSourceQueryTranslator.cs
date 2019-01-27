@@ -44,7 +44,7 @@ namespace Linq2Shadow.QueryTranslators
                 {
                     var lambda = ExpressionsInternalToolkit.SkipUnary(mCall.Arguments[1]) as LambdaExpression; // skip Quote
                     var lambdaTyped =
-                        Expression.Lambda<Func<ShadowRow, bool>>(lambda.Body, ExpressionUtils.CreateDefaultRowParameter());
+                        Expression.Lambda<Func<ShadowRow, bool>>(lambda.Body, ExpressionBuilders.DefaultRowParameter);
                     externalPredicates.Add(lambdaTyped);
                 }
             }
@@ -56,7 +56,7 @@ namespace Linq2Shadow.QueryTranslators
                 {
                     var lambda = ExpressionsInternalToolkit.SkipUnary(mCall.Arguments[1]) as LambdaExpression; // skip Quote
                     var lambdaTyped =
-                        Expression.Lambda<Func<ShadowRow, bool>>(lambda.Body, ExpressionUtils.CreateDefaultRowParameter());
+                        Expression.Lambda<Func<ShadowRow, bool>>(lambda.Body, ExpressionBuilders.DefaultRowParameter);
                     externalPredicates.Add(lambdaTyped);
 
                 }

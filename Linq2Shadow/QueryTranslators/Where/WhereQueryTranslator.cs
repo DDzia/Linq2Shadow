@@ -77,7 +77,7 @@ namespace Linq2Shadow.QueryTranslators.Where
 
                 case ExpressionType.LessThanOrEqual:
                     Visit(node.Left);
-                    _sb.Append(" >= ");
+                    _sb.Append(" <= ");
                     Visit(node.Right);
                     break;
 
@@ -128,7 +128,7 @@ namespace Linq2Shadow.QueryTranslators.Where
                         else
                         {
                             Visit(node.Left);
-                            _sb.Append(" != ");
+                            _sb.Append(" <> ");
                             Visit(node.Right);
                         }
                     }
@@ -296,11 +296,6 @@ namespace Linq2Shadow.QueryTranslators.Where
             return node;
         }
 
-        public override Expression Visit(Expression node)
-        {
-            return base.Visit(node);
-        }
-
         private bool _notUnary = false;
 
         protected override Expression VisitUnary(UnaryExpression node)
@@ -324,7 +319,7 @@ namespace Linq2Shadow.QueryTranslators.Where
         {
             whereEjector.Visit(expr);
 
-            var p = ExpressionUtils.CreateDefaultRowParameter();
+            var p = ExpressionBuilders.DefaultRowParameter;
 
             var typedLambdas = whereEjector.WhereExpressions
                                            .Select(x => Expression.Lambda<Func<ShadowRow, bool>>(x.Body, p))
@@ -337,7 +332,7 @@ namespace Linq2Shadow.QueryTranslators.Where
 
             if (typedLambdas.Any())
             {
-                var exp = ExpressionUtils.And(typedLambdas.ToArray());
+                var exp = ExpressionBuilders.And(typedLambdas.ToArray());
                 Visit(exp);
             }
 
