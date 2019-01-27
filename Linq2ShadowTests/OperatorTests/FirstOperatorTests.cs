@@ -32,7 +32,7 @@ namespace Linq2ShadowTests.OperatorTests
             // Arrange
             const string member = "Id";
             const int idExpected = 2;
-            var predicate = ExpressionUtils.MakeEquals(member, idExpected);
+            var predicate = ExpressionBuilders.Predicates.AreEquals(member, idExpected);
 
             // Act
             var query = _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable);
@@ -52,7 +52,7 @@ namespace Linq2ShadowTests.OperatorTests
             // Arrange
             const string member = "Id";
             const int notExistsId = 3; // User[Id] == 3 is not exists
-            var filterExpr = ExpressionUtils.MakeEquals(member, notExistsId);
+            var filterExpr = ExpressionBuilders.Predicates.AreEquals(member, notExistsId);
 
             // Act
             var query = _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable);

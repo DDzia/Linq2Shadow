@@ -33,11 +33,11 @@ namespace Linq2ShadowTests.OperatorTests
             // Act
             var usersFound = _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
                 .Take(takeCount)
-                .ToList();
+                .ToList<dynamic>();
 
             // Assert
             Assert.AreEqual(usersFound.Count, 1);
-            Assert.AreEqual(usersFound[0]["UserName"], "Denis");
+            Assert.AreEqual(usersFound[0].UserName, "Dzianis");
         }
 
         [Test]

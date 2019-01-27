@@ -1,5 +1,8 @@
 ﻿CREATE TABLE dbo.tUsers (
-	Id integer,
-	UserName nvarchar(128),
-	BirthDate DATE
+	Id INTEGER,
+	UserName NVARCHAR(128),
+	BirthDate DATE,
+    LastName NVARCHAR(128) NULL,
+    Married BIT,
+    ChildCount INTEGER
 )

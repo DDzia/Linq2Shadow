@@ -1,3 +1,3 @@
-﻿INSERT INTO tUsers VALUES (0, 'Denis', '12.09.1992')
-INSERT INTO tUsers VALUES (1, 'Alex', '10.09.1985')
-INSERT INTO tUsers VALUES (2, 'Katua', '02.09.1986')
+﻿INSERT INTO tUsers VALUES (0, 'Dzianis', '09/12/1992', 'Dziarkach', 0, NULL)
+INSERT INTO tUsers VALUES (1, 'Alex', '09/10/1986', NULL, 0, NULL)
+INSERT INTO tUsers VALUES (2, 'Katrin', '09/02/1985', 'Melnik', 1, 1)

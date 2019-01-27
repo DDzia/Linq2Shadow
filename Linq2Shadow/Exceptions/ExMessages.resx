@@ -121,6 +121,9 @@
     <value>Unexpected NULL value.</value>
     <comment>method argument is NULL</comment>
   </data>
+  <data name="invTypeComp" xml:space="preserve">
+    <value>{0} comparison for a {1} condition is not acceptable.</value>
+  </data>
   <data name="stringEmpty" xml:space="preserve">
     <value>Unexpected empty line.</value>
     <comment>string is empty</comment>

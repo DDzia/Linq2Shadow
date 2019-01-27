@@ -70,6 +70,15 @@ namespace Linq2Shadow.Exceptions {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0} comparison for a {1} condition is not acceptable..
+        /// </summary>
+        internal static string invTypeComp {
+            get {
+                return ResourceManager.GetString("invTypeComp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unexpected empty line..
         /// </summary>
         internal static string stringEmpty {
