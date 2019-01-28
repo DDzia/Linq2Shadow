@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
@@ -13,7 +14,7 @@ namespace Linq2Shadow.Utils
     /// </summary>
     public static class ExpressionBuilders
     {
-        internal static readonly ParameterExpression DefaultRowParameter = Expression.Parameter(typeof(ShadowRow), "shadowRow");
+        internal static readonly ParameterExpression DefaultRowParameter = Expression.Parameter(typeof(ShadowRow), "row");
 
         private static readonly MethodInfo RowIndexer = typeof(ShadowRow)
             .GetProperties()
@@ -29,6 +30,46 @@ namespace Linq2Shadow.Utils
         /// </summary>
         public static class Predicates
         {
+            #region collection contains
+
+            /// <summary>
+            /// Build the logical expression based on the IN operator.
+            /// </summary>
+            /// <typeparam name="T">Elements type.</typeparam>
+            /// <param name="data">The elemnents.</param>
+            /// <param name="member">Member which value will be used for the contains condition.</param>
+            /// <returns>Builded predicate.</returns>
+            /// <exception cref="ArgumentNullException">Will throw when <paramref name="member"/> or<paramref name="data"/> is null.</exception>
+            /// <exception cref="ArgumentException">Will throw when <paramref name="member"/> is whitespace.</exception>
+            public static Expression<Func<ShadowRow, bool>> CollectionContains<T>(IEnumerable<T> data, string member)
+            {
+                ExHelpers.ThrowIfSpacesOrNull(() => member);
+                ExHelpers.ThrowIfNull(() => data);
+
+                Expression<Func<ShadowRow, bool>> lambda = x => Enumerable.Contains(data, (T)x[member]);
+                return lambda;
+            }
+
+            /// <summary>
+            /// Build the logical expression based on the NOT IN operator.
+            /// </summary>
+            /// <typeparam name="T">Elements type.</typeparam>
+            /// <param name="data">The elemnents.</param>
+            /// <param name="member">Member which value will be used for a no contains condition.</param>
+            /// <returns>Builded predicate.</returns>
+            /// <exception cref="ArgumentNullException">Will throw when <paramref name="member"/> or<paramref name="data"/> is null.</exception>
+            /// <exception cref="ArgumentException">Will throw when <paramref name="member"/> is whitespace.</exception>
+            public static Expression<Func<ShadowRow, bool>> CollectionNotContains<T>(IEnumerable<T> data, string member)
+            {
+                ExHelpers.ThrowIfSpacesOrNull(() => member);
+                ExHelpers.ThrowIfNull(() => data);
+
+                Expression<Func<ShadowRow, bool>> lambda = x => !Enumerable.Contains<T>(data, (T)x[member]);
+                return lambda;
+            }
+
+            #endregion collection contains
+
             #region are equals
 
             /// <summary>
@@ -518,85 +559,99 @@ namespace Linq2Shadow.Utils
             }
 
             #endregion less than or equal
-        }
 
-        public static Expression<Func<ShadowRow, bool>> And(Expression<Func<ShadowRow, bool>> left,
-            Expression<Func<ShadowRow, bool>> right)
-        {
-            var binary = Expression.And(left.Body, right.Body);
+            #region logical and
 
-            var p = DefaultRowParameter;
-            var lambda = Expression.Lambda<Func<ShadowRow, bool>>(binary, p);
-            return lambda;
-        }
-
-        public static Expression<Func<ShadowRow, bool>> And(Expression<Func<ShadowRow, bool>>[] predicates)
-        {
-            if (predicates == null)
-                throw new ArgumentNullException(nameof(predicates));
-
-            if (!predicates.Any())
-                throw new ArgumentException(nameof(predicates));
-
-            if (predicates.Length == 1) return predicates[0];
-
-            Expression<Func<ShadowRow, bool>> result = predicates[1];
-
-            foreach (var expression in predicates.Skip(1))
+            /// <summary>
+            /// Build the logical expression based on the AND operator.
+            /// </summary>
+            /// <param name="predicates">The operands.</param>
+            /// <returns>Builded predicate.</returns>
+            /// <exception cref="ArgumentNullException">Will throw when <paramref name="predicates"/> is null.</exception>
+            /// <exception cref="ArgumentException">Will throw when any operand of <paramref name="predicates"/> is null.</exception>
+            public static Expression<Func<ShadowRow, bool>> LogicalAnd(Expression<Func<ShadowRow, bool>>[] predicates)
             {
-                result = And(result, expression);
+                ExHelpers.ThrowIfNull(() => predicates);
+                ExHelpers.ThrowIfOneOfItemsIsNull(() => predicates);
+
+                if (predicates.Length == 1) return predicates[0];
+
+                var result = predicates[0];
+                foreach (var expression in predicates.Skip(1))
+                {
+                    result = LogicalAnd(result, expression);
+                }
+
+                return result;
             }
 
-            return result;
-        }
-
-        public static Expression<Func<ShadowRow, bool>> Or(Expression<Func<ShadowRow, bool>> left,
-            Expression<Func<ShadowRow, bool>> right)
-        {
-            var binary = Expression.Or(left.Body, right.Body);
-
-            var p = DefaultRowParameter;
-            var lambda = Expression.Lambda<Func<ShadowRow, bool>>(binary, p);
-            return lambda;
-        }
-
-        public static Expression<Func<ShadowRow, bool>> Or(Expression<Func<ShadowRow, bool>>[] predicates)
-        {
-            if (predicates == null)
-                throw new ArgumentNullException(nameof(predicates));
-
-            if (!predicates.Any())
-                throw new ArgumentException(nameof(predicates));
-
-            if (predicates.Length == 1) return predicates[0];
-
-            Expression<Func<ShadowRow, bool>> result = predicates[1];
-
-            foreach (var expression in predicates.Skip(1))
+            /// <summary>
+            /// Build the logical expression based on the AND operator.
+            /// </summary>
+            /// <param name="left">Left operand.</param>
+            /// <param name="right">Right operand.</param>
+            /// <returns>Builded predicate.</returns>
+            /// <exception cref="ArgumentNullException">Will throw when any operand is null.</exception>
+            public static Expression<Func<ShadowRow, bool>> LogicalAnd(Expression<Func<ShadowRow, bool>> left,
+                                        Expression<Func<ShadowRow, bool>> right)
             {
-                result = Or(result, expression);
+                ExHelpers.ThrowIfNull(() => left);
+                ExHelpers.ThrowIfNull(() => right);
+
+                var binary = Expression.AndAlso(left.Body, right.Body);
+
+                var lambda = Expression.Lambda<Func<ShadowRow, bool>>(binary, DefaultRowParameter);
+                return lambda;
             }
 
-            return result;
-        }
+            #endregion logical and
 
-        public static Expression<Func<ShadowRow, bool>> CollectionContains(ConstantExpression data, string member)
-        {
-            var constValue = ExpressionsInternalToolkit.GetConstant(data);
-            if (constValue == null)
-                throw new InvalidOperationException("Collection constant can't be NULL.");
+            #region logical or
 
-            if(!(constValue is IEnumerable))
-                throw new InvalidOperationException("Invalid collection.");
-
-            var list = new List<object>();
-            foreach (var c in (constValue as IEnumerable))
+            /// <summary>
+            /// Build the logical expression based on the OR operator.
+            /// </summary>
+            /// <param name="predicates">The operands.</param>
+            /// <returns>Builded predicate.</returns>
+            /// <exception cref="ArgumentNullException">Will throw when <paramref name="predicates"/> is null.</exception>
+            /// <exception cref="ArgumentException">Will throw when any operand of <paramref name="predicates"/> is null.</exception>
+            public static Expression<Func<ShadowRow, bool>> LogicalOr(Expression<Func<ShadowRow, bool>>[] predicates)
             {
-                list.Add(c);
+                ExHelpers.ThrowIfNull(() => predicates);
+                ExHelpers.ThrowIfOneOfItemsIsNull(() => predicates);
+
+                if (predicates.Length == 1) return predicates[0];
+
+                var result = predicates[0];
+                foreach (var expression in predicates.Skip(1))
+                {
+                    result = LogicalOr(result, expression);
+                }
+
+                return result;
             }
 
-            Expression<Func<ShadowRow, bool>> lambda = x => Enumerable.Contains(list, x[member]);
-            return lambda;
+            /// <summary>
+            /// Build the logical expression based on the OR operator.
+            /// </summary>
+            /// <param name="left">Left operand.</param>
+            /// <param name="right">Right operand.</param>
+            /// <returns>Builded predicate.</returns>
+            /// <exception cref="ArgumentNullException">Will throw when any operand is null.</exception>
+            public static Expression<Func<ShadowRow, bool>> LogicalOr(Expression<Func<ShadowRow, bool>> left,
+                Expression<Func<ShadowRow, bool>> right)
+            {
+                ExHelpers.ThrowIfNull(() => left);
+                ExHelpers.ThrowIfNull(() => right);
+
+                var binary = Expression.OrElse(left.Body, right.Body);
+
+                var p = DefaultRowParameter;
+                var lambda = Expression.Lambda<Func<ShadowRow, bool>>(binary, p);
+                return lambda;
+            }
+
+            #endregion logical or
         }
     }
 }
