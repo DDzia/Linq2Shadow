@@ -79,6 +79,15 @@ namespace Linq2Shadow.Exceptions {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to One of items is null..
+        /// </summary>
+        internal static string onOfItemsIsNull {
+            get {
+                return ResourceManager.GetString("onOfItemsIsNull", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unexpected empty line..
         /// </summary>
         internal static string stringEmpty {

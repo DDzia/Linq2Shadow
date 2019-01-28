@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 
 namespace Linq2Shadow.Exceptions
@@ -32,7 +34,7 @@ namespace Linq2Shadow.Exceptions
             var val = value.Compile()();
             if (string.IsNullOrEmpty(val))
             {
-                throw new ArgumentException(GetVariableNameIinternal(value), ExMessages.stringEmpty);
+                throw new ArgumentException(ExMessages.stringEmpty, GetVariableNameIinternal(value));
             }
         }
 
@@ -43,7 +45,16 @@ namespace Linq2Shadow.Exceptions
             var val = value.Compile()();
             if (string.IsNullOrWhiteSpace(val))
             {
-                throw new ArgumentException(GetVariableNameIinternal(value), ExMessages.stringWhitespace);
+                throw new ArgumentException(ExMessages.stringWhitespace, GetVariableNameIinternal(value));
+            }
+        }
+
+        public static void ThrowIfOneOfItemsIsNull<T>(Expression<Func<IEnumerable<T>>> value)
+        {
+            var val = value.Compile()();
+            if (val.Any(x => x == null))
+            {
+                throw new ArgumentException(ExMessages.onOfItemsIsNull, GetVariableNameIinternal(value));
             }
         }
     }
