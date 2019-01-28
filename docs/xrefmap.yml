@@ -433,69 +433,6 @@ references:
   commentId: T:Linq2Shadow.Utils.ExpressionBuilders
   fullName: Linq2Shadow.Utils.ExpressionBuilders
   nameWithType: ExpressionBuilders
-- uid: Linq2Shadow.Utils.ExpressionBuilders.And(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}},System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}})
-  name: And(Expression<Func<ShadowRow, Boolean>>, Expression<Func<ShadowRow, Boolean>>)
-  href: api/Linq2Shadow.Utils.ExpressionBuilders.html#Linq2Shadow_Utils_ExpressionBuilders_And_System_Linq_Expressions_Expression_System_Func_Linq2Shadow_ShadowRow_System_Boolean___System_Linq_Expressions_Expression_System_Func_Linq2Shadow_ShadowRow_System_Boolean___
-  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.And(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}},System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}})
-  name.vb: And(Expression(Of Func(Of ShadowRow, Boolean)), Expression(Of Func(Of ShadowRow, Boolean)))
-  fullName: Linq2Shadow.Utils.ExpressionBuilders.And(System.Linq.Expressions.Expression<System.Func<Linq2Shadow.ShadowRow, System.Boolean>>, System.Linq.Expressions.Expression<System.Func<Linq2Shadow.ShadowRow, System.Boolean>>)
-  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.And(System.Linq.Expressions.Expression(Of System.Func(Of Linq2Shadow.ShadowRow, System.Boolean)), System.Linq.Expressions.Expression(Of System.Func(Of Linq2Shadow.ShadowRow, System.Boolean)))
-  nameWithType: ExpressionBuilders.And(Expression<Func<ShadowRow, Boolean>>, Expression<Func<ShadowRow, Boolean>>)
-  nameWithType.vb: ExpressionBuilders.And(Expression(Of Func(Of ShadowRow, Boolean)), Expression(Of Func(Of ShadowRow, Boolean)))
-- uid: Linq2Shadow.Utils.ExpressionBuilders.And(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}}[])
-  name: And(Expression<Func<ShadowRow, Boolean>>[])
-  href: api/Linq2Shadow.Utils.ExpressionBuilders.html#Linq2Shadow_Utils_ExpressionBuilders_And_System_Linq_Expressions_Expression_System_Func_Linq2Shadow_ShadowRow_System_Boolean_____
-  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.And(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}}[])
-  name.vb: And(Expression(Of Func(Of ShadowRow, Boolean))())
-  fullName: Linq2Shadow.Utils.ExpressionBuilders.And(System.Linq.Expressions.Expression<System.Func<Linq2Shadow.ShadowRow, System.Boolean>>[])
-  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.And(System.Linq.Expressions.Expression(Of System.Func(Of Linq2Shadow.ShadowRow, System.Boolean))())
-  nameWithType: ExpressionBuilders.And(Expression<Func<ShadowRow, Boolean>>[])
-  nameWithType.vb: ExpressionBuilders.And(Expression(Of Func(Of ShadowRow, Boolean))())
-- uid: Linq2Shadow.Utils.ExpressionBuilders.And*
-  name: And
-  href: api/Linq2Shadow.Utils.ExpressionBuilders.html#Linq2Shadow_Utils_ExpressionBuilders_And_
-  commentId: Overload:Linq2Shadow.Utils.ExpressionBuilders.And
-  isSpec: "True"
-  fullName: Linq2Shadow.Utils.ExpressionBuilders.And
-  nameWithType: ExpressionBuilders.And
-- uid: Linq2Shadow.Utils.ExpressionBuilders.CollectionContains(System.Linq.Expressions.ConstantExpression,System.String)
-  name: CollectionContains(ConstantExpression, String)
-  href: api/Linq2Shadow.Utils.ExpressionBuilders.html#Linq2Shadow_Utils_ExpressionBuilders_CollectionContains_System_Linq_Expressions_ConstantExpression_System_String_
-  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.CollectionContains(System.Linq.Expressions.ConstantExpression,System.String)
-  fullName: Linq2Shadow.Utils.ExpressionBuilders.CollectionContains(System.Linq.Expressions.ConstantExpression, System.String)
-  nameWithType: ExpressionBuilders.CollectionContains(ConstantExpression, String)
-- uid: Linq2Shadow.Utils.ExpressionBuilders.CollectionContains*
-  name: CollectionContains
-  href: api/Linq2Shadow.Utils.ExpressionBuilders.html#Linq2Shadow_Utils_ExpressionBuilders_CollectionContains_
-  commentId: Overload:Linq2Shadow.Utils.ExpressionBuilders.CollectionContains
-  isSpec: "True"
-  fullName: Linq2Shadow.Utils.ExpressionBuilders.CollectionContains
-  nameWithType: ExpressionBuilders.CollectionContains
-- uid: Linq2Shadow.Utils.ExpressionBuilders.Or(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}},System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}})
-  name: Or(Expression<Func<ShadowRow, Boolean>>, Expression<Func<ShadowRow, Boolean>>)
-  href: api/Linq2Shadow.Utils.ExpressionBuilders.html#Linq2Shadow_Utils_ExpressionBuilders_Or_System_Linq_Expressions_Expression_System_Func_Linq2Shadow_ShadowRow_System_Boolean___System_Linq_Expressions_Expression_System_Func_Linq2Shadow_ShadowRow_System_Boolean___
-  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Or(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}},System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}})
-  name.vb: Or(Expression(Of Func(Of ShadowRow, Boolean)), Expression(Of Func(Of ShadowRow, Boolean)))
-  fullName: Linq2Shadow.Utils.ExpressionBuilders.Or(System.Linq.Expressions.Expression<System.Func<Linq2Shadow.ShadowRow, System.Boolean>>, System.Linq.Expressions.Expression<System.Func<Linq2Shadow.ShadowRow, System.Boolean>>)
-  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Or(System.Linq.Expressions.Expression(Of System.Func(Of Linq2Shadow.ShadowRow, System.Boolean)), System.Linq.Expressions.Expression(Of System.Func(Of Linq2Shadow.ShadowRow, System.Boolean)))
-  nameWithType: ExpressionBuilders.Or(Expression<Func<ShadowRow, Boolean>>, Expression<Func<ShadowRow, Boolean>>)
-  nameWithType.vb: ExpressionBuilders.Or(Expression(Of Func(Of ShadowRow, Boolean)), Expression(Of Func(Of ShadowRow, Boolean)))
-- uid: Linq2Shadow.Utils.ExpressionBuilders.Or(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}}[])
-  name: Or(Expression<Func<ShadowRow, Boolean>>[])
-  href: api/Linq2Shadow.Utils.ExpressionBuilders.html#Linq2Shadow_Utils_ExpressionBuilders_Or_System_Linq_Expressions_Expression_System_Func_Linq2Shadow_ShadowRow_System_Boolean_____
-  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Or(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}}[])
-  name.vb: Or(Expression(Of Func(Of ShadowRow, Boolean))())
-  fullName: Linq2Shadow.Utils.ExpressionBuilders.Or(System.Linq.Expressions.Expression<System.Func<Linq2Shadow.ShadowRow, System.Boolean>>[])
-  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Or(System.Linq.Expressions.Expression(Of System.Func(Of Linq2Shadow.ShadowRow, System.Boolean))())
-  nameWithType: ExpressionBuilders.Or(Expression<Func<ShadowRow, Boolean>>[])
-  nameWithType.vb: ExpressionBuilders.Or(Expression(Of Func(Of ShadowRow, Boolean))())
-- uid: Linq2Shadow.Utils.ExpressionBuilders.Or*
-  name: Or
-  href: api/Linq2Shadow.Utils.ExpressionBuilders.html#Linq2Shadow_Utils_ExpressionBuilders_Or_
-  commentId: Overload:Linq2Shadow.Utils.ExpressionBuilders.Or
-  isSpec: "True"
-  fullName: Linq2Shadow.Utils.ExpressionBuilders.Or
-  nameWithType: ExpressionBuilders.Or
 - uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates
   name: ExpressionBuilders.Predicates
   href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html
@@ -564,6 +501,38 @@ references:
   isSpec: "True"
   fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals
   nameWithType: ExpressionBuilders.Predicates.AreNotEquals
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.CollectionContains*
+  name: CollectionContains
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_CollectionContains_
+  commentId: Overload:Linq2Shadow.Utils.ExpressionBuilders.Predicates.CollectionContains
+  isSpec: "True"
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.CollectionContains
+  nameWithType: ExpressionBuilders.Predicates.CollectionContains
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.CollectionContains``1(System.Collections.Generic.IEnumerable{``0},System.String)
+  name: CollectionContains<T>(IEnumerable<T>, String)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_CollectionContains__1_System_Collections_Generic_IEnumerable___0__System_String_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.CollectionContains``1(System.Collections.Generic.IEnumerable{``0},System.String)
+  name.vb: CollectionContains(Of T)(IEnumerable(Of T), String)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.CollectionContains<T>(System.Collections.Generic.IEnumerable<T>, System.String)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.CollectionContains(Of T)(System.Collections.Generic.IEnumerable(Of T), System.String)
+  nameWithType: ExpressionBuilders.Predicates.CollectionContains<T>(IEnumerable<T>, String)
+  nameWithType.vb: ExpressionBuilders.Predicates.CollectionContains(Of T)(IEnumerable(Of T), String)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.CollectionNotContains*
+  name: CollectionNotContains
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_CollectionNotContains_
+  commentId: Overload:Linq2Shadow.Utils.ExpressionBuilders.Predicates.CollectionNotContains
+  isSpec: "True"
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.CollectionNotContains
+  nameWithType: ExpressionBuilders.Predicates.CollectionNotContains
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.CollectionNotContains``1(System.Collections.Generic.IEnumerable{``0},System.String)
+  name: CollectionNotContains<T>(IEnumerable<T>, String)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_CollectionNotContains__1_System_Collections_Generic_IEnumerable___0__System_String_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.CollectionNotContains``1(System.Collections.Generic.IEnumerable{``0},System.String)
+  name.vb: CollectionNotContains(Of T)(IEnumerable(Of T), String)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.CollectionNotContains<T>(System.Collections.Generic.IEnumerable<T>, System.String)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.CollectionNotContains(Of T)(System.Collections.Generic.IEnumerable(Of T), System.String)
+  nameWithType: ExpressionBuilders.Predicates.CollectionNotContains<T>(IEnumerable<T>, String)
+  nameWithType.vb: ExpressionBuilders.Predicates.CollectionNotContains(Of T)(IEnumerable(Of T), String)
 - uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThan(System.String,System.DateTime)
   name: GreaterThan(String, DateTime)
   href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_GreaterThan_System_String_System_DateTime_
@@ -640,6 +609,56 @@ references:
   isSpec: "True"
   fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual
   nameWithType: ExpressionBuilders.Predicates.LessThanOrEqual
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LogicalAnd(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}},System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}})
+  name: LogicalAnd(Expression<Func<ShadowRow, Boolean>>, Expression<Func<ShadowRow, Boolean>>)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LogicalAnd_System_Linq_Expressions_Expression_System_Func_Linq2Shadow_ShadowRow_System_Boolean___System_Linq_Expressions_Expression_System_Func_Linq2Shadow_ShadowRow_System_Boolean___
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.LogicalAnd(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}},System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}})
+  name.vb: LogicalAnd(Expression(Of Func(Of ShadowRow, Boolean)), Expression(Of Func(Of ShadowRow, Boolean)))
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LogicalAnd(System.Linq.Expressions.Expression<System.Func<Linq2Shadow.ShadowRow, System.Boolean>>, System.Linq.Expressions.Expression<System.Func<Linq2Shadow.ShadowRow, System.Boolean>>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LogicalAnd(System.Linq.Expressions.Expression(Of System.Func(Of Linq2Shadow.ShadowRow, System.Boolean)), System.Linq.Expressions.Expression(Of System.Func(Of Linq2Shadow.ShadowRow, System.Boolean)))
+  nameWithType: ExpressionBuilders.Predicates.LogicalAnd(Expression<Func<ShadowRow, Boolean>>, Expression<Func<ShadowRow, Boolean>>)
+  nameWithType.vb: ExpressionBuilders.Predicates.LogicalAnd(Expression(Of Func(Of ShadowRow, Boolean)), Expression(Of Func(Of ShadowRow, Boolean)))
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LogicalAnd(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}}[])
+  name: LogicalAnd(Expression<Func<ShadowRow, Boolean>>[])
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LogicalAnd_System_Linq_Expressions_Expression_System_Func_Linq2Shadow_ShadowRow_System_Boolean_____
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.LogicalAnd(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}}[])
+  name.vb: LogicalAnd(Expression(Of Func(Of ShadowRow, Boolean))())
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LogicalAnd(System.Linq.Expressions.Expression<System.Func<Linq2Shadow.ShadowRow, System.Boolean>>[])
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LogicalAnd(System.Linq.Expressions.Expression(Of System.Func(Of Linq2Shadow.ShadowRow, System.Boolean))())
+  nameWithType: ExpressionBuilders.Predicates.LogicalAnd(Expression<Func<ShadowRow, Boolean>>[])
+  nameWithType.vb: ExpressionBuilders.Predicates.LogicalAnd(Expression(Of Func(Of ShadowRow, Boolean))())
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LogicalAnd*
+  name: LogicalAnd
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LogicalAnd_
+  commentId: Overload:Linq2Shadow.Utils.ExpressionBuilders.Predicates.LogicalAnd
+  isSpec: "True"
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LogicalAnd
+  nameWithType: ExpressionBuilders.Predicates.LogicalAnd
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LogicalOr(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}},System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}})
+  name: LogicalOr(Expression<Func<ShadowRow, Boolean>>, Expression<Func<ShadowRow, Boolean>>)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LogicalOr_System_Linq_Expressions_Expression_System_Func_Linq2Shadow_ShadowRow_System_Boolean___System_Linq_Expressions_Expression_System_Func_Linq2Shadow_ShadowRow_System_Boolean___
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.LogicalOr(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}},System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}})
+  name.vb: LogicalOr(Expression(Of Func(Of ShadowRow, Boolean)), Expression(Of Func(Of ShadowRow, Boolean)))
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LogicalOr(System.Linq.Expressions.Expression<System.Func<Linq2Shadow.ShadowRow, System.Boolean>>, System.Linq.Expressions.Expression<System.Func<Linq2Shadow.ShadowRow, System.Boolean>>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LogicalOr(System.Linq.Expressions.Expression(Of System.Func(Of Linq2Shadow.ShadowRow, System.Boolean)), System.Linq.Expressions.Expression(Of System.Func(Of Linq2Shadow.ShadowRow, System.Boolean)))
+  nameWithType: ExpressionBuilders.Predicates.LogicalOr(Expression<Func<ShadowRow, Boolean>>, Expression<Func<ShadowRow, Boolean>>)
+  nameWithType.vb: ExpressionBuilders.Predicates.LogicalOr(Expression(Of Func(Of ShadowRow, Boolean)), Expression(Of Func(Of ShadowRow, Boolean)))
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LogicalOr(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}}[])
+  name: LogicalOr(Expression<Func<ShadowRow, Boolean>>[])
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LogicalOr_System_Linq_Expressions_Expression_System_Func_Linq2Shadow_ShadowRow_System_Boolean_____
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.LogicalOr(System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}}[])
+  name.vb: LogicalOr(Expression(Of Func(Of ShadowRow, Boolean))())
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LogicalOr(System.Linq.Expressions.Expression<System.Func<Linq2Shadow.ShadowRow, System.Boolean>>[])
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LogicalOr(System.Linq.Expressions.Expression(Of System.Func(Of Linq2Shadow.ShadowRow, System.Boolean))())
+  nameWithType: ExpressionBuilders.Predicates.LogicalOr(Expression<Func<ShadowRow, Boolean>>[])
+  nameWithType.vb: ExpressionBuilders.Predicates.LogicalOr(Expression(Of Func(Of ShadowRow, Boolean))())
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LogicalOr*
+  name: LogicalOr
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LogicalOr_
+  commentId: Overload:Linq2Shadow.Utils.ExpressionBuilders.Predicates.LogicalOr
+  isSpec: "True"
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LogicalOr
+  nameWithType: ExpressionBuilders.Predicates.LogicalOr
 - uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringContains(System.String,System.String)
   name: StringContains(String, String)
   href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_StringContains_System_String_System_String_

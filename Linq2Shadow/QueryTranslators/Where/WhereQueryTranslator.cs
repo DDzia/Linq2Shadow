@@ -30,6 +30,7 @@ namespace Linq2Shadow.QueryTranslators.Where
         {
             switch (node.NodeType)
             {
+                case ExpressionType.Or:
                 case ExpressionType.OrElse:
                     _sb.Append("(");
                     Visit(node.Left);
@@ -38,23 +39,13 @@ namespace Linq2Shadow.QueryTranslators.Where
                     _sb.Append(")");
                     break;
 
+                case ExpressionType.And:
                 case ExpressionType.AndAlso:
                     _sb.Append("(");
                     Visit(node.Left);
                     _sb.Append(" AND ");
                     Visit(node.Right);
                     _sb.Append(")");
-                    break;
-
-                case ExpressionType.And:
-                    Visit(node.Left);
-                    _sb.Append(" AND ");
-                    Visit(node.Right);
-                    break;
-                case ExpressionType.Or:
-                    Visit(node.Left);
-                    _sb.Append(" OR ");
-                    Visit(node.Right);
                     break;
 
                 case ExpressionType.GreaterThan:
@@ -143,14 +134,16 @@ namespace Linq2Shadow.QueryTranslators.Where
             var value = ExpressionsInternalToolkit.GetConstant(node);
             var valueType = value?.GetType();
 
-            var isCollection = valueType?.GetInterfaces()
-                                   .Any(
-                                       x => x == typeof(ICollection) ||
+            var isCollection = (valueType?.GetInterfaces()
+                                   .Any(x =>
+                                       (
+                                            x == typeof(ICollection) ||
                                             (
                                                 x.IsGenericType &&
                                                 x.GetGenericTypeDefinition() == typeof(ICollection<>)
                                             )
-                                   ) ?? false;
+                                        )
+                                   ) ?? false);
 
             if (isCollection)
             {
@@ -171,10 +164,8 @@ namespace Linq2Shadow.QueryTranslators.Where
                     {
                         break;
                     }
-                    else
-                    {
-                        inSb.Append(", ");
-                    }
+
+                    inSb.Append(", ");
                 }
 
                 inSb.Append(")");
@@ -183,7 +174,7 @@ namespace Linq2Shadow.QueryTranslators.Where
             }
             else
             {
-                var paramName = _queryParamsStore.Append(ExpressionsInternalToolkit.GetConstant(node));
+                var paramName = _queryParamsStore.Append(value);
                 _sb.Append(paramName);
             }
 
@@ -203,7 +194,8 @@ namespace Linq2Shadow.QueryTranslators.Where
 
                 Visit(node.Arguments[1]);
                 _sb.Append(_notUnary ? " NOT IN " : " IN ");
-                Visit(node.Arguments[0]);
+                var collection = ExpressionsInternalToolkit.GetConstant(node.Arguments[0]);
+                Visit(Expression.Constant(collection));
 
                 return node;
             }
@@ -332,7 +324,7 @@ namespace Linq2Shadow.QueryTranslators.Where
 
             if (typedLambdas.Any())
             {
-                var exp = ExpressionBuilders.And(typedLambdas.ToArray());
+                var exp = ExpressionBuilders.Predicates.LogicalAnd(typedLambdas.ToArray());
                 Visit(exp);
             }
 

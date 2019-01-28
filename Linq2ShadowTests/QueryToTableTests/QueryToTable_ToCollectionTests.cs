@@ -437,5 +437,223 @@ namespace Linq2ShadowTests.QueryToTableTests
             Assert.AreEqual(usersWhichHasChildrenFound[0].UserName, "Katrin");
             Assert.LessOrEqual(usersWhichHasChildrenFound[0].ChildCount, 2);
         }
+
+        [Test]
+        public void Should_GroupPredicates_When_LogicalAndOperatorIsApplied()
+        {
+            // Act
+            var userDzianisFound = _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
+                .Where(
+                    ExpressionBuilders.Predicates.LogicalAnd(
+                        ExpressionBuilders.Predicates.AreEquals("Id", 0),
+                        ExpressionBuilders.Predicates.AreEquals("UserName", "Dzianis")
+                    )
+                )
+                .FirstOrDefault<dynamic>();
+
+            var noUserFound = _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
+                .Where(
+                    ExpressionBuilders.Predicates.LogicalAnd(
+                        ExpressionBuilders.Predicates.AreEquals("Id", 1),
+                        ExpressionBuilders.Predicates.AreEquals("UserName", "Dzianis")
+                    )
+                )
+                .FirstOrDefault<dynamic>();
+
+            // Assert
+            Assert.AreEqual(userDzianisFound.UserName, "Dzianis");
+            Assert.AreEqual(userDzianisFound.Id, 0);
+
+            Assert.IsNull(noUserFound);
+
+            Assert.Throws<ArgumentNullException>(() =>
+            {
+                ExpressionBuilders.Predicates.LogicalAnd(
+                    null,
+                    ExpressionBuilders.Predicates.AreEquals("UserName", "Dzianis")
+                );
+            });
+
+            Assert.Throws<ArgumentNullException>(() =>
+            {
+                ExpressionBuilders.Predicates.LogicalAnd(
+                    ExpressionBuilders.Predicates.AreEquals("UserName", "Dzianis"),
+                    null
+                );
+            });
+
+            Assert.Throws<ArgumentNullException>(() => ExpressionBuilders.Predicates.LogicalAnd(null));
+
+            Assert.Throws<ArgumentException>(() =>
+            {
+                ExpressionBuilders.Predicates.LogicalAnd(
+                    new[]
+                    {
+                        ExpressionBuilders.Predicates.AreEquals("UserName", "Dzianis"),
+                        null
+                    }
+                );
+            });
+        }
+
+        [Test]
+        public void Should_GroupPredicates_When_LogicalOrOperatorIsApplied()
+        {
+            // Act
+            var usersDzianisAndAlexFound = _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
+                .Where(
+                    ExpressionBuilders.Predicates.LogicalOr(
+                        ExpressionBuilders.Predicates.AreEquals("Id", 0),
+                        ExpressionBuilders.Predicates.AreEquals("UserName", "Alex")
+                    )
+                )
+                .ToArray<dynamic>();
+
+            var noUserFound = _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
+                .Where(
+                    ExpressionBuilders.Predicates.LogicalOr(
+                        ExpressionBuilders.Predicates.AreEquals("Id", -1),
+                        ExpressionBuilders.Predicates.AreEquals("UserName", "Dzianis0")
+                    )
+                )
+                .FirstOrDefault<dynamic>();
+
+            // Assert
+            Assert.AreEqual(usersDzianisAndAlexFound.Length, 2);
+            Assert.IsTrue(usersDzianisAndAlexFound.All(x => x.Id == 0 || x.UserName == "Alex"));
+
+            Assert.IsNull(noUserFound);
+
+            Assert.Throws<ArgumentNullException>(() =>
+            {
+                ExpressionBuilders.Predicates.LogicalOr(
+                    null,
+                    ExpressionBuilders.Predicates.AreEquals("UserName", "Dzianis")
+                );
+            });
+
+            Assert.Throws<ArgumentNullException>(() =>
+            {
+                ExpressionBuilders.Predicates.LogicalOr(
+                    ExpressionBuilders.Predicates.AreEquals("UserName", "Dzianis"),
+                    null
+                );
+            });
+
+            Assert.Throws<ArgumentNullException>(() => ExpressionBuilders.Predicates.LogicalOr(null));
+
+            Assert.Throws<ArgumentException>(() =>
+            {
+                ExpressionBuilders.Predicates.LogicalOr(
+                    new[]
+                    {
+                        ExpressionBuilders.Predicates.AreEquals("UserName", "Dzianis"),
+                        null
+                    }
+                );
+            });
+        }
+
+        [Test]
+        public void Should_UseInCondition_When_CollectionContainsExpressionIsUsed()
+        {
+            // Arrange
+            var ids = new[] {0, 1};
+
+            // Act
+            var usersDzianisAndAlexFound = _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
+                .Where(ExpressionBuilders.Predicates.CollectionContains(ids, "Id"))
+                .ToArray<dynamic>();
+
+            var usersNoFound = _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
+                .Where(ExpressionBuilders.Predicates.CollectionContains(new []{-1,-2}, "Id"))
+                .ToArray<dynamic>();
+
+            Assert.Throws<ArgumentNullException>(() =>
+            {
+                _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
+                    .Where(ExpressionBuilders.Predicates.CollectionContains<object>(null, "Id"))
+                    .ToArray<dynamic>();
+            });
+
+            Assert.Throws<ArgumentNullException>(() =>
+            {
+                _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
+                    .Where(ExpressionBuilders.Predicates.CollectionContains(ids, null))
+                    .ToArray<dynamic>();
+            });
+
+            Assert.Throws<ArgumentException>(() =>
+            {
+                _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
+                    .Where(ExpressionBuilders.Predicates.CollectionContains(ids, string.Empty))
+                    .ToArray<dynamic>();
+            });
+
+            Assert.Throws<ArgumentException>(() =>
+            {
+                _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
+                    .Where(ExpressionBuilders.Predicates.CollectionContains(ids, "  "))
+                    .ToArray<dynamic>();
+            });
+
+            // Assert
+            Assert.AreEqual(usersDzianisAndAlexFound.Length, 2);
+            Assert.IsTrue(usersDzianisAndAlexFound.All(x => ids.Contains((int)x.Id)));
+
+            Assert.IsEmpty(usersNoFound);
+        }
+
+        [Test]
+        public void Should_UseInCondition_When_CollectionNotContainsExpressionIsUsed()
+        {
+            // Arrange
+            var ids = new[] { 0, 1 };
+            var negativeIds = new[] {-1, -2};
+
+            // Act
+            var userKartrinFound = _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
+                .Where(ExpressionBuilders.Predicates.CollectionNotContains(ids, "Id"))
+                .FirstOrDefault<dynamic>();
+
+            var usersAll = _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
+                .Where(ExpressionBuilders.Predicates.CollectionNotContains(negativeIds, "Id"))
+                .ToArray<dynamic>();
+
+            Assert.Throws<ArgumentNullException>(() =>
+            {
+                _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
+                    .Where(ExpressionBuilders.Predicates.CollectionNotContains<object>(null, "Id"))
+                    .ToArray<dynamic>();
+            });
+
+            Assert.Throws<ArgumentNullException>(() =>
+            {
+                _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
+                    .Where(ExpressionBuilders.Predicates.CollectionNotContains(ids, null))
+                    .ToArray<dynamic>();
+            });
+
+            Assert.Throws<ArgumentException>(() =>
+            {
+                _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
+                    .Where(ExpressionBuilders.Predicates.CollectionNotContains(ids, string.Empty))
+                    .ToArray<dynamic>();
+            });
+
+            Assert.Throws<ArgumentException>(() =>
+            {
+                _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
+                    .Where(ExpressionBuilders.Predicates.CollectionNotContains(ids, "  "))
+                    .ToArray<dynamic>();
+            });
+
+            // Assert
+            Assert.IsNotNull(userKartrinFound);
+            Assert.IsFalse(ids.Contains((int)userKartrinFound.Id));
+
+            Assert.AreEqual(usersAll.Length, 3);
+            Assert.IsTrue(usersAll.All(x => !negativeIds.Contains((int)x.Id)));
+        }
     }
 }
