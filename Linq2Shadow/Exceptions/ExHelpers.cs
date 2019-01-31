@@ -57,5 +57,13 @@ namespace Linq2Shadow.Exceptions
                 throw new ArgumentException(ExMessages.onOfItemsIsNull, GetVariableNameIinternal(value));
             }
         }
+
+        public static void ThrowIfUnsupportedDbType(Type type)
+        {
+            if (!Db2NetTypes.IsSupportedType(type))
+            {
+                throw new InvalidOperationException(ExMessages.unsupportedDbType);
+            }
+        }
     }
 }
