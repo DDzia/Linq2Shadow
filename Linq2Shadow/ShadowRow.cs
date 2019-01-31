@@ -11,6 +11,11 @@ namespace Linq2Shadow
     [DebuggerDisplay("Count = {DebuggerView}")]
     public class ShadowRow : DynamicObject, IReadOnlyDictionary<string, object>
     {
+        public static implicit operator Dictionary<string, object>(ShadowRow a)
+        {
+            return a._dic.ToDictionary(x => x.Key, x => x.Value);
+        }
+
         private readonly Dictionary<string, object> _dic = new Dictionary<string, object>();
 
         internal ShadowRow() { }

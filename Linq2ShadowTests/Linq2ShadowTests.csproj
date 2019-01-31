@@ -21,6 +21,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="scripts\population\populate-alltypes.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="scripts\tables\create-alltypes.table.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="scripts\tables\create-reports-table.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

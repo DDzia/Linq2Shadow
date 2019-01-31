@@ -94,9 +94,14 @@ namespace Linq2Shadow.QueryProviders
             // otherwise is applied a Query
             using (var cmd = PrepareSqlAndParams())
             {
-                using (var reader = cmd.ExecuteReader())
+                if (ExpressionsInternalToolkit.IsListAsyncCall(expression))
                 {
-                    var collection = reader.ReadAll();
+                    var ct = ExpressionsInternalToolkit.GetCancellationTokenForToList(expression);
+                    return (TResult)(object)cmd.ReadAllAsync(ct);
+                }
+                else
+                {
+                    var collection = cmd.ReadAll();
 
                     var firstAggregationCalled = ExpressionsInternalToolkit.IsFirstQueryableCall(expression);
                     var firstOrDefaultAggregationCalled = ExpressionsInternalToolkit.IsFirstOrDefaultQueryableCall(expression);
@@ -123,7 +128,7 @@ namespace Linq2Shadow.QueryProviders
                         }
                     }
 
-                    return (TResult)(object) collection;
+                    return (TResult)(object)collection;
                 }
             }
         }

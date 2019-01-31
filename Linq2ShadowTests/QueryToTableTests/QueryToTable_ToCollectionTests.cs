@@ -26,6 +26,26 @@ namespace Linq2ShadowTests.QueryToTableTests
         }
 
         [Test]
+        public void Shoud_ReadAllPropertiesCorrectlly_When_DataIsFilled()
+        {
+            // Act
+            var row = _sut.QueryToTable(DbConfig.DbObjectNames.TypesTable)
+                .First<dynamic>();
+
+            // Assert
+            Assert.AreEqual(row.Bool.GetType(), typeof(bool));
+            Assert.AreEqual(row.Byte.GetType(), typeof(byte));
+            Assert.AreEqual(row.DTime.GetType(), typeof(DateTime));
+            Assert.AreEqual(row.DDecimal.GetType(), typeof(decimal));
+            Assert.AreEqual(row.DDouble.GetType(), typeof(double));
+            Assert.AreEqual(row.GGuid.GetType(), typeof(Guid));
+            Assert.AreEqual(row.String.GetType(), typeof(string));
+            Assert.AreEqual(row.Int16.GetType(), typeof(Int16));
+            Assert.AreEqual(row.Int32.GetType(), typeof(Int32));
+            Assert.AreEqual(row.Int64.GetType(), typeof(Int64));
+        }
+
+        [Test]
         public void Should_ReturnAllUsers_When_QueryHasNoOperators()
         {
             // Arrange
@@ -48,7 +68,7 @@ namespace Linq2ShadowTests.QueryToTableTests
                 .ToList<dynamic>();
 
             var userAlexFound = _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
-                .Where(ExpressionBuilders.Predicates.AreEquals("LastName", null))
+                .Where(ExpressionBuilders.Predicates.AreEquals("LastName", (string)null))
                 .ToList<dynamic>();
 
             var userKatuaFound = _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
@@ -115,7 +135,7 @@ namespace Linq2ShadowTests.QueryToTableTests
                 .ToList<dynamic>();
 
             var usersDzianisKatrinFound = _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
-                .Where(ExpressionBuilders.Predicates.AreNotEquals("LastName", null))
+                .Where(ExpressionBuilders.Predicates.AreNotEquals("LastName", (string)null))
                 .ToList<dynamic>();
 
             var usersDzianisAlexFound = _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)

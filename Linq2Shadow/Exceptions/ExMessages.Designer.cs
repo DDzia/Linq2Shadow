@@ -104,5 +104,14 @@ namespace Linq2Shadow.Exceptions {
                 return ResourceManager.GetString("stringWhitespace", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unsupported DB type..
+        /// </summary>
+        internal static string unsupportedDbType {
+            get {
+                return ResourceManager.GetString("unsupportedDbType", resourceCulture);
+            }
+        }
     }
 }
