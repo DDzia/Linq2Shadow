@@ -2,6 +2,8 @@
 using System.Linq;
 using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
+using System.Threading;
+using Linq2Shadow.Extensions;
 
 namespace Linq2Shadow
 {
@@ -176,6 +178,18 @@ namespace Linq2Shadow
             }
 
             return null;
+        }
+
+        public static bool IsListAsyncCall(Expression expr)
+        {
+            return expr is MethodCallExpression mCall &&
+                   mCall.Method.DeclaringType == typeof(QueryableAsyncExtensions) &&
+                   mCall.Method.Name == nameof(QueryableAsyncExtensions.ToListAsync);
+        }
+
+        public static CancellationToken GetCancellationTokenForToList(Expression expr)
+        {
+            return (CancellationToken)((ConstantExpression)((MethodCallExpression)expr).Arguments[1]).Value;
         }
     }
 }

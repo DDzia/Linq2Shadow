@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Reflection;
-using System.Text;
 using Linq2Shadow.Extensions;
 using Linq2Shadow.QueryProviders;
+
+[assembly: CLSCompliant(true)]
 
 namespace Linq2Shadow
 {
@@ -84,10 +85,7 @@ namespace Linq2Shadow
             using (cmd)
             {
                 cmd.CommandText = string.Format(SqlTemplates.sqlSp, storedProcedureName, paramsSql);
-                using (var reader = cmd.ExecuteReader())
-                {
-                    return reader.ReadAll();
-                }
+                return cmd.ReadAll();
             }
         }
 

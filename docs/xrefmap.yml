@@ -102,6 +102,34 @@ references:
   isSpec: "True"
   fullName: Linq2Shadow.DatabaseContext.QueryToTableValuedFunction
   nameWithType: DatabaseContext.QueryToTableValuedFunction
+- uid: Linq2Shadow.Extensions
+  name: Linq2Shadow.Extensions
+  href: api/Linq2Shadow.Extensions.html
+  commentId: N:Linq2Shadow.Extensions
+  fullName: Linq2Shadow.Extensions
+  nameWithType: Linq2Shadow.Extensions
+- uid: Linq2Shadow.Extensions.QueryableAsyncExtensions
+  name: QueryableAsyncExtensions
+  href: api/Linq2Shadow.Extensions.QueryableAsyncExtensions.html
+  commentId: T:Linq2Shadow.Extensions.QueryableAsyncExtensions
+  fullName: Linq2Shadow.Extensions.QueryableAsyncExtensions
+  nameWithType: QueryableAsyncExtensions
+- uid: Linq2Shadow.Extensions.QueryableAsyncExtensions.ToListAsync*
+  name: ToListAsync
+  href: api/Linq2Shadow.Extensions.QueryableAsyncExtensions.html#Linq2Shadow_Extensions_QueryableAsyncExtensions_ToListAsync_
+  commentId: Overload:Linq2Shadow.Extensions.QueryableAsyncExtensions.ToListAsync
+  isSpec: "True"
+  fullName: Linq2Shadow.Extensions.QueryableAsyncExtensions.ToListAsync
+  nameWithType: QueryableAsyncExtensions.ToListAsync
+- uid: Linq2Shadow.Extensions.QueryableAsyncExtensions.ToListAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken)
+  name: ToListAsync<T>(IQueryable<T>, CancellationToken)
+  href: api/Linq2Shadow.Extensions.QueryableAsyncExtensions.html#Linq2Shadow_Extensions_QueryableAsyncExtensions_ToListAsync__1_System_Linq_IQueryable___0__System_Threading_CancellationToken_
+  commentId: M:Linq2Shadow.Extensions.QueryableAsyncExtensions.ToListAsync``1(System.Linq.IQueryable{``0},System.Threading.CancellationToken)
+  name.vb: ToListAsync(Of T)(IQueryable(Of T), CancellationToken)
+  fullName: Linq2Shadow.Extensions.QueryableAsyncExtensions.ToListAsync<T>(System.Linq.IQueryable<T>, System.Threading.CancellationToken)
+  fullName.vb: Linq2Shadow.Extensions.QueryableAsyncExtensions.ToListAsync(Of T)(System.Linq.IQueryable(Of T), System.Threading.CancellationToken)
+  nameWithType: QueryableAsyncExtensions.ToListAsync<T>(IQueryable<T>, CancellationToken)
+  nameWithType.vb: QueryableAsyncExtensions.ToListAsync(Of T)(IQueryable(Of T), CancellationToken)
 - uid: Linq2Shadow.ShadowRow
   name: ShadowRow
   href: api/Linq2Shadow.ShadowRow.html
@@ -189,6 +217,25 @@ references:
   isSpec: "True"
   fullName: Linq2Shadow.ShadowRow.Keys
   nameWithType: ShadowRow.Keys
+- uid: Linq2Shadow.ShadowRow.op_Implicit(Linq2Shadow.ShadowRow)~System.Collections.Generic.Dictionary{System.String,System.Object}
+  name: Implicit(ShadowRow to Dictionary<String, Object>)
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_op_Implicit_Linq2Shadow_ShadowRow__System_Collections_Generic_Dictionary_System_String_System_Object_
+  commentId: M:Linq2Shadow.ShadowRow.op_Implicit(Linq2Shadow.ShadowRow)~System.Collections.Generic.Dictionary{System.String,System.Object}
+  name.vb: Widening(ShadowRow to Dictionary(Of String, Object))
+  fullName: Linq2Shadow.ShadowRow.Implicit(Linq2Shadow.ShadowRow to System.Collections.Generic.Dictionary<System.String, System.Object>)
+  fullName.vb: Linq2Shadow.ShadowRow.Widening(Linq2Shadow.ShadowRow to System.Collections.Generic.Dictionary(Of System.String, System.Object))
+  nameWithType: ShadowRow.Implicit(ShadowRow to Dictionary<String, Object>)
+  nameWithType.vb: ShadowRow.Widening(ShadowRow to Dictionary(Of String, Object))
+- uid: Linq2Shadow.ShadowRow.op_Implicit*
+  name: Implicit
+  href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_op_Implicit_
+  commentId: Overload:Linq2Shadow.ShadowRow.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Linq2Shadow.ShadowRow.Implicit
+  fullName.vb: Linq2Shadow.ShadowRow.Widening
+  nameWithType: ShadowRow.Implicit
+  nameWithType.vb: ShadowRow.Widening
 - uid: Linq2Shadow.ShadowRow.System#Collections#IEnumerable#GetEnumerator
   name: IEnumerable.GetEnumerator()
   href: api/Linq2Shadow.ShadowRow.html#Linq2Shadow_ShadowRow_System_Collections_IEnumerable_GetEnumerator
@@ -445,18 +492,135 @@ references:
   commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Boolean)
   fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String, System.Boolean)
   nameWithType: ExpressionBuilders.Predicates.AreEquals(String, Boolean)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Byte)
+  name: AreEquals(String, Byte)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreEquals_System_String_System_Byte_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Byte)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String, System.Byte)
+  nameWithType: ExpressionBuilders.Predicates.AreEquals(String, Byte)
 - uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.DateTime)
   name: AreEquals(String, DateTime)
   href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreEquals_System_String_System_DateTime_
   commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.DateTime)
   fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String, System.DateTime)
   nameWithType: ExpressionBuilders.Predicates.AreEquals(String, DateTime)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Decimal)
+  name: AreEquals(String, Decimal)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreEquals_System_String_System_Decimal_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Decimal)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String, System.Decimal)
+  nameWithType: ExpressionBuilders.Predicates.AreEquals(String, Decimal)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Double)
+  name: AreEquals(String, Double)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreEquals_System_String_System_Double_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Double)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String, System.Double)
+  nameWithType: ExpressionBuilders.Predicates.AreEquals(String, Double)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Guid)
+  name: AreEquals(String, Guid)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreEquals_System_String_System_Guid_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Guid)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String, System.Guid)
+  nameWithType: ExpressionBuilders.Predicates.AreEquals(String, Guid)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Int16)
+  name: AreEquals(String, Int16)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreEquals_System_String_System_Int16_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Int16)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String, System.Int16)
+  nameWithType: ExpressionBuilders.Predicates.AreEquals(String, Int16)
 - uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Int32)
   name: AreEquals(String, Int32)
   href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreEquals_System_String_System_Int32_
   commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Int32)
   fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String, System.Int32)
   nameWithType: ExpressionBuilders.Predicates.AreEquals(String, Int32)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Int64)
+  name: AreEquals(String, Int64)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreEquals_System_String_System_Int64_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Int64)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String, System.Int64)
+  nameWithType: ExpressionBuilders.Predicates.AreEquals(String, Int64)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Nullable{System.Boolean})
+  name: AreEquals(String, Nullable<Boolean>)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreEquals_System_String_System_Nullable_System_Boolean__
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Nullable{System.Boolean})
+  name.vb: AreEquals(String, Nullable(Of Boolean))
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String, System.Nullable<System.Boolean>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String, System.Nullable(Of System.Boolean))
+  nameWithType: ExpressionBuilders.Predicates.AreEquals(String, Nullable<Boolean>)
+  nameWithType.vb: ExpressionBuilders.Predicates.AreEquals(String, Nullable(Of Boolean))
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Nullable{System.Byte})
+  name: AreEquals(String, Nullable<Byte>)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreEquals_System_String_System_Nullable_System_Byte__
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Nullable{System.Byte})
+  name.vb: AreEquals(String, Nullable(Of Byte))
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String, System.Nullable<System.Byte>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String, System.Nullable(Of System.Byte))
+  nameWithType: ExpressionBuilders.Predicates.AreEquals(String, Nullable<Byte>)
+  nameWithType.vb: ExpressionBuilders.Predicates.AreEquals(String, Nullable(Of Byte))
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Nullable{System.DateTime})
+  name: AreEquals(String, Nullable<DateTime>)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreEquals_System_String_System_Nullable_System_DateTime__
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Nullable{System.DateTime})
+  name.vb: AreEquals(String, Nullable(Of DateTime))
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String, System.Nullable<System.DateTime>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String, System.Nullable(Of System.DateTime))
+  nameWithType: ExpressionBuilders.Predicates.AreEquals(String, Nullable<DateTime>)
+  nameWithType.vb: ExpressionBuilders.Predicates.AreEquals(String, Nullable(Of DateTime))
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Nullable{System.Decimal})
+  name: AreEquals(String, Nullable<Decimal>)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreEquals_System_String_System_Nullable_System_Decimal__
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Nullable{System.Decimal})
+  name.vb: AreEquals(String, Nullable(Of Decimal))
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String, System.Nullable<System.Decimal>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String, System.Nullable(Of System.Decimal))
+  nameWithType: ExpressionBuilders.Predicates.AreEquals(String, Nullable<Decimal>)
+  nameWithType.vb: ExpressionBuilders.Predicates.AreEquals(String, Nullable(Of Decimal))
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Nullable{System.Double})
+  name: AreEquals(String, Nullable<Double>)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreEquals_System_String_System_Nullable_System_Double__
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Nullable{System.Double})
+  name.vb: AreEquals(String, Nullable(Of Double))
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String, System.Nullable<System.Double>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String, System.Nullable(Of System.Double))
+  nameWithType: ExpressionBuilders.Predicates.AreEquals(String, Nullable<Double>)
+  nameWithType.vb: ExpressionBuilders.Predicates.AreEquals(String, Nullable(Of Double))
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Nullable{System.Guid})
+  name: AreEquals(String, Nullable<Guid>)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreEquals_System_String_System_Nullable_System_Guid__
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Nullable{System.Guid})
+  name.vb: AreEquals(String, Nullable(Of Guid))
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String, System.Nullable<System.Guid>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String, System.Nullable(Of System.Guid))
+  nameWithType: ExpressionBuilders.Predicates.AreEquals(String, Nullable<Guid>)
+  nameWithType.vb: ExpressionBuilders.Predicates.AreEquals(String, Nullable(Of Guid))
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Nullable{System.Int16})
+  name: AreEquals(String, Nullable<Int16>)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreEquals_System_String_System_Nullable_System_Int16__
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Nullable{System.Int16})
+  name.vb: AreEquals(String, Nullable(Of Int16))
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String, System.Nullable<System.Int16>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String, System.Nullable(Of System.Int16))
+  nameWithType: ExpressionBuilders.Predicates.AreEquals(String, Nullable<Int16>)
+  nameWithType.vb: ExpressionBuilders.Predicates.AreEquals(String, Nullable(Of Int16))
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Nullable{System.Int32})
+  name: AreEquals(String, Nullable<Int32>)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreEquals_System_String_System_Nullable_System_Int32__
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Nullable{System.Int32})
+  name.vb: AreEquals(String, Nullable(Of Int32))
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String, System.Nullable<System.Int32>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String, System.Nullable(Of System.Int32))
+  nameWithType: ExpressionBuilders.Predicates.AreEquals(String, Nullable<Int32>)
+  nameWithType.vb: ExpressionBuilders.Predicates.AreEquals(String, Nullable(Of Int32))
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Nullable{System.Int64})
+  name: AreEquals(String, Nullable<Int64>)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreEquals_System_String_System_Nullable_System_Int64__
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.Nullable{System.Int64})
+  name.vb: AreEquals(String, Nullable(Of Int64))
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String, System.Nullable<System.Int64>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String, System.Nullable(Of System.Int64))
+  nameWithType: ExpressionBuilders.Predicates.AreEquals(String, Nullable<Int64>)
+  nameWithType.vb: ExpressionBuilders.Predicates.AreEquals(String, Nullable(Of Int64))
 - uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreEquals(System.String,System.String)
   name: AreEquals(String, String)
   href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreEquals_System_String_System_String_
@@ -476,18 +640,135 @@ references:
   commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Boolean)
   fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String, System.Boolean)
   nameWithType: ExpressionBuilders.Predicates.AreNotEquals(String, Boolean)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Byte)
+  name: AreNotEquals(String, Byte)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreNotEquals_System_String_System_Byte_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Byte)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String, System.Byte)
+  nameWithType: ExpressionBuilders.Predicates.AreNotEquals(String, Byte)
 - uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.DateTime)
   name: AreNotEquals(String, DateTime)
   href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreNotEquals_System_String_System_DateTime_
   commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.DateTime)
   fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String, System.DateTime)
   nameWithType: ExpressionBuilders.Predicates.AreNotEquals(String, DateTime)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Decimal)
+  name: AreNotEquals(String, Decimal)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreNotEquals_System_String_System_Decimal_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Decimal)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String, System.Decimal)
+  nameWithType: ExpressionBuilders.Predicates.AreNotEquals(String, Decimal)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Double)
+  name: AreNotEquals(String, Double)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreNotEquals_System_String_System_Double_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Double)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String, System.Double)
+  nameWithType: ExpressionBuilders.Predicates.AreNotEquals(String, Double)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Guid)
+  name: AreNotEquals(String, Guid)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreNotEquals_System_String_System_Guid_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Guid)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String, System.Guid)
+  nameWithType: ExpressionBuilders.Predicates.AreNotEquals(String, Guid)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Int16)
+  name: AreNotEquals(String, Int16)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreNotEquals_System_String_System_Int16_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Int16)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String, System.Int16)
+  nameWithType: ExpressionBuilders.Predicates.AreNotEquals(String, Int16)
 - uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Int32)
   name: AreNotEquals(String, Int32)
   href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreNotEquals_System_String_System_Int32_
   commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Int32)
   fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String, System.Int32)
   nameWithType: ExpressionBuilders.Predicates.AreNotEquals(String, Int32)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Int64)
+  name: AreNotEquals(String, Int64)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreNotEquals_System_String_System_Int64_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Int64)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String, System.Int64)
+  nameWithType: ExpressionBuilders.Predicates.AreNotEquals(String, Int64)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Nullable{System.Boolean})
+  name: AreNotEquals(String, Nullable<Boolean>)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreNotEquals_System_String_System_Nullable_System_Boolean__
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Nullable{System.Boolean})
+  name.vb: AreNotEquals(String, Nullable(Of Boolean))
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String, System.Nullable<System.Boolean>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String, System.Nullable(Of System.Boolean))
+  nameWithType: ExpressionBuilders.Predicates.AreNotEquals(String, Nullable<Boolean>)
+  nameWithType.vb: ExpressionBuilders.Predicates.AreNotEquals(String, Nullable(Of Boolean))
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Nullable{System.Byte})
+  name: AreNotEquals(String, Nullable<Byte>)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreNotEquals_System_String_System_Nullable_System_Byte__
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Nullable{System.Byte})
+  name.vb: AreNotEquals(String, Nullable(Of Byte))
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String, System.Nullable<System.Byte>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String, System.Nullable(Of System.Byte))
+  nameWithType: ExpressionBuilders.Predicates.AreNotEquals(String, Nullable<Byte>)
+  nameWithType.vb: ExpressionBuilders.Predicates.AreNotEquals(String, Nullable(Of Byte))
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Nullable{System.DateTime})
+  name: AreNotEquals(String, Nullable<DateTime>)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreNotEquals_System_String_System_Nullable_System_DateTime__
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Nullable{System.DateTime})
+  name.vb: AreNotEquals(String, Nullable(Of DateTime))
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String, System.Nullable<System.DateTime>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String, System.Nullable(Of System.DateTime))
+  nameWithType: ExpressionBuilders.Predicates.AreNotEquals(String, Nullable<DateTime>)
+  nameWithType.vb: ExpressionBuilders.Predicates.AreNotEquals(String, Nullable(Of DateTime))
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Nullable{System.Decimal})
+  name: AreNotEquals(String, Nullable<Decimal>)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreNotEquals_System_String_System_Nullable_System_Decimal__
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Nullable{System.Decimal})
+  name.vb: AreNotEquals(String, Nullable(Of Decimal))
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String, System.Nullable<System.Decimal>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String, System.Nullable(Of System.Decimal))
+  nameWithType: ExpressionBuilders.Predicates.AreNotEquals(String, Nullable<Decimal>)
+  nameWithType.vb: ExpressionBuilders.Predicates.AreNotEquals(String, Nullable(Of Decimal))
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Nullable{System.Double})
+  name: AreNotEquals(String, Nullable<Double>)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreNotEquals_System_String_System_Nullable_System_Double__
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Nullable{System.Double})
+  name.vb: AreNotEquals(String, Nullable(Of Double))
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String, System.Nullable<System.Double>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String, System.Nullable(Of System.Double))
+  nameWithType: ExpressionBuilders.Predicates.AreNotEquals(String, Nullable<Double>)
+  nameWithType.vb: ExpressionBuilders.Predicates.AreNotEquals(String, Nullable(Of Double))
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Nullable{System.Guid})
+  name: AreNotEquals(String, Nullable<Guid>)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreNotEquals_System_String_System_Nullable_System_Guid__
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Nullable{System.Guid})
+  name.vb: AreNotEquals(String, Nullable(Of Guid))
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String, System.Nullable<System.Guid>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String, System.Nullable(Of System.Guid))
+  nameWithType: ExpressionBuilders.Predicates.AreNotEquals(String, Nullable<Guid>)
+  nameWithType.vb: ExpressionBuilders.Predicates.AreNotEquals(String, Nullable(Of Guid))
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Nullable{System.Int16})
+  name: AreNotEquals(String, Nullable<Int16>)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreNotEquals_System_String_System_Nullable_System_Int16__
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Nullable{System.Int16})
+  name.vb: AreNotEquals(String, Nullable(Of Int16))
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String, System.Nullable<System.Int16>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String, System.Nullable(Of System.Int16))
+  nameWithType: ExpressionBuilders.Predicates.AreNotEquals(String, Nullable<Int16>)
+  nameWithType.vb: ExpressionBuilders.Predicates.AreNotEquals(String, Nullable(Of Int16))
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Nullable{System.Int32})
+  name: AreNotEquals(String, Nullable<Int32>)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreNotEquals_System_String_System_Nullable_System_Int32__
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Nullable{System.Int32})
+  name.vb: AreNotEquals(String, Nullable(Of Int32))
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String, System.Nullable<System.Int32>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String, System.Nullable(Of System.Int32))
+  nameWithType: ExpressionBuilders.Predicates.AreNotEquals(String, Nullable<Int32>)
+  nameWithType.vb: ExpressionBuilders.Predicates.AreNotEquals(String, Nullable(Of Int32))
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Nullable{System.Int64})
+  name: AreNotEquals(String, Nullable<Int64>)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreNotEquals_System_String_System_Nullable_System_Int64__
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.Nullable{System.Int64})
+  name.vb: AreNotEquals(String, Nullable(Of Int64))
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String, System.Nullable<System.Int64>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String, System.Nullable(Of System.Int64))
+  nameWithType: ExpressionBuilders.Predicates.AreNotEquals(String, Nullable<Int64>)
+  nameWithType.vb: ExpressionBuilders.Predicates.AreNotEquals(String, Nullable(Of Int64))
 - uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.AreNotEquals(System.String,System.String)
   name: AreNotEquals(String, String)
   href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_AreNotEquals_System_String_System_String_
@@ -533,18 +814,48 @@ references:
   fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.CollectionNotContains(Of T)(System.Collections.Generic.IEnumerable(Of T), System.String)
   nameWithType: ExpressionBuilders.Predicates.CollectionNotContains<T>(IEnumerable<T>, String)
   nameWithType.vb: ExpressionBuilders.Predicates.CollectionNotContains(Of T)(IEnumerable(Of T), String)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThan(System.String,System.Byte)
+  name: GreaterThan(String, Byte)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_GreaterThan_System_String_System_Byte_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThan(System.String,System.Byte)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThan(System.String, System.Byte)
+  nameWithType: ExpressionBuilders.Predicates.GreaterThan(String, Byte)
 - uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThan(System.String,System.DateTime)
   name: GreaterThan(String, DateTime)
   href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_GreaterThan_System_String_System_DateTime_
   commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThan(System.String,System.DateTime)
   fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThan(System.String, System.DateTime)
   nameWithType: ExpressionBuilders.Predicates.GreaterThan(String, DateTime)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThan(System.String,System.Decimal)
+  name: GreaterThan(String, Decimal)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_GreaterThan_System_String_System_Decimal_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThan(System.String,System.Decimal)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThan(System.String, System.Decimal)
+  nameWithType: ExpressionBuilders.Predicates.GreaterThan(String, Decimal)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThan(System.String,System.Double)
+  name: GreaterThan(String, Double)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_GreaterThan_System_String_System_Double_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThan(System.String,System.Double)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThan(System.String, System.Double)
+  nameWithType: ExpressionBuilders.Predicates.GreaterThan(String, Double)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThan(System.String,System.Int16)
+  name: GreaterThan(String, Int16)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_GreaterThan_System_String_System_Int16_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThan(System.String,System.Int16)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThan(System.String, System.Int16)
+  nameWithType: ExpressionBuilders.Predicates.GreaterThan(String, Int16)
 - uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThan(System.String,System.Int32)
   name: GreaterThan(String, Int32)
   href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_GreaterThan_System_String_System_Int32_
   commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThan(System.String,System.Int32)
   fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThan(System.String, System.Int32)
   nameWithType: ExpressionBuilders.Predicates.GreaterThan(String, Int32)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThan(System.String,System.Int64)
+  name: GreaterThan(String, Int64)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_GreaterThan_System_String_System_Int64_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThan(System.String,System.Int64)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThan(System.String, System.Int64)
+  nameWithType: ExpressionBuilders.Predicates.GreaterThan(String, Int64)
 - uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThan*
   name: GreaterThan
   href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_GreaterThan_
@@ -552,18 +863,111 @@ references:
   isSpec: "True"
   fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThan
   nameWithType: ExpressionBuilders.Predicates.GreaterThan
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String,System.Byte)
+  name: GreaterThanOrEqual(String, Byte)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_GreaterThanOrEqual_System_String_System_Byte_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String,System.Byte)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String, System.Byte)
+  nameWithType: ExpressionBuilders.Predicates.GreaterThanOrEqual(String, Byte)
 - uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String,System.DateTime)
   name: GreaterThanOrEqual(String, DateTime)
   href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_GreaterThanOrEqual_System_String_System_DateTime_
   commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String,System.DateTime)
   fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String, System.DateTime)
   nameWithType: ExpressionBuilders.Predicates.GreaterThanOrEqual(String, DateTime)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String,System.Decimal)
+  name: GreaterThanOrEqual(String, Decimal)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_GreaterThanOrEqual_System_String_System_Decimal_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String,System.Decimal)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String, System.Decimal)
+  nameWithType: ExpressionBuilders.Predicates.GreaterThanOrEqual(String, Decimal)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String,System.Double)
+  name: GreaterThanOrEqual(String, Double)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_GreaterThanOrEqual_System_String_System_Double_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String,System.Double)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String, System.Double)
+  nameWithType: ExpressionBuilders.Predicates.GreaterThanOrEqual(String, Double)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String,System.Int16)
+  name: GreaterThanOrEqual(String, Int16)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_GreaterThanOrEqual_System_String_System_Int16_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String,System.Int16)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String, System.Int16)
+  nameWithType: ExpressionBuilders.Predicates.GreaterThanOrEqual(String, Int16)
 - uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String,System.Int32)
   name: GreaterThanOrEqual(String, Int32)
   href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_GreaterThanOrEqual_System_String_System_Int32_
   commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String,System.Int32)
   fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String, System.Int32)
   nameWithType: ExpressionBuilders.Predicates.GreaterThanOrEqual(String, Int32)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String,System.Int64)
+  name: GreaterThanOrEqual(String, Int64)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_GreaterThanOrEqual_System_String_System_Int64_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String,System.Int64)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String, System.Int64)
+  nameWithType: ExpressionBuilders.Predicates.GreaterThanOrEqual(String, Int64)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String,System.Nullable{System.Byte})
+  name: GreaterThanOrEqual(String, Nullable<Byte>)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_GreaterThanOrEqual_System_String_System_Nullable_System_Byte__
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String,System.Nullable{System.Byte})
+  name.vb: GreaterThanOrEqual(String, Nullable(Of Byte))
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String, System.Nullable<System.Byte>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String, System.Nullable(Of System.Byte))
+  nameWithType: ExpressionBuilders.Predicates.GreaterThanOrEqual(String, Nullable<Byte>)
+  nameWithType.vb: ExpressionBuilders.Predicates.GreaterThanOrEqual(String, Nullable(Of Byte))
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String,System.Nullable{System.DateTime})
+  name: GreaterThanOrEqual(String, Nullable<DateTime>)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_GreaterThanOrEqual_System_String_System_Nullable_System_DateTime__
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String,System.Nullable{System.DateTime})
+  name.vb: GreaterThanOrEqual(String, Nullable(Of DateTime))
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String, System.Nullable<System.DateTime>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String, System.Nullable(Of System.DateTime))
+  nameWithType: ExpressionBuilders.Predicates.GreaterThanOrEqual(String, Nullable<DateTime>)
+  nameWithType.vb: ExpressionBuilders.Predicates.GreaterThanOrEqual(String, Nullable(Of DateTime))
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String,System.Nullable{System.Decimal})
+  name: GreaterThanOrEqual(String, Nullable<Decimal>)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_GreaterThanOrEqual_System_String_System_Nullable_System_Decimal__
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String,System.Nullable{System.Decimal})
+  name.vb: GreaterThanOrEqual(String, Nullable(Of Decimal))
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String, System.Nullable<System.Decimal>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String, System.Nullable(Of System.Decimal))
+  nameWithType: ExpressionBuilders.Predicates.GreaterThanOrEqual(String, Nullable<Decimal>)
+  nameWithType.vb: ExpressionBuilders.Predicates.GreaterThanOrEqual(String, Nullable(Of Decimal))
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String,System.Nullable{System.Double})
+  name: GreaterThanOrEqual(String, Nullable<Double>)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_GreaterThanOrEqual_System_String_System_Nullable_System_Double__
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String,System.Nullable{System.Double})
+  name.vb: GreaterThanOrEqual(String, Nullable(Of Double))
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String, System.Nullable<System.Double>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String, System.Nullable(Of System.Double))
+  nameWithType: ExpressionBuilders.Predicates.GreaterThanOrEqual(String, Nullable<Double>)
+  nameWithType.vb: ExpressionBuilders.Predicates.GreaterThanOrEqual(String, Nullable(Of Double))
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String,System.Nullable{System.Int16})
+  name: GreaterThanOrEqual(String, Nullable<Int16>)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_GreaterThanOrEqual_System_String_System_Nullable_System_Int16__
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String,System.Nullable{System.Int16})
+  name.vb: GreaterThanOrEqual(String, Nullable(Of Int16))
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String, System.Nullable<System.Int16>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String, System.Nullable(Of System.Int16))
+  nameWithType: ExpressionBuilders.Predicates.GreaterThanOrEqual(String, Nullable<Int16>)
+  nameWithType.vb: ExpressionBuilders.Predicates.GreaterThanOrEqual(String, Nullable(Of Int16))
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String,System.Nullable{System.Int32})
+  name: GreaterThanOrEqual(String, Nullable<Int32>)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_GreaterThanOrEqual_System_String_System_Nullable_System_Int32__
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String,System.Nullable{System.Int32})
+  name.vb: GreaterThanOrEqual(String, Nullable(Of Int32))
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String, System.Nullable<System.Int32>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String, System.Nullable(Of System.Int32))
+  nameWithType: ExpressionBuilders.Predicates.GreaterThanOrEqual(String, Nullable<Int32>)
+  nameWithType.vb: ExpressionBuilders.Predicates.GreaterThanOrEqual(String, Nullable(Of Int32))
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String,System.Nullable{System.Int64})
+  name: GreaterThanOrEqual(String, Nullable<Int64>)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_GreaterThanOrEqual_System_String_System_Nullable_System_Int64__
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String,System.Nullable{System.Int64})
+  name.vb: GreaterThanOrEqual(String, Nullable(Of Int64))
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String, System.Nullable<System.Int64>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual(System.String, System.Nullable(Of System.Int64))
+  nameWithType: ExpressionBuilders.Predicates.GreaterThanOrEqual(String, Nullable<Int64>)
+  nameWithType.vb: ExpressionBuilders.Predicates.GreaterThanOrEqual(String, Nullable(Of Int64))
 - uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual*
   name: GreaterThanOrEqual
   href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_GreaterThanOrEqual_
@@ -571,18 +975,48 @@ references:
   isSpec: "True"
   fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.GreaterThanOrEqual
   nameWithType: ExpressionBuilders.Predicates.GreaterThanOrEqual
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThan(System.String,System.Byte)
+  name: LessThan(String, Byte)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LessThan_System_String_System_Byte_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThan(System.String,System.Byte)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThan(System.String, System.Byte)
+  nameWithType: ExpressionBuilders.Predicates.LessThan(String, Byte)
 - uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThan(System.String,System.DateTime)
   name: LessThan(String, DateTime)
   href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LessThan_System_String_System_DateTime_
   commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThan(System.String,System.DateTime)
   fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThan(System.String, System.DateTime)
   nameWithType: ExpressionBuilders.Predicates.LessThan(String, DateTime)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThan(System.String,System.Decimal)
+  name: LessThan(String, Decimal)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LessThan_System_String_System_Decimal_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThan(System.String,System.Decimal)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThan(System.String, System.Decimal)
+  nameWithType: ExpressionBuilders.Predicates.LessThan(String, Decimal)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThan(System.String,System.Double)
+  name: LessThan(String, Double)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LessThan_System_String_System_Double_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThan(System.String,System.Double)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThan(System.String, System.Double)
+  nameWithType: ExpressionBuilders.Predicates.LessThan(String, Double)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThan(System.String,System.Int16)
+  name: LessThan(String, Int16)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LessThan_System_String_System_Int16_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThan(System.String,System.Int16)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThan(System.String, System.Int16)
+  nameWithType: ExpressionBuilders.Predicates.LessThan(String, Int16)
 - uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThan(System.String,System.Int32)
   name: LessThan(String, Int32)
   href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LessThan_System_String_System_Int32_
   commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThan(System.String,System.Int32)
   fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThan(System.String, System.Int32)
   nameWithType: ExpressionBuilders.Predicates.LessThan(String, Int32)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThan(System.String,System.Int64)
+  name: LessThan(String, Int64)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LessThan_System_String_System_Int64_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThan(System.String,System.Int64)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThan(System.String, System.Int64)
+  nameWithType: ExpressionBuilders.Predicates.LessThan(String, Int64)
 - uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThan*
   name: LessThan
   href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LessThan_
@@ -590,18 +1024,111 @@ references:
   isSpec: "True"
   fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThan
   nameWithType: ExpressionBuilders.Predicates.LessThan
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String,System.Byte)
+  name: LessThanOrEqual(String, Byte)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LessThanOrEqual_System_String_System_Byte_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String,System.Byte)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String, System.Byte)
+  nameWithType: ExpressionBuilders.Predicates.LessThanOrEqual(String, Byte)
 - uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String,System.DateTime)
   name: LessThanOrEqual(String, DateTime)
   href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LessThanOrEqual_System_String_System_DateTime_
   commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String,System.DateTime)
   fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String, System.DateTime)
   nameWithType: ExpressionBuilders.Predicates.LessThanOrEqual(String, DateTime)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String,System.Decimal)
+  name: LessThanOrEqual(String, Decimal)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LessThanOrEqual_System_String_System_Decimal_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String,System.Decimal)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String, System.Decimal)
+  nameWithType: ExpressionBuilders.Predicates.LessThanOrEqual(String, Decimal)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String,System.Double)
+  name: LessThanOrEqual(String, Double)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LessThanOrEqual_System_String_System_Double_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String,System.Double)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String, System.Double)
+  nameWithType: ExpressionBuilders.Predicates.LessThanOrEqual(String, Double)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String,System.Int16)
+  name: LessThanOrEqual(String, Int16)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LessThanOrEqual_System_String_System_Int16_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String,System.Int16)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String, System.Int16)
+  nameWithType: ExpressionBuilders.Predicates.LessThanOrEqual(String, Int16)
 - uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String,System.Int32)
   name: LessThanOrEqual(String, Int32)
   href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LessThanOrEqual_System_String_System_Int32_
   commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String,System.Int32)
   fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String, System.Int32)
   nameWithType: ExpressionBuilders.Predicates.LessThanOrEqual(String, Int32)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String,System.Int64)
+  name: LessThanOrEqual(String, Int64)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LessThanOrEqual_System_String_System_Int64_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String,System.Int64)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String, System.Int64)
+  nameWithType: ExpressionBuilders.Predicates.LessThanOrEqual(String, Int64)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String,System.Nullable{System.Byte})
+  name: LessThanOrEqual(String, Nullable<Byte>)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LessThanOrEqual_System_String_System_Nullable_System_Byte__
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String,System.Nullable{System.Byte})
+  name.vb: LessThanOrEqual(String, Nullable(Of Byte))
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String, System.Nullable<System.Byte>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String, System.Nullable(Of System.Byte))
+  nameWithType: ExpressionBuilders.Predicates.LessThanOrEqual(String, Nullable<Byte>)
+  nameWithType.vb: ExpressionBuilders.Predicates.LessThanOrEqual(String, Nullable(Of Byte))
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String,System.Nullable{System.DateTime})
+  name: LessThanOrEqual(String, Nullable<DateTime>)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LessThanOrEqual_System_String_System_Nullable_System_DateTime__
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String,System.Nullable{System.DateTime})
+  name.vb: LessThanOrEqual(String, Nullable(Of DateTime))
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String, System.Nullable<System.DateTime>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String, System.Nullable(Of System.DateTime))
+  nameWithType: ExpressionBuilders.Predicates.LessThanOrEqual(String, Nullable<DateTime>)
+  nameWithType.vb: ExpressionBuilders.Predicates.LessThanOrEqual(String, Nullable(Of DateTime))
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String,System.Nullable{System.Decimal})
+  name: LessThanOrEqual(String, Nullable<Decimal>)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LessThanOrEqual_System_String_System_Nullable_System_Decimal__
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String,System.Nullable{System.Decimal})
+  name.vb: LessThanOrEqual(String, Nullable(Of Decimal))
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String, System.Nullable<System.Decimal>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String, System.Nullable(Of System.Decimal))
+  nameWithType: ExpressionBuilders.Predicates.LessThanOrEqual(String, Nullable<Decimal>)
+  nameWithType.vb: ExpressionBuilders.Predicates.LessThanOrEqual(String, Nullable(Of Decimal))
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String,System.Nullable{System.Double})
+  name: LessThanOrEqual(String, Nullable<Double>)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LessThanOrEqual_System_String_System_Nullable_System_Double__
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String,System.Nullable{System.Double})
+  name.vb: LessThanOrEqual(String, Nullable(Of Double))
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String, System.Nullable<System.Double>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String, System.Nullable(Of System.Double))
+  nameWithType: ExpressionBuilders.Predicates.LessThanOrEqual(String, Nullable<Double>)
+  nameWithType.vb: ExpressionBuilders.Predicates.LessThanOrEqual(String, Nullable(Of Double))
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String,System.Nullable{System.Int16})
+  name: LessThanOrEqual(String, Nullable<Int16>)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LessThanOrEqual_System_String_System_Nullable_System_Int16__
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String,System.Nullable{System.Int16})
+  name.vb: LessThanOrEqual(String, Nullable(Of Int16))
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String, System.Nullable<System.Int16>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String, System.Nullable(Of System.Int16))
+  nameWithType: ExpressionBuilders.Predicates.LessThanOrEqual(String, Nullable<Int16>)
+  nameWithType.vb: ExpressionBuilders.Predicates.LessThanOrEqual(String, Nullable(Of Int16))
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String,System.Nullable{System.Int32})
+  name: LessThanOrEqual(String, Nullable<Int32>)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LessThanOrEqual_System_String_System_Nullable_System_Int32__
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String,System.Nullable{System.Int32})
+  name.vb: LessThanOrEqual(String, Nullable(Of Int32))
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String, System.Nullable<System.Int32>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String, System.Nullable(Of System.Int32))
+  nameWithType: ExpressionBuilders.Predicates.LessThanOrEqual(String, Nullable<Int32>)
+  nameWithType.vb: ExpressionBuilders.Predicates.LessThanOrEqual(String, Nullable(Of Int32))
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String,System.Nullable{System.Int64})
+  name: LessThanOrEqual(String, Nullable<Int64>)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LessThanOrEqual_System_String_System_Nullable_System_Int64__
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String,System.Nullable{System.Int64})
+  name.vb: LessThanOrEqual(String, Nullable(Of Int64))
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String, System.Nullable<System.Int64>)
+  fullName.vb: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual(System.String, System.Nullable(Of System.Int64))
+  nameWithType: ExpressionBuilders.Predicates.LessThanOrEqual(String, Nullable<Int64>)
+  nameWithType.vb: ExpressionBuilders.Predicates.LessThanOrEqual(String, Nullable(Of Int64))
 - uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.LessThanOrEqual*
   name: LessThanOrEqual
   href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_LessThanOrEqual_

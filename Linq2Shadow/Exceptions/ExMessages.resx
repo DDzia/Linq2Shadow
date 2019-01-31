@@ -135,4 +135,7 @@
     <value>Unexpected whitespace.</value>
     <comment>string is white space</comment>
   </data>
+  <data name="unsupportedDbType" xml:space="preserve">
+    <value>Unsupported DB type.</value>
+  </data>
 </root>

@@ -72,12 +72,14 @@ namespace Linq2ShadowTests
             {
                 conn.ExecuteScriptFromFile("scripts/tables/create-users-table.sql");
                 conn.ExecuteScriptFromFile("scripts/tables/create-reports-table.sql");
+                conn.ExecuteScriptFromFile("scripts/tables/create-alltypes.table.sql");
 
                 conn.ExecuteScriptFromFile("scripts/tv-functions/get-all-users-function.sql");
                 conn.ExecuteScriptFromFile("scripts/sp/return-allusers-sp.sql");
 
                 conn.ExecuteScriptFromFile("scripts/population/populate-users.sql");
                 conn.ExecuteScriptFromFile("scripts/population/populate-reports.sql");
+                conn.ExecuteScriptFromFile("scripts/population/populate-alltypes.sql");
             }
         }
 
@@ -85,6 +87,7 @@ namespace Linq2ShadowTests
         {
             public const string UsersTable = "tUsers";
             public const string ReportsTable = "tReports";
+            public const string TypesTable = "[dbo].[AllTypes]";
 
             public const string GetAllUsersFunction = "fGetAllUsers";
 
