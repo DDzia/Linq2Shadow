@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
 using System.Threading;
@@ -22,17 +21,7 @@ namespace Linq2Shadow.Extensions
             return items;
         }
 
-        public static Task<List<ShadowRow>> ReadAllAsync(this IDbCommand cmd, CancellationToken cancellationToken)
-        {
-            if (cmd is DbCommand dbCmd)
-            {
-                return ReadAllAsync(dbCmd, cancellationToken);
-            }
-
-            return ReadAllViaThreadPoolWorkItemAsync(cmd, cancellationToken);
-        }
-
-        private static async Task<List<ShadowRow>> ReadAllAsync(this DbCommand cmd, CancellationToken cancellationToken)
+        public static async Task<List<ShadowRow>> ReadAllAsync(this DbCommand cmd, CancellationToken cancellationToken)
         {
             var items = new List<ShadowRow>();
 
@@ -44,42 +33,32 @@ namespace Linq2Shadow.Extensions
                 {
                     while (await reader.ReadAsync(cancellationToken).ConfigureAwait(false) && !cancellationToken.IsCancellationRequested)
                     {
-                        items.Add(reader.FillRow());
+                        var r = await reader.FillRow(cancellationToken).ConfigureAwait(false);
+                        items.Add(r);
                     }
                 }
             }
 
             if (cancellationToken.IsCancellationRequested)
             {
-                return await Task.FromCanceled<List<ShadowRow>>(cancellationToken).ConfigureAwait(false);
+                return await CodeUtils.FromCancelledTask<List<ShadowRow>>(cancellationToken).ConfigureAwait(false);
             }
 
             return items;
         }
 
-        private static Task<List<ShadowRow>> ReadAllViaThreadPoolWorkItemAsync(this IDbCommand cmd, CancellationToken cancellationToken)
+        private static async Task<ShadowRow> FillRow(this DbDataReader reader, CancellationToken cancellationToken = default(CancellationToken))
         {
-            var tcs = new TaskCompletionSource<List<ShadowRow>>();
-
-            Task.Run(() =>
+            var row = new ShadowRow();
+            for (int i = 0; i < reader.FieldCount; i++)
             {
-                try
-                {
-                    var items = ReadAll(cmd, cancellationToken);
-                    if (cancellationToken.IsCancellationRequested)
-                    {
-                        tcs.SetCanceled();
-                    }
-
-                    tcs.SetResult(items);
-                }
-                catch (Exception e)
-                {
-                    tcs.SetException(e);
-                }
-            }, cancellationToken);
-
-            return tcs.Task;
+                var name = reader.GetName(i);
+                var value = await reader.IsDBNullAsync(i, cancellationToken).ConfigureAwait(false)
+                    ? null
+                    : reader[name];
+                row.SetValue(name, value);
+            }
+            return row;
         }
 
         private static ShadowRow FillRow(this IDataReader reader)
@@ -90,7 +69,7 @@ namespace Linq2Shadow.Extensions
                 var name = reader.GetName(i);
                 var value = reader.IsDBNull(i)
                     ? null
-                    : reader.GetValue(i);
+                    : reader[name];
                 row.SetValue(name, value);
             }
             return row;

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Common;
 using System.Linq;
 using System.Reflection;
+using Linq2Shadow.Adapters;
 using Linq2Shadow.Extensions;
 using Linq2Shadow.QueryProviders;
 
@@ -13,19 +15,21 @@ namespace Linq2Shadow
     public class DatabaseContext: IDisposable
     {
         private readonly Func<IDbConnection> _connFactory;
-        internal readonly Lazy<IDbConnection> Connection;
+        internal readonly Lazy<DbConnection> Connection;
 
         public DatabaseContext(Func<IDbConnection> db)
         {
             _connFactory = db;
-            Connection = new Lazy<IDbConnection>(() =>
+            Connection = new Lazy<DbConnection>(() =>
             {
                 var connCreated = _connFactory();
-                if (connCreated.State == ConnectionState.Closed)
+                var conn = DbConnectionAdapter.Adapte(connCreated);
+
+                if (conn.State == ConnectionState.Closed)
                 {
-                    connCreated.Open();
+                    conn.Open();
                 }
-                return connCreated;
+                return conn;
             });
         }
 
