@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Data.Common;
 using System.Linq;
 using System.Linq.Expressions;
 using Linq2Shadow.Extensions;
@@ -54,10 +55,9 @@ namespace Linq2Shadow.QueryProviders
             var sqlGenerated = new FromSourceQueryTranslator(_queryParamsStore, _source)
                 .TranslateToSql(expression);
 
-            IDbCommand PrepareSqlAndParams()
+            DbCommand PrepareSqlAndParams()
             {
                 var cmd = _dbCtx.Connection.Value.CreateCommand();
-
                 cmd.CommandText = sqlGenerated;
 
                 foreach (var paramKv in _queryParamsStore.GetParams())
