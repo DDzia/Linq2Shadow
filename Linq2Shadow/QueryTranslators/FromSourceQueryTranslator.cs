@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using Linq2Shadow.QueryTranslators.OrderBy;
+using Linq2Shadow.QueryTranslators.SelectOnly;
 using Linq2Shadow.QueryTranslators.Where;
 using Linq2Shadow.Utils;
 
@@ -21,7 +22,7 @@ namespace Linq2Shadow.QueryTranslators
 
         public override string TranslateToSql(Expression expr)
         {
-            List<Expression<Func<ShadowRow, bool>>> externalPredicates = new List<Expression<Func<ShadowRow, bool>>>();
+            var externalPredicates = new List<Expression<Func<ShadowRow, bool>>>();
 
             var itIsCount = false;
             var itIsFirst = false;
@@ -36,9 +37,13 @@ namespace Linq2Shadow.QueryTranslators
 #pragma warning restore CS0642
 
 
+            var selectOnlyTranslator = new SelectOnlyTranslator();
+
             if (itIsCount)
             {
-                _sb.Append("SELECT COUNT (*) FROM ");
+                _sb.Append("SELECT COUNT (");
+                _sb.Append(selectOnlyTranslator.TranslateToSql(expr));
+                _sb.Append(") FROM ");
                 var mCall = expr as MethodCallExpression;
                 if (mCall.Arguments.Count == 2)
                 {
@@ -50,7 +55,9 @@ namespace Linq2Shadow.QueryTranslators
             }
             else if (itIsFirst && !skipUsed)
             {
-                _sb.Append("SELECT TOP 1 * FROM ");
+                _sb.Append("SELECT TOP 1 ");
+                _sb.Append(selectOnlyTranslator.TranslateToSql(expr));
+                _sb.Append(" FROM ");
                 var mCall = expr as MethodCallExpression;
                 if (mCall.Arguments.Count == 2)
                 {
@@ -63,7 +70,9 @@ namespace Linq2Shadow.QueryTranslators
             }
             else
             {
-                _sb.Append("SELECT * FROM ");
+                _sb.Append("SELECT ");
+                _sb.Append(selectOnlyTranslator.TranslateToSql(expr));
+                _sb.Append(" FROM ");
             }
 
             _sb.Append(_sourceName);
