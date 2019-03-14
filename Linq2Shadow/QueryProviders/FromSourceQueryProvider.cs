@@ -149,17 +149,24 @@ namespace Linq2Shadow.QueryProviders
         private DbCommand PrepareSqlAndParams(Expression expression)
         {
             var cmd = _dbCtx.Connection.Value.CreateCommand();
-
-            // generate SQL from expression trees
-            cmd.CommandText = new FromSourceQueryTranslator(_queryParamsStore, _source)
-                .TranslateToSql(expression);
-
-            foreach (var paramKv in _queryParamsStore.GetParams())
+            try
             {
-                var p = cmd.CreateParameter();
-                p.ParameterName = paramKv.Key;
-                p.Value = paramKv.Value;
-                cmd.Parameters.Add(p);
+                // generate SQL from expression trees
+                cmd.CommandText = new FromSourceQueryTranslator(_queryParamsStore, _source)
+                    .TranslateToSql(expression);
+
+                foreach (var paramKv in _queryParamsStore.GetParams())
+                {
+                    var p = cmd.CreateParameter();
+                    p.ParameterName = paramKv.Key;
+                    p.Value = paramKv.Value;
+                    cmd.Parameters.Add(p);
+                }
+            }
+            catch
+            {
+                cmd.Dispose();
+                throw;
             }
 
             return cmd;
