@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 
@@ -8,7 +9,7 @@ namespace Linq2Shadow.QueryProviders
     {
         protected readonly QueryParametersStore _queryParamsStore;
 
-        protected internal QueryProvider(QueryParametersStore queryParamsStore = null)
+        internal QueryProvider(QueryParametersStore queryParamsStore = null)
         {
             _queryParamsStore = queryParamsStore ?? new QueryParametersStore();
         }
@@ -24,11 +25,10 @@ namespace Linq2Shadow.QueryProviders
             return new Query<TElement>(this, expression);
         }
 
-        public object Execute(Expression expression)
-        {
-            throw new NotSupportedException();
-        }
+        public object Execute(Expression expression) => throw new NotSupportedException();
 
         public abstract TResult Execute<TResult>(Expression expression);
+
+        public abstract IEnumerator<T> GetEnumerator<T>(Expression expression);
     }
 }
