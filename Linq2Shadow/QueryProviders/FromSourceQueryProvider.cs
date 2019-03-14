@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Data;
+using System.Collections.Generic;
 using System.Data.Common;
 using System.Linq;
 using System.Linq.Expressions;
@@ -51,30 +51,10 @@ namespace Linq2Shadow.QueryProviders
         /// <returns></returns>
         public override TResult Execute<TResult>(Expression expression)
         {
-            // generate SQL from expression trees
-            var sqlGenerated = new FromSourceQueryTranslator(_queryParamsStore, _source)
-                .TranslateToSql(expression);
-
-            DbCommand PrepareSqlAndParams()
-            {
-                var cmd = _dbCtx.Connection.Value.CreateCommand();
-                cmd.CommandText = sqlGenerated;
-
-                foreach (var paramKv in _queryParamsStore.GetParams())
-                {
-                    var p = cmd.CreateParameter();
-                    p.ParameterName = paramKv.Key;
-                    p.Value = paramKv.Value;
-                    cmd.Parameters.Add(p);
-                }
-
-                return cmd;
-            }
-
             // it is a Count aggregation call
             if (ExpressionsInternalToolkit.IsCountQueryableCall(expression))
             {
-                using (var cmd = PrepareSqlAndParams())
+                using (var cmd = PrepareSqlAndParams(expression))
                 {
                     var val = cmd.ExecuteScalar();
 
@@ -92,7 +72,7 @@ namespace Linq2Shadow.QueryProviders
             }
 
             // otherwise is applied a Query
-            using (var cmd = PrepareSqlAndParams())
+            using (var cmd = PrepareSqlAndParams(expression))
             {
                 if (ExpressionsInternalToolkit.IsListAsyncCall(expression))
                 {
@@ -101,7 +81,14 @@ namespace Linq2Shadow.QueryProviders
                 }
                 else
                 {
-                    var collection = cmd.ReadAll();
+                    var collection = new List<ShadowRow>();
+                    using (var enumerator = GetEnumerator<ShadowRow>(expression))
+                    {
+                        while (enumerator.MoveNext())
+                        {
+                            collection.Add(enumerator.Current);
+                        }
+                    }
 
                     var firstAggregationCalled = ExpressionsInternalToolkit.IsFirstQueryableCall(expression);
                     var firstOrDefaultAggregationCalled = ExpressionsInternalToolkit.IsFirstOrDefaultQueryableCall(expression);
@@ -131,6 +118,51 @@ namespace Linq2Shadow.QueryProviders
                     return (TResult)(object)collection;
                 }
             }
+        }
+
+        public override IEnumerator<T> GetEnumerator<T>(Expression expression)
+        {
+            DbCommand cmd = null;
+            DbDataReader reader = null;
+
+            void Disposition()
+            {
+                reader?.Dispose();
+                cmd?.Dispose();
+            }
+
+            try
+            {
+                cmd = PrepareSqlAndParams(expression);
+                reader = cmd.ExecuteReader();
+            }
+            catch
+            {
+                Disposition();
+                throw;
+            }
+
+            var enumerator = (IEnumerator<T>)(object)new ResultSetEnumerator(reader, Disposition);
+            return enumerator;
+        }
+
+        private DbCommand PrepareSqlAndParams(Expression expression)
+        {
+            var cmd = _dbCtx.Connection.Value.CreateCommand();
+
+            // generate SQL from expression trees
+            cmd.CommandText = new FromSourceQueryTranslator(_queryParamsStore, _source)
+                .TranslateToSql(expression);
+
+            foreach (var paramKv in _queryParamsStore.GetParams())
+            {
+                var p = cmd.CreateParameter();
+                p.ParameterName = paramKv.Key;
+                p.Value = paramKv.Value;
+                cmd.Parameters.Add(p);
+            }
+
+            return cmd;
         }
     }
 }

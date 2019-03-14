@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Data;
 using System.Data.Common;
 using System.Threading;
 using System.Threading.Tasks;
@@ -8,9 +7,10 @@ namespace Linq2Shadow.Extensions
 {
     internal static class DbCommandExtensions
     {
-        public static List<ShadowRow> ReadAll(this IDbCommand cmd, CancellationToken cancellationToken = default)
+        internal static List<ShadowRow> ReadAll(this DbCommand cmd, CancellationToken cancellationToken = default)
         {
             var items = new List<ShadowRow>();
+
             using (var reader = cmd.ExecuteReader())
             {
                 while (reader.Read() && !cancellationToken.IsCancellationRequested)
@@ -33,7 +33,7 @@ namespace Linq2Shadow.Extensions
                 {
                     while (await reader.ReadAsync(cancellationToken).ConfigureAwait(false) && !cancellationToken.IsCancellationRequested)
                     {
-                        var r = await reader.FillRow(cancellationToken).ConfigureAwait(false);
+                        var r = await reader.FillRowAsync(cancellationToken).ConfigureAwait(false);
                         items.Add(r);
                     }
                 }
@@ -45,34 +45,6 @@ namespace Linq2Shadow.Extensions
             }
 
             return items;
-        }
-
-        private static async Task<ShadowRow> FillRow(this DbDataReader reader, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            var row = new ShadowRow();
-            for (int i = 0; i < reader.FieldCount; i++)
-            {
-                var name = reader.GetName(i);
-                var value = await reader.IsDBNullAsync(i, cancellationToken).ConfigureAwait(false)
-                    ? null
-                    : reader[name];
-                row.SetValue(name, value);
-            }
-            return row;
-        }
-
-        private static ShadowRow FillRow(this IDataReader reader)
-        {
-            var row = new ShadowRow();
-            for (int i = 0; i < reader.FieldCount; i++)
-            {
-                var name = reader.GetName(i);
-                var value = reader.IsDBNull(i)
-                    ? null
-                    : reader[name];
-                row.SetValue(name, value);
-            }
-            return row;
         }
     }
 }
