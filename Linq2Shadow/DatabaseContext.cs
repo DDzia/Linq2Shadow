@@ -43,6 +43,7 @@ namespace Linq2Shadow
             return QueryToStoredProcedureInternal(storedProcedureName, parameters);
         }
 
+        [Obsolete("Queries to stored procedures is impossible.", false)]
         public IEnumerable<ShadowRow> QueryToStoredProcedure<T>(string storedProcedureName, T parameters = null)
             where T: class
         {
