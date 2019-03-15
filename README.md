@@ -58,7 +58,7 @@ build-doc.ps1
 Demo serve via command line:
 
 ```shell
-docx doc_templates/docfx.json --serve
+docfx doc_templates/docfx.json --serve
 ```
 
 ## Licensing
