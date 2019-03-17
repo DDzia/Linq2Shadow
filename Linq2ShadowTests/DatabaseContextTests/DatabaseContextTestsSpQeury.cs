@@ -1,11 +1,12 @@
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using Linq2Shadow;
 using NUnit.Framework;
 
 namespace Linq2ShadowTests.DatabaseContextTests
 {
-    internal class DatabaseContextTestsSpQeury: TestBase
+    [TestFixture]
+    public class DatabaseContextTestsSpQeury: TestBase
     {
         private DatabaseContext _sut;
 
