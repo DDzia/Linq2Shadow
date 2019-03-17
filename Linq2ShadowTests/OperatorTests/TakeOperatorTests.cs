@@ -6,7 +6,8 @@ using NUnit.Framework;
 namespace Linq2ShadowTests.OperatorTests
 {
     // TODO: need check with count
-    class TakeOperatorTests: TestBase
+    [TestFixture]
+    public class TakeOperatorTests: TestBase
     {
         private DatabaseContext _sut;
 

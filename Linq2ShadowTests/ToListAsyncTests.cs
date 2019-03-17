@@ -5,7 +5,8 @@ using Linq2Shadow.Extensions;
 
 namespace Linq2ShadowTests
 {
-    class ToListAsyncTests: TestBase
+    [TestFixture]
+    public class ToListAsyncTests: TestBase
     {
         private DatabaseContext _sut;
 

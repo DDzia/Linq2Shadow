@@ -5,7 +5,7 @@ using NUnit.Framework;
 namespace Linq2ShadowTests
 {
     [TestFixture]
-    class EnumeratorTests: TestBase
+    public class EnumeratorTests: TestBase
     {
         private DatabaseContext _db;
 

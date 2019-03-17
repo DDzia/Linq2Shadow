@@ -7,7 +7,8 @@ using NUnit.Framework;
 
 namespace Linq2ShadowTests.OperatorTests
 {
-    internal class WhereOperatorTests: TestBase
+    [TestFixture]
+    public class WhereOperatorTests: TestBase
     {
         private DatabaseContext _sut;
 

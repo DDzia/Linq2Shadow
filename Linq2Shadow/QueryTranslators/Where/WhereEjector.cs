@@ -16,7 +16,7 @@ namespace Linq2Shadow.QueryTranslators.Where
                 var prevQuery = node.Arguments[0];
                 Visit(prevQuery);
 
-                if (node.Method.Name == "Where")
+                if (node.Method.Name == nameof(Queryable.Where))
                 {
                     var lambda = (node.Arguments[1] as UnaryExpression)?.Operand as LambdaExpression;
                     if (lambda == null)

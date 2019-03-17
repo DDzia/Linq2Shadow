@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace Linq2ShadowTests
 {
     [Parallelizable(ParallelScope.None)]
-    internal abstract class TestBase
+    public abstract class TestBase
     {
         [OneTimeSetUp]
         public Task SetUpOnce() => BeforeAll();
