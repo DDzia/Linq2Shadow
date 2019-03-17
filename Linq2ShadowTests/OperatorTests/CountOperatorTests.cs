@@ -1,11 +1,12 @@
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using Linq2Shadow;
 using NUnit.Framework;
 
 namespace Linq2ShadowTests.OperatorTests
 {
-    internal class CountOperatorTests: TestBase
+    [TestFixture]
+    public class CountOperatorTests: TestBase
     {
         private DatabaseContext _sut;
 

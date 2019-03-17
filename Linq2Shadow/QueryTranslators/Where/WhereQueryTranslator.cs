@@ -311,10 +311,8 @@ namespace Linq2Shadow.QueryTranslators.Where
         {
             whereEjector.Visit(expr);
 
-            var p = ExpressionBuilders.DefaultRowParameter;
-
             var typedLambdas = whereEjector.WhereExpressions
-                                           .Select(x => Expression.Lambda<Func<ShadowRow, bool>>(x.Body, p))
+                                           .Select(x => Expression.Lambda<Func<ShadowRow, bool>>(x.Body, ExpressionBuilders.DefaultRowParameter))
                                            .ToList();
 
             if (_externalPredicates?.Any() ?? false)

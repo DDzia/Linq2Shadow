@@ -5,7 +5,8 @@ using NUnit.Framework;
 
 namespace Linq2ShadowTests.OperatorTests
 {
-    internal class SkipOperatorTests: TestBase
+    [TestFixture]
+    public class SkipOperatorTests: TestBase
     {
         private DatabaseContext _sut;
 
