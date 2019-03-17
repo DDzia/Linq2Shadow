@@ -7,7 +7,8 @@ using NUnit.Framework;
 
 namespace Linq2ShadowTests.OperatorTests
 {
-    class SelectOnlyOperatorTests: TestBase
+    [TestFixture]
+    public class SelectOnlyOperatorTests: TestBase
     {
         private DatabaseContext _db;
 

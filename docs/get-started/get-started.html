@@ -90,6 +90,7 @@ cd SampleApp
 <h5>Note</h5>
 <p>SqlServer connection string is not defined in here code. We will use  connection string from <a href="attachments.html#connection-string">attachments</a>.</p>
 </div>
+<p>Instantiating the DatabaseContext object:</p>
 <pre><code class="lang-csharp">Func&lt;SqlConnection&gt; connectionFactory = () =&gt; new SqlConnection(connectionString);  
 var db = new DatabaseContext(connectionFactory);
 </code></pre>
@@ -267,6 +268,23 @@ ExpressionBuilders.Predicates.StringEndsWith(&quot;UserName&quot;, &quot;Dzi&quo
 
 // SQL equivalent:  `UserName LIKE 'Dzi%'`
 ExpressionBuilders.Predicates.StringStartsWith(&quot;UserName&quot;, &quot;Dzi&quot;);
+</code></pre>
+<h2 id="update-source">Update source</h2>
+<p>Approaches to update data source:</p>
+<pre><code class="lang-csharp">var updateMap = new Dictionary&lt;string, object&gt;(){{&quot;UserName&quot;, &quot;SuperDzianis&quot;}};  
+var updatePredicate = ExpressionBuiders.Predicates.AreEquals(&quot;UserName&quot;, &quot;Dzianis&quot;);  
+
+// update all rows  
+var udpdatedUsersCount = db.Update(&quot;tUsers&quot;, updateMap);  
+
+// update with predicate(part of data)
+var udpdatedUsersCount = db.Update(&quot;tUsers&quot;, updateMap, updatePredicate);  
+
+// same with typed model
+var udpdatedUsersCount = db.Update(&quot;tUsers&quot;, new { UserName=&quot;Dzianis&quot; }, updatePredicate);  
+
+// update asynchronously
+var udpdatedUsersCount = db.UpdateAsync(&quot;tUsers&quot;, new { UserName=&quot;Dzianis&quot; }, CancellationToken.None);  
 </code></pre>
 </article>
           </div>

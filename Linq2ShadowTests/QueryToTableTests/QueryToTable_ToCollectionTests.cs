@@ -7,7 +7,8 @@ using NUnit.Framework;
 
 namespace Linq2ShadowTests.QueryToTableTests
 {
-    class QueryToTable_ToCollectionTests : TestBase
+    [TestFixture]
+    public class QueryToTable_ToCollectionTests : TestBase
     {
         private DatabaseContext _sut;
 

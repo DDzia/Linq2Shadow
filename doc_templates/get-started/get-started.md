@@ -26,6 +26,8 @@ The DatabaseContext object present the context over pure connection to make quer
 > [!NOTE]
 > SqlServer connection string is not defined in here code. We will use  connection string from [attachments](attachments.html#connection-string).
 
+Instantiating the DatabaseContext object:
+
 ```csharp
 Func<SqlConnection> connectionFactory = () => new SqlConnection(connectionString);  
 var db = new DatabaseContext(connectionFactory);
@@ -211,4 +213,25 @@ ExpressionBuilders.Predicates.StringEndsWith("UserName", "Dzi");
 
 // SQL equivalent:  `UserName LIKE 'Dzi%'`
 ExpressionBuilders.Predicates.StringStartsWith("UserName", "Dzi");
+```
+
+##  Update source
+
+Approaches to update data source:
+
+```csharp
+var updateMap = new Dictionary<string, object>(){{"UserName", "SuperDzianis"}};  
+var updatePredicate = ExpressionBuiders.Predicates.AreEquals("UserName", "Dzianis");  
+
+// update all rows  
+var udpdatedUsersCount = db.Update("tUsers", updateMap);  
+
+// update with predicate(part of data)
+var udpdatedUsersCount = db.Update("tUsers", updateMap, updatePredicate);  
+
+// same with typed model
+var udpdatedUsersCount = db.Update("tUsers", new { UserName="Dzianis" }, updatePredicate);  
+
+// update asynchronously
+var udpdatedUsersCount = db.UpdateAsync("tUsers", new { UserName="Dzianis" }, CancellationToken.None);  
 ```

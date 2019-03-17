@@ -102,6 +102,56 @@ references:
   isSpec: "True"
   fullName: Linq2Shadow.DatabaseContext.QueryToTableValuedFunction
   nameWithType: DatabaseContext.QueryToTableValuedFunction
+- uid: Linq2Shadow.DatabaseContext.Update(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}})
+  name: Update(String, Dictionary<String, Object>, Expression<Func<ShadowRow, Boolean>>)
+  href: api/Linq2Shadow.DatabaseContext.html#Linq2Shadow_DatabaseContext_Update_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__System_Linq_Expressions_Expression_System_Func_Linq2Shadow_ShadowRow_System_Boolean___
+  commentId: M:Linq2Shadow.DatabaseContext.Update(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}})
+  name.vb: Update(String, Dictionary(Of String, Object), Expression(Of Func(Of ShadowRow, Boolean)))
+  fullName: Linq2Shadow.DatabaseContext.Update(System.String, System.Collections.Generic.Dictionary<System.String, System.Object>, System.Linq.Expressions.Expression<System.Func<Linq2Shadow.ShadowRow, System.Boolean>>)
+  fullName.vb: Linq2Shadow.DatabaseContext.Update(System.String, System.Collections.Generic.Dictionary(Of System.String, System.Object), System.Linq.Expressions.Expression(Of System.Func(Of Linq2Shadow.ShadowRow, System.Boolean)))
+  nameWithType: DatabaseContext.Update(String, Dictionary<String, Object>, Expression<Func<ShadowRow, Boolean>>)
+  nameWithType.vb: DatabaseContext.Update(String, Dictionary(Of String, Object), Expression(Of Func(Of ShadowRow, Boolean)))
+- uid: Linq2Shadow.DatabaseContext.Update*
+  name: Update
+  href: api/Linq2Shadow.DatabaseContext.html#Linq2Shadow_DatabaseContext_Update_
+  commentId: Overload:Linq2Shadow.DatabaseContext.Update
+  isSpec: "True"
+  fullName: Linq2Shadow.DatabaseContext.Update
+  nameWithType: DatabaseContext.Update
+- uid: Linq2Shadow.DatabaseContext.Update``1(System.String,``0,System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}})
+  name: Update<T>(String, T, Expression<Func<ShadowRow, Boolean>>)
+  href: api/Linq2Shadow.DatabaseContext.html#Linq2Shadow_DatabaseContext_Update__1_System_String___0_System_Linq_Expressions_Expression_System_Func_Linq2Shadow_ShadowRow_System_Boolean___
+  commentId: M:Linq2Shadow.DatabaseContext.Update``1(System.String,``0,System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}})
+  name.vb: Update(Of T)(String, T, Expression(Of Func(Of ShadowRow, Boolean)))
+  fullName: Linq2Shadow.DatabaseContext.Update<T>(System.String, T, System.Linq.Expressions.Expression<System.Func<Linq2Shadow.ShadowRow, System.Boolean>>)
+  fullName.vb: Linq2Shadow.DatabaseContext.Update(Of T)(System.String, T, System.Linq.Expressions.Expression(Of System.Func(Of Linq2Shadow.ShadowRow, System.Boolean)))
+  nameWithType: DatabaseContext.Update<T>(String, T, Expression<Func<ShadowRow, Boolean>>)
+  nameWithType.vb: DatabaseContext.Update(Of T)(String, T, Expression(Of Func(Of ShadowRow, Boolean)))
+- uid: Linq2Shadow.DatabaseContext.UpdateAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}},System.Threading.CancellationToken)
+  name: UpdateAsync(String, Dictionary<String, Object>, Expression<Func<ShadowRow, Boolean>>, CancellationToken)
+  href: api/Linq2Shadow.DatabaseContext.html#Linq2Shadow_DatabaseContext_UpdateAsync_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__System_Linq_Expressions_Expression_System_Func_Linq2Shadow_ShadowRow_System_Boolean___System_Threading_CancellationToken_
+  commentId: M:Linq2Shadow.DatabaseContext.UpdateAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}},System.Threading.CancellationToken)
+  name.vb: UpdateAsync(String, Dictionary(Of String, Object), Expression(Of Func(Of ShadowRow, Boolean)), CancellationToken)
+  fullName: Linq2Shadow.DatabaseContext.UpdateAsync(System.String, System.Collections.Generic.Dictionary<System.String, System.Object>, System.Linq.Expressions.Expression<System.Func<Linq2Shadow.ShadowRow, System.Boolean>>, System.Threading.CancellationToken)
+  fullName.vb: Linq2Shadow.DatabaseContext.UpdateAsync(System.String, System.Collections.Generic.Dictionary(Of System.String, System.Object), System.Linq.Expressions.Expression(Of System.Func(Of Linq2Shadow.ShadowRow, System.Boolean)), System.Threading.CancellationToken)
+  nameWithType: DatabaseContext.UpdateAsync(String, Dictionary<String, Object>, Expression<Func<ShadowRow, Boolean>>, CancellationToken)
+  nameWithType.vb: DatabaseContext.UpdateAsync(String, Dictionary(Of String, Object), Expression(Of Func(Of ShadowRow, Boolean)), CancellationToken)
+- uid: Linq2Shadow.DatabaseContext.UpdateAsync*
+  name: UpdateAsync
+  href: api/Linq2Shadow.DatabaseContext.html#Linq2Shadow_DatabaseContext_UpdateAsync_
+  commentId: Overload:Linq2Shadow.DatabaseContext.UpdateAsync
+  isSpec: "True"
+  fullName: Linq2Shadow.DatabaseContext.UpdateAsync
+  nameWithType: DatabaseContext.UpdateAsync
+- uid: Linq2Shadow.DatabaseContext.UpdateAsync``1(System.String,``0,System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}},System.Threading.CancellationToken)
+  name: UpdateAsync<T>(String, T, Expression<Func<ShadowRow, Boolean>>, CancellationToken)
+  href: api/Linq2Shadow.DatabaseContext.html#Linq2Shadow_DatabaseContext_UpdateAsync__1_System_String___0_System_Linq_Expressions_Expression_System_Func_Linq2Shadow_ShadowRow_System_Boolean___System_Threading_CancellationToken_
+  commentId: M:Linq2Shadow.DatabaseContext.UpdateAsync``1(System.String,``0,System.Linq.Expressions.Expression{System.Func{Linq2Shadow.ShadowRow,System.Boolean}},System.Threading.CancellationToken)
+  name.vb: UpdateAsync(Of T)(String, T, Expression(Of Func(Of ShadowRow, Boolean)), CancellationToken)
+  fullName: Linq2Shadow.DatabaseContext.UpdateAsync<T>(System.String, T, System.Linq.Expressions.Expression<System.Func<Linq2Shadow.ShadowRow, System.Boolean>>, System.Threading.CancellationToken)
+  fullName.vb: Linq2Shadow.DatabaseContext.UpdateAsync(Of T)(System.String, T, System.Linq.Expressions.Expression(Of System.Func(Of Linq2Shadow.ShadowRow, System.Boolean)), System.Threading.CancellationToken)
+  nameWithType: DatabaseContext.UpdateAsync<T>(String, T, Expression<Func<ShadowRow, Boolean>>, CancellationToken)
+  nameWithType.vb: DatabaseContext.UpdateAsync(Of T)(String, T, Expression(Of Func(Of ShadowRow, Boolean)), CancellationToken)
 - uid: Linq2Shadow.Extensions
   name: Linq2Shadow.Extensions
   href: api/Linq2Shadow.Extensions.html

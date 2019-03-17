@@ -3,16 +3,19 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Reflection;
+using System.Text;
 using Linq2Shadow.Adapters;
 using Linq2Shadow.Extensions;
 using Linq2Shadow.QueryProviders;
+using Linq2Shadow.QueryTranslators.Where;
 
 [assembly: CLSCompliant(true)]
 
 namespace Linq2Shadow
 {
-    public class DatabaseContext: IDisposable
+    public partial class DatabaseContext: IDisposable
     {
         private readonly Func<IDbConnection> _connFactory;
         internal readonly Lazy<DbConnection> Connection;
@@ -32,6 +35,8 @@ namespace Linq2Shadow
                 return conn;
             });
         }
+
+        #region queries
 
         public IQueryable<ShadowRow> QueryToTableValuedFunction(string functionName, object[] parameters = null)
         {
@@ -98,6 +103,8 @@ namespace Linq2Shadow
         {
             return new Query<ShadowRow>(new FromSourceQueryProvider(this, sourceName));
         }
+
+        #endregion queries
 
         protected virtual void Dispose(bool disposing)
         {
