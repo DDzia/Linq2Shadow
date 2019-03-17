@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Get started | Linq2Shadow Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Get started | Linq2Shadow Documentation ">
+    <meta name="generator" content="docfx 2.40.12.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    <meta property="docfx:newtab" content="true">
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="get-started">Get started</h1>
+
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>In all samples we will use database client from the <strong>System.Data.SqlClient</strong> package. For more about engines support, see <a href="/compatibility">compatibility page</a>.</p>
+</div>
+<h2 id="project-preparing">Project preparing</h2>
+<h3 id="creating-project-via-dotnet-cli">Creating project via dotnet CLI</h3>
+<pre><code class="lang-cmd">dotnet new console -n SampleApp
+cd SampleApp
+</code></pre>
+<h3 id="install-linq2shadow-package">Install Linq2Shadow package</h3>
+<pre><code class="lang-cmd">dotnet add SampleApp package Linq2Shadow
+</code></pre>
+<h3 id="install-database-client-package">Install database client package</h3>
+<pre><code class="lang-cmd">dotnet add . package System.Data.SqlClient
+</code></pre>
+<h2 id="databasecontext">DatabaseContext</h2>
+<p>The DatabaseContext object present the context over pure connection to make query operations(for example: query to table, view, stored procedure, function and etc.). For more info about DatabaseContext, see <a href="/api/Linq2Shadow.DatabaseContext.html">API</a>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>SqlServer connection string is not defined in here code. We will use  connection string from <a href="attachments.html#connection-string">attachments</a>.</p>
+</div>
+<pre><code class="lang-csharp">Func&lt;SqlConnection&gt; connectionFactory = () =&gt; new SqlConnection(connectionString);  
+var db = new DatabaseContext(connectionFactory);
+</code></pre>
+<h2 id="shadowrow">ShadowRow</h2>
+<p>Try execute this code:</p>
+<pre><code class="lang-csharp">ShadowRow userFound = db.QueryToTable(&quot;tUsers&quot;).First();
+</code></pre>
+<p>As you can see, that the result of query is the ShadowRow object. The The ShadowRow is needed to present the entry retrieved from query. We can don't know table name(and entity structure also) at compilation time, because data source can be passed from the client or 3rd-party service, for example.</p>
+<p>Example to get property of entry:</p>
+<pre><code class="lang-csharp">string uname = userFound[&quot;UserName&quot;]; // &quot;Dzianis&quot;
+dynamic userDynamic = userFound;
+// dynamic access to row properties is possible
+Console.WriteLine(uname == userDynamic.UserName); // True
+
+IEnumerable&lt;object&gt; values = userFound.Values; // [&quot;Dzianis&quot;, 0]
+int countOfProperties = userFound.Count; // 1
+IEnumerable&lt;string&gt; propertyNames = userFound.Keys; // [&quot;UserName&quot;, &quot;Married&quot;]
+</code></pre>
+<h2 id="query-examples">Query examples</h2>
+<div class="NOTE">
+<h5>Note</h5>
+<p>In those samples will be used DatabaseContext object created at above.</p>
+</div>
+<div class="tabGroup" id="tabgroup_CeZOj-G++Q">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_quey-to-table" role="tab" aria-controls="tabpanel_CeZOj-G++Q_quey-to-table" data-tab="quey-to-table" tabindex="0" aria-selected="true">Query to table</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_quey-to-view" role="tab" aria-controls="tabpanel_CeZOj-G++Q_quey-to-view" data-tab="quey-to-view" tabindex="-1">Query to view</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_quey-to-stored-procedure" role="tab" aria-controls="tabpanel_CeZOj-G++Q_quey-to-stored-procedure" data-tab="quey-to-stored-procedure" tabindex="-1">Query to store procedure</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_CeZOj-G++Q_quey-to-function" role="tab" aria-controls="tabpanel_CeZOj-G++Q_quey-to-function" data-tab="quey-to-function" tabindex="-1">Query to function</a>
+</li>
+</ul>
+<section id="tabpanel_CeZOj-G++Q_quey-to-table" role="tabpanel" data-tab="quey-to-table">
+
+<pre><code class="lang-csharp">var usersFound = db.QueryToTable(&quot;tUsers&quot;)  
+    .ToList();
+</code></pre>
+</section>
+<section id="tabpanel_CeZOj-G++Q_quey-to-view" role="tabpanel" data-tab="quey-to-view" aria-hidden="true" hidden="hidden">
+
+<p>Queries to view has the same approach as to table.</p>
+</section>
+<section id="tabpanel_CeZOj-G++Q_quey-to-stored-procedure" role="tabpanel" data-tab="quey-to-stored-procedure" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">var spArgs = new Dictionary&lt;string, object&gt;(){ {&quot;UserName&quot;, &quot;Dzianis&quot;} };  
+var usersFound = db.QueryToStoredProcedure(&quot;spFindUsers&quot;, spArgs)  
+    .ToList();
+
+// TODO: typed params approach
+var spArgsTyped = new { UserName = &quot;Dzianis&quot; };  
+var usersFoundSame = db.QueryToStoredProcedure(&quot;spFindUsers&quot;, spArgsTyped)  
+    .ToList();
+</code></pre>
+</section>
+<section id="tabpanel_CeZOj-G++Q_quey-to-function" role="tabpanel" data-tab="quey-to-function" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">var functionArguments = new object[] { &quot;Dzianis&quot; };  
+var usersFound = db.QueryToStoredProcedure(&quot;fFindUsers&quot;, functionArguments)  
+    .ToList();
+</code></pre>
+</section>
+</div>
+<h3 id="paging-sample">Paging sample</h3>
+<pre><code class="lang-csharp">var userFound = db.QueryToTable(&quot;tUsers&quot;)  
+    .Skip(1)  
+    .Take(1)  
+    .ToList();
+</code></pre>
+<h3 id="filtering-example">Filtering example</h3>
+<div class="NOTE">
+<h5>Note</h5>
+<p>More about ExpressionBuilders.Predicates class see <a href="#predicates">below</a>.</p>
+</div>
+<pre><code class="lang-csharp">var userFound = db.QueryToTable(&quot;tUsers&quot;)  
+    .Where(ExpressionBuilders.Predicates.AreEqual(&quot;UserName&quot;, &quot;Dzianis&quot;))  
+    .ToList();
+</code></pre>
+<h3 id="count-example">Count example</h3>
+<div class="NOTE">
+<h5>Note</h5>
+<p>More about ExpressionBuilders.Predicates class see <a href="#predicates">below</a>.</p>
+</div>
+<pre><code class="lang-csharp">var countAl = db.QueryToTable(&quot;tUsers&quot;).Count();
+
+var countDzianises = db.QueryToTable(&quot;tUsers&quot;)  
+    .Count(ExpressionBuilders.Predicates.AreEqual(&quot;UserName&quot;, &quot;Dzianis&quot;));
+</code></pre>
+<h3 id="ordering-example">Ordering example</h3>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Today, assembly has no contains helpers to create the MemberAccess expressions with ShadowRow like <code>x =&gt; x[&quot;UserName&quot;]</code>. You can create him manually, but know that it is planned to future.</p>
+</div>
+<pre><code class="lang-csharp">var usersOrdered = db.QueryToTable(&quot;tUsers&quot;)  
+    .OrderBy(x =&gt; x[&quot;UserName&quot;])  
+    .ThenByDescending(x =&gt; x[&quot;Marrried&quot;])  
+    .ToList();
+</code></pre>
+<h3 id="first-example">First example</h3>
+<pre><code class="lang-csharp">var firstFound = db.QueryToTable(&quot;tUsers&quot;)
+    .First(); // or FirstOrDefault()
+</code></pre>
+<h3 id="reading-via-loop">Reading via loop</h3>
+<pre><code class="lang-csharp">// All data are not loaded to memory, here.  
+// Data reads like `from row to row`: EnumeratorObj.Move() initiate DbDataReader.Read()  
+foreach(var row in db.QueryToTable(&quot;tUsers&quot;))  
+{  
+    Console.WriteLine(row[&quot;UserName&quot;]);
+}
+</code></pre>
+<h3 id="select-example">Select example</h3>
+<pre><code class="lang-csharp">var usersFound = db.QueryToTable(&quot;tUsers&quot;)  
+    .SelectOnly(new [] { &quot;Married&quot; })  
+    .First();
+// Output: [0]
+// !Attention!: UserName is skipped
+</code></pre>
+<h3 id="async-example">Async example</h3>
+<pre><code class="lang-csharp">await db.QueryToTable(&quot;tUsers&quot;).ToListAsync();
+await db.QueryToTable(&quot;tUsers&quot;).FirstAsync();
+await db.QueryToTable(&quot;tUsers&quot;).CountAsync();
+</code></pre>
+<h3 id="predicates">Predicates</h3>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Usage the methods of ExpressionBuilders.Predicates class is recomended way to building predicates. Today all predicate building are similar <code>x =&gt; (int)x == 1</code>, where <code>x</code> is ShadowRow, but in future approach for it can be changed, but interface of ExpressionBuilders.Predicates class will be stable.</p>
+</div>
+<p>For building predicates let's use methods of static ExpressionBuilders.Predicates class. This class has lot of methods like those:</p>
+<pre><code class="lang-csharp">// SQL equivalent:  `Age=1`
+ExpressionBuilders.Predicates.AreEquals(&quot;Age&quot;, 1);
+
+// SQL equivalent:  `Age!=1`
+ExpressionBuilders.Predicates.AreNotEquals(&quot;Age&quot;, 1);
+
+// SQL equivalent:  `Age IN [1]`
+ExpressionBuilders.Predicates.CollectionContains(new [] { 1 }, &quot;Age&quot;);
+
+// SQL equivalent:  `Age NOT IN [1]`
+ExpressionBuilders.Predicates.CollectionNotContains(new [] { 1 }, &quot;Age&quot;);
+
+// SQL equivalent:  `Age &gt; 1`
+ExpressionBuilders.Predicates.GreaterThan(&quot;Age&quot;, 1);
+
+// SQL equivalent:  `Age &gt;= 1`
+ExpressionBuilders.Predicates.GreaterThanOrEqual(&quot;Age&quot;, 1);
+
+// SQL equivalent:  `Age &lt; 1`
+ExpressionBuilders.Predicates.LessThan(&quot;Age&quot;, 1);
+
+// SQL equivalent:  `Age &lt;= 1`
+ExpressionBuilders.Predicates.LessThanOrEqual(&quot;Age&quot;, 1);
+
+// SQL equivalent:  `Age &gt; 1 AND Age &lt; 2`
+ExpressionBuilders.Predicates.LessThanOrEqual(
+    ExpressionBuilders.Predicates.GreaterThan(&quot;Age&quot;, 1),
+    ExpressionBuilders.Predicates.LessThan(&quot;Age&quot;, 2)
+);
+
+// SQL equivalent:  `Age = 1 OR Age = 2`
+ExpressionBuilders.Predicates.LessThanOrEqual(
+    ExpressionBuilders.Predicates.AreEquals(&quot;Age&quot;, 1),
+    ExpressionBuilders.Predicates.AreEquals(&quot;Age&quot;, 2)
+);
+
+// SQL equivalent:  `UserName LIKE '%Dzi%'`
+ExpressionBuilders.Predicates.StringContains(&quot;UserName&quot;, &quot;Dzi&quot;);
+
+// SQL equivalent:  `UserName LIKE '%Dzi'`
+ExpressionBuilders.Predicates.StringEndsWith(&quot;UserName&quot;, &quot;Dzi&quot;);
+
+// SQL equivalent:  `UserName LIKE 'Dzi%'`
+ExpressionBuilders.Predicates.StringStartsWith(&quot;UserName&quot;, &quot;Dzi&quot;);
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/DDzia/Linq2Shadow/blob/master/doc_templates/get-started/get-started.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright © 2019 Dzianis Dziarkach
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
