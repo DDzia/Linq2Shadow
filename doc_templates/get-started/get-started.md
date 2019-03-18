@@ -192,13 +192,13 @@ ExpressionBuilders.Predicates.LessThan("Age", 1);
 ExpressionBuilders.Predicates.LessThanOrEqual("Age", 1);
 
 // SQL equivalent:  `Age > 1 AND Age < 2`
-ExpressionBuilders.Predicates.LessThanOrEqual(
+ExpressionBuilders.Predicates.LogicalAnd(
     ExpressionBuilders.Predicates.GreaterThan("Age", 1),
     ExpressionBuilders.Predicates.LessThan("Age", 2)
 );
 
 // SQL equivalent:  `Age = 1 OR Age = 2`
-ExpressionBuilders.Predicates.LessThanOrEqual(
+ExpressionBuilders.Predicates.LogicalOr(
     ExpressionBuilders.Predicates.AreEquals("Age", 1),
     ExpressionBuilders.Predicates.AreEquals("Age", 2)
 );
