@@ -286,6 +286,18 @@ var udpdatedUsersCount = db.Update(&quot;tUsers&quot;, new { UserName=&quot;Dzia
 // update asynchronously
 var udpdatedUsersCount = db.UpdateAsync(&quot;tUsers&quot;, new { UserName=&quot;Dzianis&quot; }, CancellationToken.None);  
 </code></pre>
+<h2 id="remove-from-source">Remove from source</h2>
+<p>Approaches to remove data from sources like table or view:</p>
+<pre><code class="lang-csharp">// Update all records from tUsets table
+db.Remove(&quot;tUsers&quot;);
+
+// Update users with 'Dzianis' UserName
+db.Remove(&quot;tUsers&quot;, ExpressionBuilders.Predicates.AreEquals(&quot;UserName&quot;, &quot;Dzianis&quot;));
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Database Context object has same an asynchronous Remove overloads with <strong>Async</strong> postfix. Asynchronous overloads supports cancellation also.</p>
+</div>
 </article>
           </div>
           

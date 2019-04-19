@@ -47,4 +47,10 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="DatabaseContextTests.*.cs">
+      <DependentUpon>DatabaseContextTests.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
 </Project>

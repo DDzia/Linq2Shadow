@@ -235,3 +235,17 @@ var udpdatedUsersCount = db.Update("tUsers", new { UserName="Dzianis" }, updateP
 // update asynchronously
 var udpdatedUsersCount = db.UpdateAsync("tUsers", new { UserName="Dzianis" }, CancellationToken.None);  
 ```
+
+## Remove from source
+
+Approaches to remove data from sources like table or view:
+
+```csharp
+// Update all records from tUsets table
+db.Remove("tUsers");
+
+// Update users with 'Dzianis' UserName
+db.Remove("tUsers", ExpressionBuilders.Predicates.AreEquals("UserName", "Dzianis"));
+```
+> [!NOTE]
+> Database Context object has same an asynchronous Remove overloads with **Async** postfix. Asynchronous overloads supports cancellation also.
