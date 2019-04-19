@@ -34,6 +34,9 @@
     <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="DatabaseContext - Copy.Update.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Update="Exceptions\ExMessages.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -55,4 +58,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
   </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="DatabaseContext.*.cs">
+      <DependentUpon>DatabaseContext.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
 </Project>

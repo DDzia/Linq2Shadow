@@ -105,6 +105,7 @@ namespace Linq2Shadow
         /// <param name="updateTarget">Data source to update.</param>
         /// <param name="updateFields">Map of members and new values.</param>
         /// <param name="predicate">Filter predicate to update.</param>
+        /// <param name="cancellationToken">Operation cancellation.</param>
         /// <returns>Count of updated rows.</returns>
         /// <exception cref="ArgumentNullException">Thrown when <paramref name="updateTarget"/> is null.</exception>
         /// <exception cref="ArgumentException">Thrown when <paramref name="updateTarget"/> is whitespace.</exception>
@@ -128,6 +129,7 @@ namespace Linq2Shadow
         /// <param name="updateTarget">Data source to update.</param>
         /// <param name="updateFields">Map of members and new values.</param>
         /// <param name="predicate">Filter predicate to update.</param>
+        /// <param name="cancellationToken">Operation cancellation.</param>
         /// <returns>Count of updated rows.</returns>
         /// <exception cref="ArgumentNullException">Thrown when <paramref name="updateTarget"/> is null.</exception>
         /// <exception cref="ArgumentException">Thrown when <paramref name="updateTarget"/> is whitespace.</exception>
@@ -152,7 +154,8 @@ namespace Linq2Shadow
             Expression<Func<ShadowRow, bool>> predicate = null)
         {
             var sb = new StringBuilder()
-                .Append($"UPDATE {updateTarget}");
+                .Append("UPDATE ")
+                .Append(updateTarget);
 
             var store = new QueryParametersStore();
             var fieldPNameMap = new Dictionary<string, string>();

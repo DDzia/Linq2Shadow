@@ -3,13 +3,10 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Reflection;
-using System.Text;
 using Linq2Shadow.Adapters;
 using Linq2Shadow.Extensions;
 using Linq2Shadow.QueryProviders;
-using Linq2Shadow.QueryTranslators.Where;
 
 [assembly: CLSCompliant(true)]
 
@@ -17,15 +14,16 @@ namespace Linq2Shadow
 {
     public partial class DatabaseContext: IDisposable
     {
-        private readonly Func<IDbConnection> _connFactory;
         internal readonly Lazy<DbConnection> Connection;
 
         public DatabaseContext(Func<IDbConnection> db)
         {
-            _connFactory = db;
+            if (db is null)
+                throw new ArgumentNullException(nameof(db));
+
             Connection = new Lazy<DbConnection>(() =>
             {
-                var connCreated = _connFactory();
+                var connCreated = db();
                 var conn = DbConnectionAdapter.Adapte(connCreated);
 
                 if (conn.State == ConnectionState.Closed)
