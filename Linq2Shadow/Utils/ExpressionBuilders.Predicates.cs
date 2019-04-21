@@ -365,7 +365,7 @@ namespace Linq2Shadow.Utils
                 ExHelpers.ThrowIfSpacesOrNull(() => member);
                 ExHelpers.ThrowIfUnsupportedDbType(value?.GetType());
 
-                var indexerCall = Member(member);
+                var indexerCall = MemberInternal(member);
 
                 Expression eqExpr;
 
@@ -678,7 +678,7 @@ namespace Linq2Shadow.Utils
                 ExHelpers.ThrowIfSpacesOrNull(() => member);
                 ExHelpers.ThrowIfUnsupportedDbType(value?.GetType());
 
-                var indexerCall = Member(member);
+                var indexerCall = MemberInternal(member);
 
                 Expression eqExpr;
 
@@ -717,7 +717,7 @@ namespace Linq2Shadow.Utils
                 ExHelpers.ThrowIfNull(() => value);
 
 
-                var memberCall = Member(member);
+                var memberCall = MemberInternal(member);
                 var memberAsString = Expression.Convert(memberCall, typeof(string));
 
 
@@ -750,7 +750,7 @@ namespace Linq2Shadow.Utils
                 ExHelpers.ThrowIfSpacesOrNull(() => member);
                 ExHelpers.ThrowIfNull(() => value);
 
-                var memberCall = Member(member);
+                var memberCall = MemberInternal(member);
                 var memberAsString = Expression.Convert(memberCall, typeof(string));
 
                 var mi = typeof(string).GetMethods(BindingFlags.Instance | BindingFlags.Public)
@@ -782,7 +782,7 @@ namespace Linq2Shadow.Utils
                 ExHelpers.ThrowIfSpacesOrNull(() => member);
                 ExHelpers.ThrowIfNull(() => value);
 
-                var memberCall = Member(member);
+                var memberCall = MemberInternal(member);
                 var memberAsString = Expression.Convert(memberCall, typeof(string));
 
                 var mi = typeof(string).GetMethods(BindingFlags.Instance | BindingFlags.Public)
@@ -913,7 +913,7 @@ namespace Linq2Shadow.Utils
                     throw new InvalidOperationException(string.Format(ExMessages.invTypeComp, "Boolean", "greater than"));
                 }
 
-                var indexerCall = Member(member);
+                var indexerCall = MemberInternal(member);
 
                 var convertExpr = Expression.Convert(indexerCall, valueType);
 
@@ -1139,7 +1139,7 @@ namespace Linq2Shadow.Utils
                     throw new InvalidOperationException(string.Format(ExMessages.invTypeComp, "Boolean", "greater than or equal"));
                 }
 
-                var indexerCall = Member(member);
+                var indexerCall = MemberInternal(member);
 
                 var convertExpr = Expression.Convert(indexerCall, valueType);
 
@@ -1260,7 +1260,7 @@ namespace Linq2Shadow.Utils
                     throw new InvalidOperationException(string.Format(ExMessages.invTypeComp, "Boolean", "less than"));
                 }
 
-                var indexerCall = Member(member);
+                var indexerCall = MemberInternal(member);
 
                 var convertExpr = Expression.Convert(indexerCall, valueType);
 
@@ -1486,7 +1486,7 @@ namespace Linq2Shadow.Utils
                     throw new InvalidOperationException(string.Format(ExMessages.invTypeComp, "Boolean", "less than or equal"));
                 }
 
-                var indexerCall = Member(member);
+                var indexerCall = MemberInternal(member);
 
                 var convertExpr = Expression.Convert(indexerCall, valueType);
 

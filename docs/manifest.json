@@ -9,10 +9,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Linq2Shadow.DatabaseContext.html",
-          "hash": "Y4v4E/sefIaffHQTGaelAw=="
+          "hash": "Psps+XoHaFby4MUNXOgumg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -21,10 +21,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Linq2Shadow.Extensions.QueryableAsyncExtensions.html",
-          "hash": "+lnP+4G26D+43/AJ7rVwUQ=="
+          "hash": "RmOlbiQDnnDJrK6kpROeLA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -33,10 +33,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Linq2Shadow.Extensions.QueryableExtensions.html",
-          "hash": "eKKrHrHAaDmxc6Yf598QTA=="
+          "hash": "EvjqEDKZGW07UwzEcwOwIg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -48,7 +48,7 @@
           "hash": "cvsZWDhYMhZQDC8VFx/dyQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -57,10 +57,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Linq2Shadow.ShadowRow.html",
-          "hash": "RAyEnz4vCU4xtgAij3wcnw=="
+          "hash": "Rr756a2D4AMchj0NDLCCrg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -69,10 +69,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html",
-          "hash": "ltgejpY/EAHBiyU54fS2pw=="
+          "hash": "3NDUcAESBNwi+ruZExRFqQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -81,10 +81,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Linq2Shadow.Utils.ExpressionBuilders.html",
-          "hash": "4OJ8H3BM1f9jCcS7En6gSA=="
+          "hash": "czdvU9Cpq2sJu6dG76O01w=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -96,7 +96,7 @@
           "hash": "9Dkn1vDU3uxMV/EVfYnCXw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -108,7 +108,7 @@
           "hash": "VSJYHtP4SPnMtSVuiX6Z+g=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -180,10 +180,10 @@
       "output": {
         ".html": {
           "relative_path": "get-started/get-started.html",
-          "hash": "V3rSecxtZH1wK+cRDq2fXQ=="
+          "hash": "ujHQNucFxUiGJ7uV/q0Aaw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -344,6 +344,19 @@
         "skipped_file_count": 0
       },
       "processors": {
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 11,
+          "skipped_file_count": 11
+        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -355,20 +368,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 9,
-          "skipped_file_count": 3
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 11,
-          "skipped_file_count": 10
-        },
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
+          "skipped_file_count": 9
         }
       }
     },
