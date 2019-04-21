@@ -119,13 +119,13 @@ var countDzianises = db.QueryToTable("tUsers")
 
 ### Ordering example
 
-> [!NOTE]
-> Today, assembly has no contains helpers to create the MemberAccess expressions with ShadowRow like `x => x["UserName"]`. You can create him manually, but know that it is planned to future.
+> [!TIP]
+> Use **ExpressionBuilders.MemberAccess(string memberName)** helper to create attribute-based expression.
 
 ```csharp
 var usersOrdered = db.QueryToTable("tUsers")  
-    .OrderBy(x => x["UserName"])  
-    .ThenByDescending(x => x["Marrried"])  
+    .OrderBy(ExpressionBuilders.MemberAccess("UserName"))  
+    .ThenByDescending(ExpressionBuilders.MemberAccess("Marrried"))  
     .ToList();
 ```
 

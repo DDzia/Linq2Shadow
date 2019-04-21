@@ -33,8 +33,7 @@ namespace Linq2Shadow.Extensions
                 {
                     while (await reader.ReadAsync(cancellationToken).ConfigureAwait(false) && !cancellationToken.IsCancellationRequested)
                     {
-                        var r = await reader.FillRowAsync(cancellationToken).ConfigureAwait(false);
-                        items.Add(r);
+                        items.Add(reader.FillRow());
                     }
                 }
             }

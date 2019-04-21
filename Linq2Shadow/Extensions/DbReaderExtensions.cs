@@ -1,6 +1,5 @@
-﻿using System.Data.Common;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using System;
+using System.Data.Common;
 
 namespace Linq2Shadow.Extensions
 {
@@ -12,23 +11,11 @@ namespace Linq2Shadow.Extensions
             for (int i = 0; i < reader.FieldCount; i++)
             {
                 var name = reader.GetName(i);
-                var value = reader.IsDBNull(i)
+                var value = reader[name];
+                value = value == DBNull.Value
                     ? null
-                    : reader[name];
-                row.SetValue(name, value);
-            }
-            return row;
-        }
+                    : value;
 
-        internal static async Task<ShadowRow> FillRowAsync(this DbDataReader reader, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            var row = new ShadowRow();
-            for (int i = 0; i < reader.FieldCount; i++)
-            {
-                var name = reader.GetName(i);
-                var value = await reader.IsDBNullAsync(i, cancellationToken).ConfigureAwait(false)
-                    ? null
-                    : reader[name];
                 row.SetValue(name, value);
             }
             return row;
