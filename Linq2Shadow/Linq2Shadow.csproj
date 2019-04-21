@@ -65,4 +65,10 @@
     </Compile>
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="ExpressionBuilders.*.cs">
+      <DependentUpon>ExpressionBuilders.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
 </Project>
