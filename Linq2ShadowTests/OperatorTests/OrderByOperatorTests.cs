@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
 using Linq2Shadow;
+using Linq2Shadow.Utils;
 using NUnit.Framework;
 
 namespace Linq2ShadowTests.OperatorTests
@@ -32,7 +33,7 @@ namespace Linq2ShadowTests.OperatorTests
 
             // Act
             var data = _sut.QueryToTableValuedFunction(DbConfig.DbObjectNames.GetAllUsersFunction)
-                            .OrderBy(x => x[orderMember])
+                            .OrderBy(ExpressionBuilders.MemberAccess(orderMember))
                             .ToArray();
 
             // Assert
@@ -47,9 +48,9 @@ namespace Linq2ShadowTests.OperatorTests
 
             // Act
             var data = _sut.QueryToTable(DbConfig.DbObjectNames.ReportsTable)
-                           .OrderByDescending(x => x["Id"])
-                           .ThenBy(x => x["FileName"])
-                           .ThenByDescending(x => x["CreatedBy"])
+                           .OrderByDescending(ExpressionBuilders.MemberAccess("Id"))
+                           .ThenBy(ExpressionBuilders.MemberAccess("FileName"))
+                           .ThenByDescending(ExpressionBuilders.MemberAccess("CreatedBy"))
                            .ToArray();
 
             // Assert

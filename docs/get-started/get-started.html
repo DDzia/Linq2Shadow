@@ -185,13 +185,13 @@ var countDzianises = db.QueryToTable(&quot;tUsers&quot;)
     .Count(ExpressionBuilders.Predicates.AreEqual(&quot;UserName&quot;, &quot;Dzianis&quot;));
 </code></pre>
 <h3 id="ordering-example">Ordering example</h3>
-<div class="NOTE">
-<h5>Note</h5>
-<p>Today, assembly has no contains helpers to create the MemberAccess expressions with ShadowRow like <code>x =&gt; x[&quot;UserName&quot;]</code>. You can create him manually, but know that it is planned to future.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Use <strong>ExpressionBuilders.MemberAccess(string memberName)</strong> helper to create attribute-based expression.</p>
 </div>
 <pre><code class="lang-csharp">var usersOrdered = db.QueryToTable(&quot;tUsers&quot;)  
-    .OrderBy(x =&gt; x[&quot;UserName&quot;])  
-    .ThenByDescending(x =&gt; x[&quot;Marrried&quot;])  
+    .OrderBy(ExpressionBuilders.MemberAccess(&quot;UserName&quot;))  
+    .ThenByDescending(ExpressionBuilders.MemberAccess(&quot;Marrried&quot;))  
     .ToList();
 </code></pre>
 <h3 id="first-example">First example</h3>
