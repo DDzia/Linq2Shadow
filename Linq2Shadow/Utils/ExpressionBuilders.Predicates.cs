@@ -1496,7 +1496,7 @@ namespace Linq2Shadow.Utils
 
             #endregion less than or equal
 
-            #region logical and
+            #region and
 
             /// <summary>
             /// Build the logical expression based on the AND operator.
@@ -1505,7 +1505,7 @@ namespace Linq2Shadow.Utils
             /// <returns>Builded predicate.</returns>
             /// <exception cref="ArgumentNullException">Will throw when <paramref name="predicates"/> is null.</exception>
             /// <exception cref="ArgumentException">Will throw when any operand of <paramref name="predicates"/> is null.</exception>
-            public static Expression<Func<ShadowRow, bool>> LogicalAnd(Expression<Func<ShadowRow, bool>>[] predicates)
+            public static Expression<Func<ShadowRow, bool>> And(Expression<Func<ShadowRow, bool>>[] predicates)
             {
                 ExHelpers.ThrowIfNull(() => predicates);
                 ExHelpers.ThrowIfOneOfItemsIsNull(() => predicates);
@@ -1515,7 +1515,7 @@ namespace Linq2Shadow.Utils
                 var result = predicates[0];
                 foreach (var expression in predicates.Skip(1))
                 {
-                    result = LogicalAnd(result, expression);
+                    result = And(result, expression);
                 }
 
                 return result;
@@ -1528,7 +1528,7 @@ namespace Linq2Shadow.Utils
             /// <param name="right">Right operand.</param>
             /// <returns>Builded predicate.</returns>
             /// <exception cref="ArgumentNullException">Will throw when any operand is null.</exception>
-            public static Expression<Func<ShadowRow, bool>> LogicalAnd(Expression<Func<ShadowRow, bool>> left,
+            public static Expression<Func<ShadowRow, bool>> And(Expression<Func<ShadowRow, bool>> left,
                                         Expression<Func<ShadowRow, bool>> right)
             {
                 ExHelpers.ThrowIfNull(() => left);
@@ -1540,9 +1540,9 @@ namespace Linq2Shadow.Utils
                 return lambda;
             }
 
-            #endregion logical and
+            #endregion and
 
-            #region logical or
+            #region or
 
             /// <summary>
             /// Build the logical expression based on the OR operator.
@@ -1551,7 +1551,7 @@ namespace Linq2Shadow.Utils
             /// <returns>Builded predicate.</returns>
             /// <exception cref="ArgumentNullException">Will throw when <paramref name="predicates"/> is null.</exception>
             /// <exception cref="ArgumentException">Will throw when any operand of <paramref name="predicates"/> is null.</exception>
-            public static Expression<Func<ShadowRow, bool>> LogicalOr(Expression<Func<ShadowRow, bool>>[] predicates)
+            public static Expression<Func<ShadowRow, bool>> Or(Expression<Func<ShadowRow, bool>>[] predicates)
             {
                 ExHelpers.ThrowIfNull(() => predicates);
                 ExHelpers.ThrowIfOneOfItemsIsNull(() => predicates);
@@ -1561,7 +1561,7 @@ namespace Linq2Shadow.Utils
                 var result = predicates[0];
                 foreach (var expression in predicates.Skip(1))
                 {
-                    result = LogicalOr(result, expression);
+                    result = Or(result, expression);
                 }
 
                 return result;
@@ -1574,7 +1574,7 @@ namespace Linq2Shadow.Utils
             /// <param name="right">Right operand.</param>
             /// <returns>Builded predicate.</returns>
             /// <exception cref="ArgumentNullException">Will throw when any operand is null.</exception>
-            public static Expression<Func<ShadowRow, bool>> LogicalOr(Expression<Func<ShadowRow, bool>> left,
+            public static Expression<Func<ShadowRow, bool>> Or(Expression<Func<ShadowRow, bool>> left,
                 Expression<Func<ShadowRow, bool>> right)
             {
                 ExHelpers.ThrowIfNull(() => left);
@@ -1587,7 +1587,7 @@ namespace Linq2Shadow.Utils
                 return lambda;
             }
 
-            #endregion logical or
+            #endregion or
         }
     }
 }

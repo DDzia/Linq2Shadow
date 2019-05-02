@@ -322,7 +322,7 @@ namespace Linq2Shadow.QueryTranslators.Where
 
             if (typedLambdas.Any())
             {
-                var exp = ExpressionBuilders.Predicates.LogicalAnd(typedLambdas.ToArray());
+                var exp = ExpressionBuilders.Predicates.And(typedLambdas.ToArray());
                 Visit(exp);
             }
 

@@ -460,12 +460,12 @@ namespace Linq2ShadowTests.QueryToTableTests
         }
 
         [Test]
-        public void Should_GroupPredicates_When_LogicalAndOperatorIsApplied()
+        public void Should_GroupPredicates_When_AndOperatorIsApplied()
         {
             // Act
             var userDzianisFound = _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
                 .Where(
-                    ExpressionBuilders.Predicates.LogicalAnd(
+                    ExpressionBuilders.Predicates.And(
                         ExpressionBuilders.Predicates.AreEquals("Id", 0),
                         ExpressionBuilders.Predicates.AreEquals("UserName", "Dzianis")
                     )
@@ -474,7 +474,7 @@ namespace Linq2ShadowTests.QueryToTableTests
 
             var noUserFound = _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
                 .Where(
-                    ExpressionBuilders.Predicates.LogicalAnd(
+                    ExpressionBuilders.Predicates.And(
                         ExpressionBuilders.Predicates.AreEquals("Id", 1),
                         ExpressionBuilders.Predicates.AreEquals("UserName", "Dzianis")
                     )
@@ -489,7 +489,7 @@ namespace Linq2ShadowTests.QueryToTableTests
 
             Assert.Throws<ArgumentNullException>(() =>
             {
-                ExpressionBuilders.Predicates.LogicalAnd(
+                ExpressionBuilders.Predicates.And(
                     null,
                     ExpressionBuilders.Predicates.AreEquals("UserName", "Dzianis")
                 );
@@ -497,17 +497,17 @@ namespace Linq2ShadowTests.QueryToTableTests
 
             Assert.Throws<ArgumentNullException>(() =>
             {
-                ExpressionBuilders.Predicates.LogicalAnd(
+                ExpressionBuilders.Predicates.And(
                     ExpressionBuilders.Predicates.AreEquals("UserName", "Dzianis"),
                     null
                 );
             });
 
-            Assert.Throws<ArgumentNullException>(() => ExpressionBuilders.Predicates.LogicalAnd(null));
+            Assert.Throws<ArgumentNullException>(() => ExpressionBuilders.Predicates.And(null));
 
             Assert.Throws<ArgumentException>(() =>
             {
-                ExpressionBuilders.Predicates.LogicalAnd(
+                ExpressionBuilders.Predicates.And(
                     new[]
                     {
                         ExpressionBuilders.Predicates.AreEquals("UserName", "Dzianis"),
@@ -518,12 +518,12 @@ namespace Linq2ShadowTests.QueryToTableTests
         }
 
         [Test]
-        public void Should_GroupPredicates_When_LogicalOrOperatorIsApplied()
+        public void Should_GroupPredicates_When_OrOperatorIsApplied()
         {
             // Act
             var usersDzianisAndAlexFound = _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
                 .Where(
-                    ExpressionBuilders.Predicates.LogicalOr(
+                    ExpressionBuilders.Predicates.Or(
                         ExpressionBuilders.Predicates.AreEquals("Id", 0),
                         ExpressionBuilders.Predicates.AreEquals("UserName", "Alex")
                     )
@@ -532,7 +532,7 @@ namespace Linq2ShadowTests.QueryToTableTests
 
             var noUserFound = _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
                 .Where(
-                    ExpressionBuilders.Predicates.LogicalOr(
+                    ExpressionBuilders.Predicates.Or(
                         ExpressionBuilders.Predicates.AreEquals("Id", -1),
                         ExpressionBuilders.Predicates.AreEquals("UserName", "Dzianis0")
                     )
@@ -547,7 +547,7 @@ namespace Linq2ShadowTests.QueryToTableTests
 
             Assert.Throws<ArgumentNullException>(() =>
             {
-                ExpressionBuilders.Predicates.LogicalOr(
+                ExpressionBuilders.Predicates.Or(
                     null,
                     ExpressionBuilders.Predicates.AreEquals("UserName", "Dzianis")
                 );
@@ -555,17 +555,17 @@ namespace Linq2ShadowTests.QueryToTableTests
 
             Assert.Throws<ArgumentNullException>(() =>
             {
-                ExpressionBuilders.Predicates.LogicalOr(
+                ExpressionBuilders.Predicates.Or(
                     ExpressionBuilders.Predicates.AreEquals("UserName", "Dzianis"),
                     null
                 );
             });
 
-            Assert.Throws<ArgumentNullException>(() => ExpressionBuilders.Predicates.LogicalOr(null));
+            Assert.Throws<ArgumentNullException>(() => ExpressionBuilders.Predicates.Or(null));
 
             Assert.Throws<ArgumentException>(() =>
             {
-                ExpressionBuilders.Predicates.LogicalOr(
+                ExpressionBuilders.Predicates.Or(
                     new[]
                     {
                         ExpressionBuilders.Predicates.AreEquals("UserName", "Dzianis"),

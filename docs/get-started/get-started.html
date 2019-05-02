@@ -88,10 +88,10 @@ cd SampleApp
 <p>The DatabaseContext object present the context over pure connection to make query operations(for example: query to table, view, stored procedure, function and etc.). For more info about DatabaseContext, see <a href="/api/Linq2Shadow.DatabaseContext.html">API</a>.</p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>SqlServer connection string is not defined in here code. We will use  connection string from <a href="attachments.html#connection-string">attachments</a>.</p>
+<p>SqlServer connection string is not defined in here code. We will use connection string from <a href="attachments.html#connection-string">attachments</a>.</p>
 </div>
 <p>Instantiating the DatabaseContext object:</p>
-<pre><code class="lang-csharp">Func&lt;SqlConnection&gt; connectionFactory = () =&gt; new SqlConnection(connectionString);  
+<pre><code class="lang-csharp">Func&lt;SqlConnection&gt; connectionFactory = () =&gt; new SqlConnection(connectionString);
 var db = new DatabaseContext(connectionFactory);
 </code></pre>
 <h2 id="shadowrow">ShadowRow</h2>
@@ -131,7 +131,7 @@ IEnumerable&lt;string&gt; propertyNames = userFound.Keys; // [&quot;UserName&quo
 </ul>
 <section id="tabpanel_CeZOj-G++Q_quey-to-table" role="tabpanel" data-tab="quey-to-table">
 
-<pre><code class="lang-csharp">var usersFound = db.QueryToTable(&quot;tUsers&quot;)  
+<pre><code class="lang-csharp">var usersFound = db.QueryToTable(&quot;tUsers&quot;)
     .ToList();
 </code></pre>
 </section>
@@ -141,28 +141,28 @@ IEnumerable&lt;string&gt; propertyNames = userFound.Keys; // [&quot;UserName&quo
 </section>
 <section id="tabpanel_CeZOj-G++Q_quey-to-stored-procedure" role="tabpanel" data-tab="quey-to-stored-procedure" aria-hidden="true" hidden="hidden">
 
-<pre><code class="lang-csharp">var spArgs = new Dictionary&lt;string, object&gt;(){ {&quot;UserName&quot;, &quot;Dzianis&quot;} };  
-var usersFound = db.QueryToStoredProcedure(&quot;spFindUsers&quot;, spArgs)  
+<pre><code class="lang-csharp">var spArgs = new Dictionary&lt;string, object&gt;(){ {&quot;UserName&quot;, &quot;Dzianis&quot;} };
+var usersFound = db.QueryToStoredProcedure(&quot;spFindUsers&quot;, spArgs)
     .ToList();
 
 // TODO: typed params approach
-var spArgsTyped = new { UserName = &quot;Dzianis&quot; };  
-var usersFoundSame = db.QueryToStoredProcedure(&quot;spFindUsers&quot;, spArgsTyped)  
+var spArgsTyped = new { UserName = &quot;Dzianis&quot; };
+var usersFoundSame = db.QueryToStoredProcedure(&quot;spFindUsers&quot;, spArgsTyped)
     .ToList();
 </code></pre>
 </section>
 <section id="tabpanel_CeZOj-G++Q_quey-to-function" role="tabpanel" data-tab="quey-to-function" aria-hidden="true" hidden="hidden">
 
-<pre><code class="lang-csharp">var functionArguments = new object[] { &quot;Dzianis&quot; };  
-var usersFound = db.QueryToStoredProcedure(&quot;fFindUsers&quot;, functionArguments)  
+<pre><code class="lang-csharp">var functionArguments = new object[] { &quot;Dzianis&quot; };
+var usersFound = db.QueryToStoredProcedure(&quot;fFindUsers&quot;, functionArguments)
     .ToList();
 </code></pre>
 </section>
 </div>
 <h3 id="paging-sample">Paging sample</h3>
-<pre><code class="lang-csharp">var userFound = db.QueryToTable(&quot;tUsers&quot;)  
-    .Skip(1)  
-    .Take(1)  
+<pre><code class="lang-csharp">var userFound = db.QueryToTable(&quot;tUsers&quot;)
+    .Skip(1)
+    .Take(1)
     .ToList();
 </code></pre>
 <h3 id="filtering-example">Filtering example</h3>
@@ -170,8 +170,8 @@ var usersFound = db.QueryToStoredProcedure(&quot;fFindUsers&quot;, functionArgum
 <h5>Note</h5>
 <p>More about ExpressionBuilders.Predicates class see <a href="#predicates">below</a>.</p>
 </div>
-<pre><code class="lang-csharp">var userFound = db.QueryToTable(&quot;tUsers&quot;)  
-    .Where(ExpressionBuilders.Predicates.AreEqual(&quot;UserName&quot;, &quot;Dzianis&quot;))  
+<pre><code class="lang-csharp">var userFound = db.QueryToTable(&quot;tUsers&quot;)
+    .Where(ExpressionBuilders.Predicates.AreEqual(&quot;UserName&quot;, &quot;Dzianis&quot;))
     .ToList();
 </code></pre>
 <h3 id="count-example">Count example</h3>
@@ -181,7 +181,7 @@ var usersFound = db.QueryToStoredProcedure(&quot;fFindUsers&quot;, functionArgum
 </div>
 <pre><code class="lang-csharp">var countAl = db.QueryToTable(&quot;tUsers&quot;).Count();
 
-var countDzianises = db.QueryToTable(&quot;tUsers&quot;)  
+var countDzianises = db.QueryToTable(&quot;tUsers&quot;)
     .Count(ExpressionBuilders.Predicates.AreEqual(&quot;UserName&quot;, &quot;Dzianis&quot;));
 </code></pre>
 <h3 id="ordering-example">Ordering example</h3>
@@ -189,9 +189,9 @@ var countDzianises = db.QueryToTable(&quot;tUsers&quot;)
 <h5>Tip</h5>
 <p>Use <strong>ExpressionBuilders.MemberAccess(string memberName)</strong> helper to create attribute-based expression.</p>
 </div>
-<pre><code class="lang-csharp">var usersOrdered = db.QueryToTable(&quot;tUsers&quot;)  
-    .OrderBy(ExpressionBuilders.MemberAccess(&quot;UserName&quot;))  
-    .ThenByDescending(ExpressionBuilders.MemberAccess(&quot;Marrried&quot;))  
+<pre><code class="lang-csharp">var usersOrdered = db.QueryToTable(&quot;tUsers&quot;)
+    .OrderBy(ExpressionBuilders.MemberAccess(&quot;UserName&quot;))
+    .ThenByDescending(ExpressionBuilders.MemberAccess(&quot;Marrried&quot;))
     .ToList();
 </code></pre>
 <h3 id="first-example">First example</h3>
@@ -199,16 +199,16 @@ var countDzianises = db.QueryToTable(&quot;tUsers&quot;)
     .First(); // or FirstOrDefault()
 </code></pre>
 <h3 id="reading-via-loop">Reading via loop</h3>
-<pre><code class="lang-csharp">// All data are not loaded to memory, here.  
-// Data reads like `from row to row`: EnumeratorObj.Move() initiate DbDataReader.Read()  
-foreach(var row in db.QueryToTable(&quot;tUsers&quot;))  
-{  
+<pre><code class="lang-csharp">// All data are not loaded to memory, here.
+// Data reads like `from row to row`: EnumeratorObj.Move() initiate DbDataReader.Read()
+foreach(var row in db.QueryToTable(&quot;tUsers&quot;))
+{
     Console.WriteLine(row[&quot;UserName&quot;]);
 }
 </code></pre>
 <h3 id="select-example">Select example</h3>
-<pre><code class="lang-csharp">var usersFound = db.QueryToTable(&quot;tUsers&quot;)  
-    .SelectOnly(new [] { &quot;Married&quot; })  
+<pre><code class="lang-csharp">var usersFound = db.QueryToTable(&quot;tUsers&quot;)
+    .SelectOnly(new [] { &quot;Married&quot; })
     .First();
 // Output: [0]
 // !Attention!: UserName is skipped
@@ -249,13 +249,13 @@ ExpressionBuilders.Predicates.LessThan(&quot;Age&quot;, 1);
 ExpressionBuilders.Predicates.LessThanOrEqual(&quot;Age&quot;, 1);
 
 // SQL equivalent:  `Age &gt; 1 AND Age &lt; 2`
-ExpressionBuilders.Predicates.LogicalAnd(
+ExpressionBuilders.Predicates.And(
     ExpressionBuilders.Predicates.GreaterThan(&quot;Age&quot;, 1),
     ExpressionBuilders.Predicates.LessThan(&quot;Age&quot;, 2)
 );
 
 // SQL equivalent:  `Age = 1 OR Age = 2`
-ExpressionBuilders.Predicates.LogicalOr(
+ExpressionBuilders.Predicates.Or(
     ExpressionBuilders.Predicates.AreEquals(&quot;Age&quot;, 1),
     ExpressionBuilders.Predicates.AreEquals(&quot;Age&quot;, 2)
 );
@@ -271,20 +271,20 @@ ExpressionBuilders.Predicates.StringStartsWith(&quot;UserName&quot;, &quot;Dzi&q
 </code></pre>
 <h2 id="update-source">Update source</h2>
 <p>Approaches to update data source:</p>
-<pre><code class="lang-csharp">var updateMap = new Dictionary&lt;string, object&gt;(){{&quot;UserName&quot;, &quot;SuperDzianis&quot;}};  
-var updatePredicate = ExpressionBuiders.Predicates.AreEquals(&quot;UserName&quot;, &quot;Dzianis&quot;);  
+<pre><code class="lang-csharp">var updateMap = new Dictionary&lt;string, object&gt;(){{&quot;UserName&quot;, &quot;SuperDzianis&quot;}};
+var updatePredicate = ExpressionBuiders.Predicates.AreEquals(&quot;UserName&quot;, &quot;Dzianis&quot;);
 
-// update all rows  
-var udpdatedUsersCount = db.Update(&quot;tUsers&quot;, updateMap);  
+// update all rows
+var udpdatedUsersCount = db.Update(&quot;tUsers&quot;, updateMap);
 
 // update with predicate(part of data)
-var udpdatedUsersCount = db.Update(&quot;tUsers&quot;, updateMap, updatePredicate);  
+var udpdatedUsersCount = db.Update(&quot;tUsers&quot;, updateMap, updatePredicate);
 
 // same with typed model
-var udpdatedUsersCount = db.Update(&quot;tUsers&quot;, new { UserName=&quot;Dzianis&quot; }, updatePredicate);  
+var udpdatedUsersCount = db.Update(&quot;tUsers&quot;, new { UserName=&quot;Dzianis&quot; }, updatePredicate);
 
 // update asynchronously
-var udpdatedUsersCount = db.UpdateAsync(&quot;tUsers&quot;, new { UserName=&quot;Dzianis&quot; }, CancellationToken.None);  
+var udpdatedUsersCount = db.UpdateAsync(&quot;tUsers&quot;, new { UserName=&quot;Dzianis&quot; }, CancellationToken.None);
 </code></pre>
 <h2 id="remove-from-source">Remove from source</h2>
 <p>Approaches to remove data from sources like table or view:</p>
