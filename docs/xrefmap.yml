@@ -1329,6 +1329,45 @@ references:
   isSpec: "True"
   fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringEndsWith
   nameWithType: ExpressionBuilders.Predicates.StringEndsWith
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringNotContains(System.String,System.String)
+  name: StringNotContains(String, String)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_StringNotContains_System_String_System_String_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringNotContains(System.String,System.String)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringNotContains(System.String, System.String)
+  nameWithType: ExpressionBuilders.Predicates.StringNotContains(String, String)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringNotContains*
+  name: StringNotContains
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_StringNotContains_
+  commentId: Overload:Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringNotContains
+  isSpec: "True"
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringNotContains
+  nameWithType: ExpressionBuilders.Predicates.StringNotContains
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringNotEndsWith(System.String,System.String)
+  name: StringNotEndsWith(String, String)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_StringNotEndsWith_System_String_System_String_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringNotEndsWith(System.String,System.String)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringNotEndsWith(System.String, System.String)
+  nameWithType: ExpressionBuilders.Predicates.StringNotEndsWith(String, String)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringNotEndsWith*
+  name: StringNotEndsWith
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_StringNotEndsWith_
+  commentId: Overload:Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringNotEndsWith
+  isSpec: "True"
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringNotEndsWith
+  nameWithType: ExpressionBuilders.Predicates.StringNotEndsWith
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringNotStartsWith(System.String,System.String)
+  name: StringNotStartsWith(String, String)
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_StringNotStartsWith_System_String_System_String_
+  commentId: M:Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringNotStartsWith(System.String,System.String)
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringNotStartsWith(System.String, System.String)
+  nameWithType: ExpressionBuilders.Predicates.StringNotStartsWith(String, String)
+- uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringNotStartsWith*
+  name: StringNotStartsWith
+  href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_StringNotStartsWith_
+  commentId: Overload:Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringNotStartsWith
+  isSpec: "True"
+  fullName: Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringNotStartsWith
+  nameWithType: ExpressionBuilders.Predicates.StringNotStartsWith
 - uid: Linq2Shadow.Utils.ExpressionBuilders.Predicates.StringStartsWith(System.String,System.String)
   name: StringStartsWith(String, String)
   href: api/Linq2Shadow.Utils.ExpressionBuilders.Predicates.html#Linq2Shadow_Utils_ExpressionBuilders_Predicates_StringStartsWith_System_String_System_String_

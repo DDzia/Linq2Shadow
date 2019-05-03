@@ -676,5 +676,56 @@ namespace Linq2ShadowTests.QueryToTableTests
             Assert.AreEqual(usersAll.Length, 3);
             Assert.IsTrue(usersAll.All(x => !negativeIds.Contains((int)x.Id)));
         }
+
+        [Test]
+        public void Should_ReturnUsersWhichHasNoUsernamesContainsD_When_PredicateStringNotContains_D_IsUsed()
+        {
+            // Arrange
+            var character = "D";
+            var member = "UserName";
+
+            // Act
+            var userFound = _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
+                .Where(ExpressionBuilders.Predicates.StringNotContains(member, character))
+                .ToArray();
+
+            // Assert
+            Assert.AreEqual(2, userFound.Length);
+            Assert.IsTrue(userFound.All(x => !x[member].ToString().Contains(character)));
+        }
+
+        [Test]
+        public void Should_ReturnUsersWhichHasNoUsernamesStartedWithK_When_PredicateStringNotStartsWith_K_IsUsed()
+        {
+            // Arrange
+            var character = "K";
+            var member = "UserName";
+
+            // Act
+            var userFound = _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
+                .Where(ExpressionBuilders.Predicates.StringNotStartsWith(member, character))
+                .ToArray();
+
+            // Assert
+            Assert.AreEqual(2, userFound.Length);
+            Assert.IsTrue(userFound.All(x => !x[member].ToString().StartsWith(character)));
+        }
+
+        [Test]
+        public void Should_ReturnUsersWhichHasNoUsernamesEndsWithX_When_PredicateStringNotEndsWith_x_IsUsed()
+        {
+            // Arrange
+            var character = "x";
+            var member = "UserName";
+
+            // Act
+            var userFound = _sut.QueryToTable(DbConfig.DbObjectNames.UsersTable)
+                .Where(ExpressionBuilders.Predicates.StringNotEndsWith(member, character))
+                .ToArray();
+
+            // Assert
+            Assert.AreEqual(2, userFound.Length);
+            Assert.IsTrue(userFound.All(x => !x[member].ToString().EndsWith(character)));
+        }
     }
 }
