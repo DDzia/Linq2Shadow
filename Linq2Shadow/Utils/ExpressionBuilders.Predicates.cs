@@ -722,17 +722,54 @@ namespace Linq2Shadow.Utils
 
 
                 var mi = typeof(string).GetMethods(BindingFlags.Instance | BindingFlags.Public)
-                    .Where(x =>
+                    .First(x =>
                     {
                         var pms = x.GetParameters();
                         return x.Name == nameof(string.Contains) &&
                                pms.Length == 1 &&
                                pms[0].ParameterType == typeof(string);
-                    })
-                    .First();
+                    });
                 var containsCall = Expression.Call(memberAsString, mi, Expression.Constant(value));
 
                 var lambda = Expression.Lambda<Func<ShadowRow, bool>>(containsCall, DefaultRowParameter);
+                return lambda;
+            }
+
+            /// <summary>
+            /// Build the string not contains predicate.
+            /// </summary>
+            /// <param name="member">The member whose value should not contain.</param>
+            /// <param name="value">Value which should be matched.</param>
+            /// <returns>Builded predicate.</returns>
+            /// <exception cref="ArgumentNullException">Will throw when <paramref name="member"/> is null.</exception>
+            /// <exception cref="ArgumentException">Will throw when <paramref name="member"/> is whitespace.</exception>
+            /// <exception cref="ArgumentNullException">Will throw when <paramref name="value"/> is null.</exception>
+            public static Expression<Func<ShadowRow, bool>> StringNotContains(string member, string value)
+            {
+                if(member is null)
+                    throw new ArgumentNullException(nameof(member));
+                if(string.IsNullOrWhiteSpace(member))
+                    throw new ArgumentException(nameof(member));
+
+                if(value is null)
+                    throw new ArgumentNullException(nameof(value));
+
+                var memberCall = MemberInternal(member);
+                var memberAsString = Expression.Convert(memberCall, typeof(string));
+
+                var mi = typeof(string).GetMethods(BindingFlags.Instance | BindingFlags.Public)
+                    .First(x =>
+                    {
+                        var pms = x.GetParameters();
+                        return x.Name == nameof(string.Contains) &&
+                               pms.Length == 1 &&
+                               pms[0].ParameterType == typeof(string);
+                    });
+                var notContainsCall = Expression.MakeUnary(ExpressionType.Not,
+                    Expression.Call(memberAsString, mi, Expression.Constant(value)),
+                    typeof(bool));
+
+                var lambda = Expression.Lambda<Func<ShadowRow, bool>>(notContainsCall, DefaultRowParameter);
                 return lambda;
             }
 
@@ -754,17 +791,56 @@ namespace Linq2Shadow.Utils
                 var memberAsString = Expression.Convert(memberCall, typeof(string));
 
                 var mi = typeof(string).GetMethods(BindingFlags.Instance | BindingFlags.Public)
-                    .Where(x =>
+                    .First(x =>
                     {
                         var pms = x.GetParameters();
                         return x.Name == nameof(string.StartsWith) &&
                                pms.Length == 1 &&
                                pms[0].ParameterType == typeof(string);
-                    })
-                    .First();
+                    });
                 var swCall = Expression.Call(memberAsString, mi, Expression.Constant(value));
 
                 var lambda = Expression.Lambda<Func<ShadowRow, bool>>(swCall, DefaultRowParameter);
+                return lambda;
+            }
+
+            /// <summary>
+            /// Build a predicate of the string not starts with.
+            /// </summary>
+            /// <param name="member">The member whose value should not starts with.</param>
+            /// <param name="value">Value which should be matched.</param>
+            /// <returns>Builded predicate.</returns>
+            /// <exception cref="ArgumentNullException">Will throw when <paramref name="member"/> is null.</exception>
+            /// <exception cref="ArgumentException">Will throw when <paramref name="member"/> is whitespace.</exception>
+            /// <exception cref="ArgumentNullException">Will throw when <paramref name="value"/> is null.</exception>
+            public static Expression<Func<ShadowRow, bool>> StringNotStartsWith(string member, string value)
+            {
+                if(member is null)
+                    throw new ArgumentNullException(nameof(member));
+                if (string.IsNullOrWhiteSpace(member))
+                    throw new ArgumentException(nameof(member));
+
+                if (value is null)
+                    throw new ArgumentNullException(nameof(value));
+
+                var memberCall = MemberInternal(member);
+                var memberAsString = Expression.Convert(memberCall, typeof(string));
+
+                var mi = typeof(string).GetMethods(BindingFlags.Instance | BindingFlags.Public)
+                    .First(x =>
+                    {
+                        var pms = x.GetParameters();
+                        return x.Name == nameof(string.StartsWith) &&
+                               pms.Length == 1 &&
+                               pms[0].ParameterType == typeof(string);
+                    });
+                var notSwCall = Expression.MakeUnary(
+                    ExpressionType.Not,
+                    Expression.Call(memberAsString, mi, Expression.Constant(value)),
+                    typeof(bool)
+                );
+
+                var lambda = Expression.Lambda<Func<ShadowRow, bool>>(notSwCall, DefaultRowParameter);
                 return lambda;
             }
 
@@ -786,17 +862,57 @@ namespace Linq2Shadow.Utils
                 var memberAsString = Expression.Convert(memberCall, typeof(string));
 
                 var mi = typeof(string).GetMethods(BindingFlags.Instance | BindingFlags.Public)
-                    .Where(x =>
+                    .First(x =>
                     {
                         var pms = x.GetParameters();
                         return x.Name == nameof(string.EndsWith) &&
                                pms.Length == 1 &&
                                pms[0].ParameterType == typeof(string);
-                    })
-                    .First();
-                var swCall = Expression.Call(memberAsString, mi, Expression.Constant(value));
+                    });
+                var notEwCall = Expression.Call(memberAsString, mi, Expression.Constant(value));
 
-                var lambda = Expression.Lambda<Func<ShadowRow, bool>>(swCall, DefaultRowParameter);
+                var lambda = Expression.Lambda<Func<ShadowRow, bool>>(notEwCall, DefaultRowParameter);
+                return lambda;
+            }
+
+            /// <summary>
+            /// Build a predicate of the string not ends with.
+            /// </summary>
+            /// <param name="member">The member whose value should not ends with.</param>
+            /// <param name="value">Value which should be matched.</param>
+            /// <returns>Builded predicate.</returns>
+            /// <exception cref="ArgumentNullException">Will throw when <paramref name="member"/> is null.</exception>
+            /// <exception cref="ArgumentException">Will throw when <paramref name="member"/> is whitespace.</exception>
+            /// <exception cref="ArgumentNullException">Will throw when <paramref name="value"/> is null.</exception>
+            public static Expression<Func<ShadowRow, bool>> StringNotEndsWith(string member, string value)
+            {
+                if (member is null)
+                    throw new ArgumentNullException(nameof(member));
+                if (string.IsNullOrWhiteSpace(member))
+                    throw new ArgumentException(nameof(member));
+
+                if (value is null)
+                    throw new ArgumentNullException(nameof(value));
+
+                var memberCall = MemberInternal(member);
+                var memberAsString = Expression.Convert(memberCall, typeof(string));
+
+                var mi = typeof(string).GetMethods(BindingFlags.Instance | BindingFlags.Public)
+                    .First(x =>
+                    {
+                        var pms = x.GetParameters();
+                        return x.Name == nameof(string.EndsWith) &&
+                               pms.Length == 1 &&
+                               pms[0].ParameterType == typeof(string);
+                    });
+
+                var notEwCall = Expression.MakeUnary(
+                    ExpressionType.Not,
+                    Expression.Call(memberAsString, mi, Expression.Constant(value)),
+                    typeof(bool)
+                );
+
+                var lambda = Expression.Lambda<Func<ShadowRow, bool>>(notEwCall, DefaultRowParameter);
                 return lambda;
             }
 
