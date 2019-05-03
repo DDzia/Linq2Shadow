@@ -227,11 +227,20 @@ ExpressionBuilders.Predicates.Or(
 // SQL equivalent:  `UserName LIKE '%Dzi%'`
 ExpressionBuilders.Predicates.StringContains("UserName", "Dzi");
 
+// SQL equivalent:  `UserName NOT LIKE '%Dzi%'`
+ExpressionBuilders.Predicates.StringNotContains("UserName", "Dzi");
+
 // SQL equivalent:  `UserName LIKE '%Dzi'`
 ExpressionBuilders.Predicates.StringEndsWith("UserName", "Dzi");
 
+// SQL equivalent:  `UserName NOT LIKE '%Dzi'`
+ExpressionBuilders.Predicates.StringNotEndsWith("UserName", "Dzi");
+
 // SQL equivalent:  `UserName LIKE 'Dzi%'`
 ExpressionBuilders.Predicates.StringStartsWith("UserName", "Dzi");
+
+// SQL equivalent:  `UserName NOT LIKE 'Dzi%'`
+ExpressionBuilders.Predicates.StringNotStartsWith("UserName", "Dzi");
 ```
 
 ## Update source
