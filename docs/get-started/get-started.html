@@ -263,11 +263,20 @@ ExpressionBuilders.Predicates.Or(
 // SQL equivalent:  `UserName LIKE '%Dzi%'`
 ExpressionBuilders.Predicates.StringContains(&quot;UserName&quot;, &quot;Dzi&quot;);
 
+// SQL equivalent:  `UserName NOT LIKE '%Dzi%'`
+ExpressionBuilders.Predicates.StringNotContains(&quot;UserName&quot;, &quot;Dzi&quot;);
+
 // SQL equivalent:  `UserName LIKE '%Dzi'`
 ExpressionBuilders.Predicates.StringEndsWith(&quot;UserName&quot;, &quot;Dzi&quot;);
 
+// SQL equivalent:  `UserName NOT LIKE '%Dzi'`
+ExpressionBuilders.Predicates.StringNotEndsWith(&quot;UserName&quot;, &quot;Dzi&quot;);
+
 // SQL equivalent:  `UserName LIKE 'Dzi%'`
 ExpressionBuilders.Predicates.StringStartsWith(&quot;UserName&quot;, &quot;Dzi&quot;);
+
+// SQL equivalent:  `UserName NOT LIKE 'Dzi%'`
+ExpressionBuilders.Predicates.StringNotStartsWith(&quot;UserName&quot;, &quot;Dzi&quot;);
 </code></pre>
 <h2 id="update-source">Update source</h2>
 <p>Approaches to update data source:</p>
